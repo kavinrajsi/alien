@@ -1,0 +1,35 @@
+$d-font-size : 120 100 65 80 18 24;
+$d-line-height: 144 120 90 96 30 36;
+
+$m-font-size : 74 36 38 46 20 24;
+$m-line-height: 86 54 50 56 30 36;
+
+.font-120 {
+  @include interpolate('font-size', 600px, 74px, 900px, 120px, 'ease-in');
+  @include interpolate('line-height', 600px, 86px, 900px, 144px, 'ease-in');
+}
+
+.font-100 {
+  @include interpolate('font-size', 600px, 36px, 900px, 100px, 'ease-in');
+  @include interpolate('line-height', 600px, 54px, 900px, 120px, 'ease-in');
+}
+
+.font-65 {
+  @include interpolate('font-size', 600px, 38px, 900px, 65px, 'ease-in');
+  @include interpolate('line-height', 600px, 50px, 900px, 90px, 'ease-in');
+}
+
+.font-80 {
+  @include interpolate('font-size', 600px, 46px, 900px, 80px, 'ease-in');
+  @include interpolate('line-height', 600px, 56px, 900px, 96px, 'ease-in');
+}
+
+.font-18 {
+  @include interpolate('font-size', 600px, 20px, 900px, 18px, 'ease-in');
+  @include interpolate('line-height', 600px, 30px, 900px, 30px, 'ease-in');
+}
+
+.font-24 {
+  font-size: 24px;
+  line-height: 36px;
+}

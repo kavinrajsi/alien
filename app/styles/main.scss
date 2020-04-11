@@ -1,3 +1,15 @@
-@import 'reset';
-@import 'interpolate';
-@import 'variable';
+@import 'common/index';
+  /*
+   * 'reset'
+   * 'interpolate'
+   * 'variable'
+   * 'font'
+   * 'footer'
+  */
+
+@import 'home/index';
+  /*
+   * 'hero'
+   * 'slider'
+   * 'let-our-work'
+  */
