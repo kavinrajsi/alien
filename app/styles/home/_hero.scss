@@ -1,10 +1,30 @@
-
 .hero-unit {
   position: relative;
   padding-top: 194px;
   padding-bottom: 200px;
-  &:before{
+
+  canvas {
+    background-repeat: no-repeat;
+    background-image: url('../images/frame.svg');
+    background-color: transparent;
+    background-position: 0px 0px;
+    height: 100%;
+    width: auto;
+    min-height: 300px;
+    z-index: -1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    // width: 1371.88px;
+    // height: 1371.88px;
+    position: absolute;
+    left: -124px;
+    top: -80px;
+  }
+
+  &:before {
     content: "";
+    // content: none;
     z-index: -1;
     display: block;
     width: 100%;
@@ -19,11 +39,12 @@
     background-color: transparent;
     background-position: 0px 0px;
   }
+
   .page-title {
     font-family: var(--font-500);
     font-size: 65px;
     line-height: 90px;
-    color: #FFFFFF;
+    color: var(--white);
     margin-bottom: 168px;
 
     span {
@@ -36,7 +57,7 @@
       font-family: var(--font-400);
       font-size: 18px;
       line-height: 30px;
-      color: #FFFFFF;
+      color: var(--white);
       width: 300px;
       position: relative;
       padding-top: 30px;
@@ -51,6 +72,103 @@
         top: 0;
         left: 0;
       }
+    }
+  }
+}
+
+
+
+.about-what-we-do {
+  padding-top: 220px;
+  padding-bottom: 220px;
+
+  .wedo {
+    &-title {
+      font-family: var(--font-500);
+      font-size: 100px;
+      line-height: 120px;
+      letter-spacing: 3px;
+      padding-bottom: 40px;
+      /*
+       *
+       * Support on
+       * Chrome	Firefox	IE	Edge	Safari
+       * 4*	49*	No	15*	3.1*
+       * Android Chrome	Android Firefox	Android	iOS Safari
+       * 80*	68*	2.1*	4.0-4.1*
+       *
+       */
+
+      color: var(--black-coral);
+
+      @supports (-webkit-text-stroke: 2px var(--black-coral)) {
+        -webkit-text-stroke: 2px var(--black-coral);
+        color: transparent;
+        /* Will override color (regardless of order) */
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: var(--black-coral);
+      }
+
+      &.active {
+        color: var(--blue-violet);
+
+        +.wedo-content {
+          display: block;
+        }
+      }
+    }
+
+    &-content {
+      overflow: hidden !important;
+      height: 0 !important;
+      opacity: 0 !important;
+      visibility: hidden !important;
+      transition: all 0.2s ease-in !important;
+      will-change: transition, height !important;
+      // display: none;
+      max-width: 702px;
+      padding-bottom: 40px;
+      font-family: var(--font-400);
+      font-size: 24px;
+      line-height: 36px;
+      color: var(--white);
+    }
+  }
+
+  .link--text {
+    margin-top: 34px;
+    display: inline-block;
+    font-family: var(--font-500);
+    font-size: 24px;
+    line-height: 36px;
+    color: var(--white);
+    position: relative;
+    padding-bottom: 5px;
+
+    &:after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: var(--white);
+    }
+  }
+}
+
+.asp.active {
+  .wedo {
+    &-title {
+      color: var(--blue-violet);
+    }
+
+    &-content {
+      // height: 100%;
+      overflow: hidden !important;
+      height: 100% !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+      transition: all 0.5s ease-out !important;
+      will-change: transition, height !important;
     }
   }
 }
