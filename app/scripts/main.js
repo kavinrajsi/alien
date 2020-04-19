@@ -12,372 +12,373 @@ $(document).ready(function() {
 });
 
 
-// // init controller
-// const controller = new ScrollMagic.Controller();
+// init controller
+const controller = new ScrollMagic.Controller();
 
-// $(".hero-unit").each(function (i) {
-//   var animateIn = new TimelineMax();
-//   var imgOvarly = $(this).find(".page-title, .page-title-secondary");
-//   console.log(imgOvarly);
-//   animateIn.staggerFromTo(
-//     imgOvarly,
-//     1,
-//     {
-//       opacity: 0,
-//       y: 30,
-//       transformOrigin: "bottom",
-//       ease: Power4.easeOut,
-//     },
-//     {
-//       opacity: 1,
-//       y: 0,
-//       transformOrigin: "bottom",
-//       ease: Power4.easeOut,
-//     },
-//     0.5
-//   );
+$(".hero-unit").each(function (i) {
+  var animateIn = new TimelineMax();
+  var imgOvarly = $(this).find(".page-title, .page-title-secondary");
+  console.log(imgOvarly);
+  animateIn.staggerFromTo(
+    imgOvarly,
+    1,
+    {
+      opacity: 0,
+      y: 30,
+      transformOrigin: "bottom",
+      ease: Power4.easeOut,
+    },
+    {
+      opacity: 1,
+      y: 0,
+      transformOrigin: "bottom",
+      ease: Power4.easeOut,
+    },
+    0.5
+  );
 
-//   var scene = new ScrollMagic.Scene({
-//     triggerElement: this,
-//     triggerHook: 0.5,
-//     offset: "0",
-//   })
-//     .setTween(animateIn)
-//     .addIndicators()
-//     .addTo(controller);
+  var scene = new ScrollMagic.Scene({
+    triggerElement: this,
+    triggerHook: 0.5,
+    offset: "0",
+  })
+    .setTween(animateIn)
+    .addIndicators()
+    .addTo(controller);
 
-//   var reverse = scene.reverse();
-//   scene.reverse(true);
-// });
+  var reverse = scene.reverse();
+  scene.reverse(true);
+});
 
-// TweenLite.set(".wedo-content", {
-//   autoAlpha: 0.3,
-//   height: 0,
-// });
+TweenLite.set(".wedo-content", {
+  autoAlpha: 0.3,
+  height: 0,
+});
 
-// $(".asp").each(function (i) {
-//   const animateIn = gsap.timeline();
-//   const imgOvarly = $(this).find(".wedo-content");
-//   console.log(imgOvarly);
+$(".asp").each(function (i) {
+  const animateIn = gsap.timeline();
+  const imgOvarly = $(this).find(".wedo-content");
+  console.log(imgOvarly);
 
-//   animateIn.staggerFromTo(
-//     imgOvarly,
-//     1,
-//     {
-//       opacity: 0,
-//       height: 0,
-//       y: 30,
-//       transformOrigin: "bottom",
-//       ease: Power4.easeOut,
-//     },
-//     {
-//       opacity: 1,
-//       height: "100%",
-//       y: 0,
-//       transformOrigin: "bottom",
-//       ease: Power4.easeOut,
-//     },
-//     0.23
-//   );
+  animateIn.staggerFromTo(
+    imgOvarly,
+    1,
+    {
+      opacity: 0,
+      height: 0,
+      y: 30,
+      transformOrigin: "bottom",
+      ease: Power4.easeOut,
+    },
+    {
+      opacity: 1,
+      height: "100%",
+      y: 0,
+      transformOrigin: "bottom",
+      ease: Power4.easeOut,
+    },
+    0.23
+  );
 
-//   // create a scene for each element
-//   var wedoList = new ScrollMagic.Scene({
-//     // triggerElement: revealElements[i],
-//     triggerElement: this,
-//     offset: "0",
-//     triggerHook: 0.5,
-//     duration: "100px",
-//   })
-//     .setClassToggle(this, "active")
-//     .setTween(animateIn)
-//     .addIndicators({
-//       name: i + 1,
-//       colorTrigger: "white",
-//       colorStart: "white",
-//       colorEnd: "white",
-//       indent: 25,
-//     }) // add indicators (requires plugin)
-//     .addTo(controller);
+  // create a scene for each element
+  var wedoList = new ScrollMagic.Scene({
+    // triggerElement: revealElements[i],
+    triggerElement: this,
+    offset: "0",
+    triggerHook: 0.5,
+    duration: "100px",
+  })
+    .setClassToggle(this, "active")
+    .setTween(animateIn)
+    .addIndicators({
+      name: i + 1,
+      colorTrigger: "white",
+      colorStart: "white",
+      colorEnd: "white",
+      indent: 25,
+    }) // add indicators (requires plugin)
+    .addTo(controller);
 
-//   var reverses = wedoList.reverse();
-//   wedoList.reverse(true);
-// });
-
-
-// $(".we-let-our-work").each(function (i) {
-//   var animateIn = new TimelineMax();
-//   var imgOvarly = $(this).find(".section-title span, .section-content");
-//   console.log(imgOvarly);
-//   animateIn.staggerFromTo(
-//     imgOvarly,
-//     1,
-//     {
-//       opacity: 0,
-//       y: 30,
-//       transformOrigin: "bottom",
-//       ease: Power4.easeOut,
-//     },
-//     {
-//       opacity: 1,
-//       y: 0,
-//       transformOrigin: "bottom",
-//       ease: Power4.easeOut,
-//     },
-//     0.5
-//   );
-
-//   var scene = new ScrollMagic.Scene({
-//     triggerElement: this,
-//     triggerHook: 0.5,
-//     offset: "0",
-//   })
-//     .setTween(animateIn)
-//     .addIndicators()
-//     .addTo(controller);
-
-//   var reverse = scene.reverse();
-//   scene.reverse(true);
-// });
+  var reverses = wedoList.reverse();
+  wedoList.reverse(true);
+});
 
 
-// $(".project-list").each(function (i) {
-//   var animateIn = new TimelineMax();
-//   var imgOvarly = $(this).find(".project-wrapper");
-//   console.log(imgOvarly);
-//   animateIn.staggerFromTo(
-//     imgOvarly,
-//     1,
-//     {
-//       opacity: 0,
-//       y: 30,
-//       transformOrigin: "bottom",
-//       ease: Power4.easeOut,
-//     },
-//     {
-//       opacity: 1,
-//       y: 0,
-//       transformOrigin: "bottom",
-//       ease: Power4.easeOut,
-//     },
-//     0.5
-//   );
+$(".we-let-our-work").each(function (i) {
+  var animateIn = new TimelineMax();
+  var imgOvarly = $(this).find(".section-title span, .section-content");
+  console.log(imgOvarly);
+  animateIn.staggerFromTo(
+    imgOvarly,
+    1,
+    {
+      opacity: 0,
+      y: 30,
+      transformOrigin: "bottom",
+      ease: Power4.easeOut,
+    },
+    {
+      opacity: 1,
+      y: 0,
+      transformOrigin: "bottom",
+      ease: Power4.easeOut,
+    },
+    0.5
+  );
 
-//   var scene = new ScrollMagic.Scene({
-//     triggerElement: this,
-//     triggerHook: 0.5,
-//     offset: "0",
-//   })
-//     .setTween(animateIn)
-//     .addIndicators()
-//     .addTo(controller);
+  var scene = new ScrollMagic.Scene({
+    triggerElement: this,
+    triggerHook: 0.5,
+    offset: "0",
+  })
+    .setTween(animateIn)
+    .addIndicators()
+    .addTo(controller);
 
-//   var reverse = scene.reverse();
-//   scene.reverse(true);
-// });
-
-// /* last section */
-// $(".requestacces").each(function (i) {
-//   var animateIn = new TimelineMax();
-//   var imgOvarly = $(this).find("p span, a");
-//   console.log(imgOvarly);
-//   animateIn.staggerFromTo(
-//     imgOvarly,
-//     1,
-//     {
-//       opacity: 0,
-//       y: 30,
-//       transformOrigin: "bottom",
-//       ease: Power4.easeOut,
-//     },
-//     {
-//       opacity: 1,
-//       y: 0,
-//       transformOrigin: "bottom",
-//       ease: Power4.easeOut,
-//     },
-//     0.5
-//   );
-
-//   var scene = new ScrollMagic.Scene({
-//     triggerElement: this,
-//     triggerHook: 0.5,
-//     offset: "0",
-//   })
-//     .setTween(animateIn)
-//     .addIndicators()
-//     .addTo(controller);
-
-//   var reverse = scene.reverse();
-//   scene.reverse(true);
-// });
+  var reverse = scene.reverse();
+  scene.reverse(true);
+});
 
 
+$(".project-list").each(function (i) {
+  var animateIn = new TimelineMax();
+  var imgOvarly = $(this).find(".project-wrapper");
+  console.log(imgOvarly);
+  animateIn.staggerFromTo(
+    imgOvarly,
+    1,
+    {
+      opacity: 0,
+      y: 30,
+      transformOrigin: "bottom",
+      ease: Power4.easeOut,
+    },
+    {
+      opacity: 1,
+      y: 0,
+      transformOrigin: "bottom",
+      ease: Power4.easeOut,
+    },
+    0.5
+  );
 
-// /* slider */
-// // setup variable
-// const slider_one = $(".testimonial-one .slide"),
-//   slider1 = $(".testimonial-one .slider1"),
-//   slider2 = $(".testimonial-one .slider2"),
-//   slider3 = $(".testimonial-one .slider3"),
-//   actionLeft = $(".testimonial-action .action-left"),
-//   actionRight = $(".testimonial-action .action-right"),
-//   active = $(".testimonial-one .active");
+  var scene = new ScrollMagic.Scene({
+    triggerElement: this,
+    triggerHook: 0.5,
+    offset: "0",
+  })
+    .setTween(animateIn)
+    .addIndicators()
+    .addTo(controller);
 
-// function init() {
-//   TweenLite.set(slider_one.not(active), {
-//     autoAlpha: 0,
-//   });
+  var reverse = scene.reverse();
+  scene.reverse(true);
+});
 
-//   TweenLite.set(actionLeft, {
-//     autoAlpha: 0.3,
-//     color: "#444",
-//   });
+/* last section */
+$(".requestacces").each(function (i) {
+  var animateIn = new TimelineMax();
+  var imgOvarly = $(this).find("p span, a");
+  console.log(imgOvarly);
+  animateIn.staggerFromTo(
+    imgOvarly,
+    1,
+    {
+      opacity: 0,
+      y: 30,
+      transformOrigin: "bottom",
+      ease: Power4.easeOut,
+    },
+    {
+      opacity: 1,
+      y: 0,
+      transformOrigin: "bottom",
+      ease: Power4.easeOut,
+    },
+    0.5
+  );
 
-//   TweenLite.set(actionRight, {
-//     autoAlpha: 1,
-//     color: "#fff",
-//   });
-// }
-// init();
+  var scene = new ScrollMagic.Scene({
+    triggerElement: this,
+    triggerHook: 0.5,
+    offset: "0",
+  })
+    .setTween(animateIn)
+    .addIndicators()
+    .addTo(controller);
 
-// function gotoNextSlider(slideOut, slideIn) {
-//   const tl = gsap.timeline(),
-//     content = slideIn.find("blockquote"),
-//     author = slideIn.find("footer"),
-//     index = slideIn.index(),
-//     size = $(".testimonial-one .slide").length;
+  var reverse = scene.reverse();
+  scene.reverse(true);
+});
 
-//   if (slideIn !== 0) {
-//     // go to next slider
-//     tl
-//       // init out
-//       .set(slideOut, {
-//         autoAlpha: 0,
-//         css: {
-//           className: "-=slide testimonial-content",
-//         },
-//       })
-//       // init in
-//       .set(slideIn, {
-//         y: "100%",
-//         autoAlpha: 0,
-//         css: {
-//           className: "+=slide active testimonial-content",
-//         },
-//       })
-//       // move out
-//       .to(
-//         slideOut,
-//         {
-//           autoAlpha: 0,
-//           y: "-100%",
-//           ease: Power3.easeInOut,
-//         },
-//         0
-//       )
-//       //move in
-//       .to(
-//         slideIn,
-//         {
-//           y: "0",
-//           autoAlpha: 1,
-//           ease: Power3.easeInOut,
-//         },
-//         0
-//       );
-//   }
 
-//   TweenLite.to(actionLeft, 0.3, {
-//     autoAlpha: 1,
-//     color: "#fff",
-//   });
 
-//   console.log(index + "," + size);
+/* slider */
+// setup variable
+const slider_one = $(".testimonial-one .slide"),
+  slider1 = $(".testimonial-one .slider1"),
+  slider2 = $(".testimonial-one .slider2"),
+  slider3 = $(".testimonial-one .slider3"),
+  actionLeft = $(".testimonial-action .action-left"),
+  actionRight = $(".testimonial-action .action-right"),
+  active = $(".testimonial-one .active");
 
-//   if (index === 1) {
-//     TweenLite.to(actionRight, 0.3, {
-//       autoAlpha: 0,
-//       color: "#444",
-//     });
-//   }
-// }
+function init() {
+  TweenLite.set(slider_one.not(active), {
+    autoAlpha: 0,
+  });
 
-// actionRight.click(function (e) {
-//   e.preventDefault();
-//   const slideOut = $(".testimonial-one .slide"),
-//     slideIn = $(".testimonial-one .slide.active").next();
-//   gotoNextSlider(slideOut, slideIn);
-// });
+  TweenLite.set(actionLeft, {
+    autoAlpha: 0.3,
+    color: "#444",
+  });
 
-// function gotoPrevSlider(slideOut, slideIn) {
-//   console.log("left");
+  TweenLite.set(actionRight, {
+    autoAlpha: 1,
+    color: "#fff",
+  });
+}
+init();
 
-//   const tl = gsap.timeline(),
-//     content = slideIn.find("blockquote"),
-//     author = slideIn.find("footer"),
-//     index = slideIn.index(),
-//     size = $(".testimonial-one .slide").length;
+function gotoNextSlider(slideOut, slideIn) {
+  const tl = gsap.timeline(),
+    content = slideIn.find("blockquote"),
+    author = slideIn.find("footer"),
+    index = slideIn.index(),
+    size = $(".testimonial-one .slide").length;
 
-//   console.log(index + "," + size);
+  if (slideIn !== 0) {
+    // go to next slider
+    tl
+      // init out
+      .set(slideOut, {
+        autoAlpha: 0,
+        css: {
+          className: "-=slide testimonial-content",
+        },
+      })
+      // init in
+      .set(slideIn, {
+        y: "100%",
+        autoAlpha: 0,
+        css: {
+          className: "+=slide active testimonial-content",
+        },
+      })
+      // move out
+      .to(
+        slideOut,
+        {
+          autoAlpha: 0,
+          y: "-100%",
+          ease: Power3.easeInOut,
+        },
+        0
+      )
+      //move in
+      .to(
+        slideIn,
+        {
+          y: "0",
+          autoAlpha: 1,
+          ease: Power3.easeInOut,
+        },
+        0
+      );
+  }
 
-//   if (slideIn !== 0) {
-//     // go to prev slider
-//     tl
-//       // init out
-//       .set(slideOut, {
-//         autoAlpha: 0,
-//         css: {
-//           className: "-=slide testimonial-content",
-//         },
-//       })
-//       // init in
-//       .set(slideIn, {
-//         y: "-100%",
-//         autoAlpha: 0,
-//         css: {
-//           className: "+=slide active testimonial-content",
-//         },
-//       })
-//       // move out
-//       .to(
-//         slideOut,
-//         {
-//           autoAlpha: 0,
-//           y: "100%",
-//           ease: Power3.easeInOut,
-//         },
-//         0
-//       )
-//       //move in
-//       .to(
-//         slideIn,
-//         {
-//           y: "0",
-//           autoAlpha: 1,
-//           ease: Power3.easeInOut,
-//         },
-//         0
-//       );
-//   }
+  TweenLite.to(actionLeft, 0.3, {
+    autoAlpha: 1,
+    color: "#fff",
+  });
 
-//   TweenLite.to(actionRight, 0.3, {
-//     autoAlpha: 1,
-//     color: "white",
-//   });
+  console.log(index + "," + size);
 
-//   if (index === 0) {
-//     TweenLite.to(actionLeft, 0.3, {
-//       autoAlpha: 0,
-//     });
-//   }
-// }
+  if (index === 1) {
+    TweenLite.to(actionRight, 0.3, {
+      autoAlpha: 0,
+      color: "#444",
+    });
+  }
+}
 
-// actionLeft.click(function (e) {
-//   e.preventDefault();
-//   const slideOut = $(".testimonial-one .slide"),
-//     slideIn = $(".testimonial-one .slide.active").prev();
-//   gotoPrevSlider(slideOut, slideIn);
-// });
+actionRight.click(function (e) {
+  e.preventDefault();
+  const slideOut = $(".testimonial-one .slide"),
+    slideIn = $(".testimonial-one .slide.active").next();
+  gotoNextSlider(slideOut, slideIn);
+});
+
+function gotoPrevSlider(slideOut, slideIn) {
+  console.log("left");
+
+  const tl = gsap.timeline(),
+    content = slideIn.find("blockquote"),
+    author = slideIn.find("footer"),
+    index = slideIn.index(),
+    size = $(".testimonial-one .slide").length;
+
+  console.log(index + "," + size);
+
+  if (slideIn !== 0) {
+    // go to prev slider
+    tl
+      // init out
+      .set(slideOut, {
+        autoAlpha: 0,
+        css: {
+          className: "-=slide testimonial-content",
+        },
+      })
+      // init in
+      .set(slideIn, {
+        y: "-100%",
+        autoAlpha: 0,
+        css: {
+          className: "+=slide active testimonial-content",
+        },
+      })
+      // move out
+      .to(
+        slideOut,
+        {
+          autoAlpha: 0,
+          y: "100%",
+          ease: Power3.easeInOut,
+        },
+        0
+      )
+      //move in
+      .to(
+        slideIn,
+        {
+          y: "0",
+          autoAlpha: 1,
+          ease: Power3.easeInOut,
+        },
+        0
+      );
+  }
+
+  TweenLite.to(actionRight, 0.3, {
+    autoAlpha: 1,
+    color: "white",
+  });
+
+  if (index === 0) {
+    TweenLite.to(actionLeft, 0.3, {
+      autoAlpha: 0,
+    });
+  }
+}
+
+actionLeft.click(function (e) {
+  e.preventDefault();
+  const slideOut = $(".testimonial-one .slide"),
+    slideIn = $(".testimonial-one .slide.active").prev();
+  gotoPrevSlider(slideOut, slideIn);
+});
+
 
 // /* wave pattern */
 // /*
