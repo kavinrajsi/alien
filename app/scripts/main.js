@@ -1,4 +1,12 @@
-// console.log("Allo Allo!");
+// console.log('Allo Allo!');
+
+// import './styles.css';
+import Gl from './gl';
+
+const scene = new Gl();
+scene.init();
+
+// load me
 
 $(document).ready(function() {
   var project1 = $('.we-let-our-work').offset();
@@ -6,7 +14,7 @@ $(document).ready(function() {
 
   $window.scroll(function() {
       if ( $window.scrollTop() >= project1.top) {
-          $("body").removeClass().addClass("wework-section");
+          $('body').removeClass().addClass('wework-section');
       }
   });
 });
@@ -15,9 +23,9 @@ $(document).ready(function() {
 // init controller
 const controller = new ScrollMagic.Controller();
 
-$(".hero-unit").each(function (i) {
+$('.hero-unit').each(function (i) {
   var animateIn = new TimelineMax();
-  var imgOvarly = $(this).find(".page-title, .page-title-secondary");
+  var imgOvarly = $(this).find('.page-title, .page-title-secondary');
   console.log(imgOvarly);
   animateIn.staggerFromTo(
     imgOvarly,
@@ -25,13 +33,13 @@ $(".hero-unit").each(function (i) {
     {
       opacity: 0,
       y: 30,
-      transformOrigin: "bottom",
+      transformOrigin: 'bottom',
       ease: Power4.easeOut,
     },
     {
       opacity: 1,
       y: 0,
-      transformOrigin: "bottom",
+      transformOrigin: 'bottom',
       ease: Power4.easeOut,
     },
     0.5
@@ -40,7 +48,7 @@ $(".hero-unit").each(function (i) {
   var scene = new ScrollMagic.Scene({
     triggerElement: this,
     triggerHook: 0.5,
-    offset: "0",
+    offset: '0',
   })
     .setTween(animateIn)
     .addIndicators()
@@ -50,14 +58,14 @@ $(".hero-unit").each(function (i) {
   scene.reverse(true);
 });
 
-TweenLite.set(".wedo-content", {
+TweenLite.set('.wedo-content', {
   autoAlpha: 0.3,
   height: 0,
 });
 
-$(".asp").each(function (i) {
+$('.asp').each(function (i) {
   const animateIn = gsap.timeline();
-  const imgOvarly = $(this).find(".wedo-content");
+  const imgOvarly = $(this).find('.wedo-content');
   console.log(imgOvarly);
 
   animateIn.staggerFromTo(
@@ -67,14 +75,14 @@ $(".asp").each(function (i) {
       opacity: 0,
       height: 0,
       y: 30,
-      transformOrigin: "bottom",
+      transformOrigin: 'bottom',
       ease: Power4.easeOut,
     },
     {
       opacity: 1,
-      height: "100%",
+      height: '100%',
       y: 0,
-      transformOrigin: "bottom",
+      transformOrigin: 'bottom',
       ease: Power4.easeOut,
     },
     0.23
@@ -84,17 +92,17 @@ $(".asp").each(function (i) {
   var wedoList = new ScrollMagic.Scene({
     // triggerElement: revealElements[i],
     triggerElement: this,
-    offset: "0",
+    offset: '0',
     triggerHook: 0.5,
-    duration: "100px",
+    duration: '100px',
   })
-    .setClassToggle(this, "active")
+    .setClassToggle(this, 'active')
     .setTween(animateIn)
     .addIndicators({
       name: i + 1,
-      colorTrigger: "white",
-      colorStart: "white",
-      colorEnd: "white",
+      colorTrigger: 'white',
+      colorStart: 'white',
+      colorEnd: 'white',
       indent: 25,
     }) // add indicators (requires plugin)
     .addTo(controller);
@@ -104,9 +112,9 @@ $(".asp").each(function (i) {
 });
 
 
-$(".we-let-our-work").each(function (i) {
+$('.we-let-our-work').each(function (i) {
   var animateIn = new TimelineMax();
-  var imgOvarly = $(this).find(".section-title span, .section-content");
+  var imgOvarly = $(this).find('.section-title span, .section-content');
   console.log(imgOvarly);
   animateIn.staggerFromTo(
     imgOvarly,
@@ -114,13 +122,13 @@ $(".we-let-our-work").each(function (i) {
     {
       opacity: 0,
       y: 30,
-      transformOrigin: "bottom",
+      transformOrigin: 'bottom',
       ease: Power4.easeOut,
     },
     {
       opacity: 1,
       y: 0,
-      transformOrigin: "bottom",
+      transformOrigin: 'bottom',
       ease: Power4.easeOut,
     },
     0.5
@@ -129,7 +137,7 @@ $(".we-let-our-work").each(function (i) {
   var scene = new ScrollMagic.Scene({
     triggerElement: this,
     triggerHook: 0.5,
-    offset: "0",
+    offset: '0',
   })
     .setTween(animateIn)
     .addIndicators()
@@ -140,9 +148,9 @@ $(".we-let-our-work").each(function (i) {
 });
 
 
-$(".project-list").each(function (i) {
+$('.project-list').each(function (i) {
   var animateIn = new TimelineMax();
-  var imgOvarly = $(this).find(".project-wrapper");
+  var imgOvarly = $(this).find('.project-wrapper');
   console.log(imgOvarly);
   animateIn.staggerFromTo(
     imgOvarly,
@@ -150,13 +158,13 @@ $(".project-list").each(function (i) {
     {
       opacity: 0,
       y: 30,
-      transformOrigin: "bottom",
+      transformOrigin: 'bottom',
       ease: Power4.easeOut,
     },
     {
       opacity: 1,
       y: 0,
-      transformOrigin: "bottom",
+      transformOrigin: 'bottom',
       ease: Power4.easeOut,
     },
     0.5
@@ -165,7 +173,7 @@ $(".project-list").each(function (i) {
   var scene = new ScrollMagic.Scene({
     triggerElement: this,
     triggerHook: 0.5,
-    offset: "0",
+    offset: '0',
   })
     .setTween(animateIn)
     .addIndicators()
@@ -176,9 +184,9 @@ $(".project-list").each(function (i) {
 });
 
 /* last section */
-$(".requestacces").each(function (i) {
+$('.requestacces').each(function (i) {
   var animateIn = new TimelineMax();
-  var imgOvarly = $(this).find("p span, a");
+  var imgOvarly = $(this).find('p span, a');
   console.log(imgOvarly);
   animateIn.staggerFromTo(
     imgOvarly,
@@ -186,13 +194,13 @@ $(".requestacces").each(function (i) {
     {
       opacity: 0,
       y: 30,
-      transformOrigin: "bottom",
+      transformOrigin: 'bottom',
       ease: Power4.easeOut,
     },
     {
       opacity: 1,
       y: 0,
-      transformOrigin: "bottom",
+      transformOrigin: 'bottom',
       ease: Power4.easeOut,
     },
     0.5
@@ -201,7 +209,7 @@ $(".requestacces").each(function (i) {
   var scene = new ScrollMagic.Scene({
     triggerElement: this,
     triggerHook: 0.5,
-    offset: "0",
+    offset: '0',
   })
     .setTween(animateIn)
     .addIndicators()
@@ -215,13 +223,13 @@ $(".requestacces").each(function (i) {
 
 /* slider */
 // setup variable
-const slider_one = $(".testimonial-one .slide"),
-  slider1 = $(".testimonial-one .slider1"),
-  slider2 = $(".testimonial-one .slider2"),
-  slider3 = $(".testimonial-one .slider3"),
-  actionLeft = $(".testimonial-action .action-left"),
-  actionRight = $(".testimonial-action .action-right"),
-  active = $(".testimonial-one .active");
+const slider_one = $('.testimonial-one .slide'),
+  slider1 = $('.testimonial-one .slider1'),
+  slider2 = $('.testimonial-one .slider2'),
+  slider3 = $('.testimonial-one .slider3'),
+  actionLeft = $('.testimonial-action .action-left'),
+  actionRight = $('.testimonial-action .action-right'),
+  active = $('.testimonial-one .active');
 
 function init() {
   TweenLite.set(slider_one.not(active), {
@@ -230,22 +238,22 @@ function init() {
 
   TweenLite.set(actionLeft, {
     autoAlpha: 0.3,
-    color: "#444",
+    color: '#444',
   });
 
   TweenLite.set(actionRight, {
     autoAlpha: 1,
-    color: "#fff",
+    color: '#fff',
   });
 }
 init();
 
 function gotoNextSlider(slideOut, slideIn) {
   const tl = gsap.timeline(),
-    content = slideIn.find("blockquote"),
-    author = slideIn.find("footer"),
+    content = slideIn.find('blockquote'),
+    author = slideIn.find('footer'),
     index = slideIn.index(),
-    size = $(".testimonial-one .slide").length;
+    size = $('.testimonial-one .slide').length;
 
   if (slideIn !== 0) {
     // go to next slider
@@ -254,15 +262,15 @@ function gotoNextSlider(slideOut, slideIn) {
       .set(slideOut, {
         autoAlpha: 0,
         css: {
-          className: "-=slide testimonial-content",
+          className: '-=slide testimonial-content',
         },
       })
       // init in
       .set(slideIn, {
-        y: "100%",
+        y: '100%',
         autoAlpha: 0,
         css: {
-          className: "+=slide active testimonial-content",
+          className: '+=slide active testimonial-content',
         },
       })
       // move out
@@ -270,7 +278,7 @@ function gotoNextSlider(slideOut, slideIn) {
         slideOut,
         {
           autoAlpha: 0,
-          y: "-100%",
+          y: '-100%',
           ease: Power3.easeInOut,
         },
         0
@@ -279,7 +287,7 @@ function gotoNextSlider(slideOut, slideIn) {
       .to(
         slideIn,
         {
-          y: "0",
+          y: '0',
           autoAlpha: 1,
           ease: Power3.easeInOut,
         },
@@ -289,36 +297,36 @@ function gotoNextSlider(slideOut, slideIn) {
 
   TweenLite.to(actionLeft, 0.3, {
     autoAlpha: 1,
-    color: "#fff",
+    color: '#fff',
   });
 
-  console.log(index + "," + size);
+  console.log(index + ',' + size);
 
   if (index === 1) {
     TweenLite.to(actionRight, 0.3, {
       autoAlpha: 0,
-      color: "#444",
+      color: '#444',
     });
   }
 }
 
 actionRight.click(function (e) {
   e.preventDefault();
-  const slideOut = $(".testimonial-one .slide"),
-    slideIn = $(".testimonial-one .slide.active").next();
+  const slideOut = $('.testimonial-one .slide'),
+    slideIn = $('.testimonial-one .slide.active').next();
   gotoNextSlider(slideOut, slideIn);
 });
 
 function gotoPrevSlider(slideOut, slideIn) {
-  console.log("left");
+  console.log('left');
 
   const tl = gsap.timeline(),
-    content = slideIn.find("blockquote"),
-    author = slideIn.find("footer"),
+    content = slideIn.find('blockquote'),
+    author = slideIn.find('footer'),
     index = slideIn.index(),
-    size = $(".testimonial-one .slide").length;
+    size = $('.testimonial-one .slide').length;
 
-  console.log(index + "," + size);
+  console.log(index + ',' + size);
 
   if (slideIn !== 0) {
     // go to prev slider
@@ -327,15 +335,15 @@ function gotoPrevSlider(slideOut, slideIn) {
       .set(slideOut, {
         autoAlpha: 0,
         css: {
-          className: "-=slide testimonial-content",
+          className: '-=slide testimonial-content',
         },
       })
       // init in
       .set(slideIn, {
-        y: "-100%",
+        y: '-100%',
         autoAlpha: 0,
         css: {
-          className: "+=slide active testimonial-content",
+          className: '+=slide active testimonial-content',
         },
       })
       // move out
@@ -343,7 +351,7 @@ function gotoPrevSlider(slideOut, slideIn) {
         slideOut,
         {
           autoAlpha: 0,
-          y: "100%",
+          y: '100%',
           ease: Power3.easeInOut,
         },
         0
@@ -352,7 +360,7 @@ function gotoPrevSlider(slideOut, slideIn) {
       .to(
         slideIn,
         {
-          y: "0",
+          y: '0',
           autoAlpha: 1,
           ease: Power3.easeInOut,
         },
@@ -362,7 +370,7 @@ function gotoPrevSlider(slideOut, slideIn) {
 
   TweenLite.to(actionRight, 0.3, {
     autoAlpha: 1,
-    color: "white",
+    color: 'white',
   });
 
   if (index === 0) {
@@ -374,8 +382,8 @@ function gotoPrevSlider(slideOut, slideIn) {
 
 actionLeft.click(function (e) {
   e.preventDefault();
-  const slideOut = $(".testimonial-one .slide"),
-    slideIn = $(".testimonial-one .slide.active").prev();
+  const slideOut = $('.testimonial-one .slide'),
+    slideIn = $('.testimonial-one .slide.active').prev();
   gotoPrevSlider(slideOut, slideIn);
 });
 
