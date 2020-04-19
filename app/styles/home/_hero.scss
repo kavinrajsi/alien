@@ -1,30 +1,13 @@
+// header hero
 .hero-unit {
   position: relative;
-  padding-top: 194px;
-  padding-bottom: 200px;
-
-  canvas {
-    background-repeat: no-repeat;
-    background-image: url('../images/frame.svg');
-    background-color: transparent;
-    background-position: 0px 0px;
-    height: 100%;
-    width: auto;
-    min-height: 300px;
-    z-index: -1;
-    display: block;
-    width: 100%;
-    height: 100%;
-    // width: 1371.88px;
-    // height: 1371.88px;
-    position: absolute;
-    left: -124px;
-    top: -80px;
-  }
+  @include interpolate('padding-top', 576px, 206px, 992px, 192px, 'ease-in');
+  @include interpolate('padding-bottom', 576px, 100px, 992px, 200px, 'ease-in');
 
   &:before {
     content: "";
-    // content: none;
+    /* TODO : Need to change the width and height, then convert into WEBGL interaction effect */
+    content: none;
     z-index: -1;
     display: block;
     width: 100%;
@@ -42,25 +25,42 @@
 
   .page-title {
     font-family: var(--font-500);
-    font-size: 65px;
-    line-height: 90px;
     color: var(--white);
-    margin-bottom: 168px;
+
+    @include interpolate('font-size', 576px, 38px, 992px, 65px, 'ease-in');
+    @include interpolate('line-height', 576px, 50px, 992px, 90px, 'ease-in');
+    @include interpolate('margin-bottom', 576px, 40px, 992px, 168px, 'ease-in');
 
     span {
       display: block;
     }
 
     &-secondary {
-      margin-left: auto;
-      margin-right: 0;
+      position: relative;
+
       font-family: var(--font-400);
       font-size: 18px;
       line-height: 30px;
       color: var(--white);
-      width: 300px;
-      position: relative;
+
+      width: 335px;
+      margin-left: auto;
+      margin-right: auto;
       padding-top: 30px;
+
+      span {
+        display: inline-block;
+      }
+
+      @media(min-width: $mobile) {
+        width: 300px;
+        margin-left: auto;
+        margin-right: 0;
+
+        span {
+          display: inline;
+        }
+      }
 
       &:before {
         content: "";
@@ -76,19 +76,19 @@
   }
 }
 
-
-
+// home page about
 .about-what-we-do {
-  padding-top: 220px;
-  padding-bottom: 220px;
+  @include interpolate('margin-bottom', 576px, 90px, 992px, 206px, 'ease-in');
 
   .wedo {
     &-title {
       font-family: var(--font-500);
-      font-size: 100px;
-      line-height: 120px;
       letter-spacing: 3px;
-      padding-bottom: 40px;
+      position: relative;
+      @include interpolate('font-size', 576px, 36px, 992px, 100px, 'ease-in');
+      @include interpolate('line-height', 576px, 54px, 992px, 120px, 'ease-in');
+      @include interpolate('margin-bottom', 576px, 20px, 992px, 40px, 'ease-in');
+
       /*
        *
        * Support on
@@ -109,13 +109,21 @@
         -webkit-text-stroke-color: var(--black-coral);
       }
 
-      &.active {
+      &:after {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        content: attr(data-text);
         color: var(--blue-violet);
-
-        +.wedo-content {
-          display: block;
-        }
+        display: block;
+        overflow: hidden;
+        transition-property: width;
+        transition-duration: 1000ms;
+        white-space: nowrap;
       }
+
     }
 
     &-content {
@@ -125,22 +133,26 @@
       visibility: hidden !important;
       transition: all 0.2s ease-in !important;
       will-change: transition, height !important;
-      // display: none;
-      max-width: 702px;
-      padding-bottom: 40px;
       font-family: var(--font-400);
-      font-size: 24px;
-      line-height: 36px;
       color: var(--white);
+      display: none;
+
+      max-width: 702px;
+
+      @include interpolate('font-size', 576px, 18px, 992px, 24px, 'ease-in');
+      @include interpolate('line-height', 576px, 30px, 992px, 36px, 'ease-in');
+      @include interpolate('margin-bottom', 576px, 30px, 992px, 40px, 'ease-in');
     }
   }
 
   .link--text {
-    margin-top: 34px;
+
+    @include interpolate('margin-top', 576px, 30px, 992px, 34px, 'ease-in');
+    @include interpolate('font-size', 576px, 20px, 992px, 24px, 'ease-in');
+    @include interpolate('line-height', 576px, 30px, 992px, 36px, 'ease-in');
+
     display: inline-block;
     font-family: var(--font-500);
-    font-size: 24px;
-    line-height: 36px;
     color: var(--white);
     position: relative;
     padding-bottom: 5px;
@@ -155,20 +167,31 @@
   }
 }
 
-.asp.active {
-  .wedo {
-    &-title {
-      color: var(--blue-violet);
-    }
+// home page about section active
+.asp {
+  &.active {
+    .wedo {
+      &-title {
+        color: var(--blue-violet);
+        -webkit-text-stroke-color: transparent;
+        -webkit-text-stroke-width: 0px;
+        -webkit-text-stroke: 0px;
+        &:after {
+          width: 100%;
+          transition-delay: 150ms;
+        }
 
-    &-content {
-      // height: 100%;
-      overflow: hidden !important;
-      height: 100% !important;
-      opacity: 1 !important;
-      visibility: visible !important;
-      transition: all 0.5s ease-out !important;
-      will-change: transition, height !important;
+      }
+
+      &-content {
+        display: block !important;
+        overflow: hidden !important;
+        height: 100% !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transition: all 0.5s ease-out !important;
+        will-change: transition, height !important;
+      }
     }
   }
 }

@@ -1,4 +1,6 @@
 .hear-them {
+  display: none !important;
+
   &-say-it {
     margin-top: 200px;
     display: grid;
@@ -56,7 +58,7 @@
     }
   }
 
-  &-one{
+  &-one {
     position: relative;
     min-height: 352px;
   }

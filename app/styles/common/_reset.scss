@@ -153,6 +153,11 @@ table {
   outline: 0;
 }
 
+svg{
+  overflow: hidden;
+  vertical-align: middle;
+}
+
 html{
   scroll-behavior: smooth;
   -webkit-tap-highlight-color: transparent;
