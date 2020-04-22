@@ -1,4 +1,4 @@
-@import 'common/index';
+@import "common/index";
 /*
    * 'reset'
    * 'interpolate'
@@ -7,7 +7,7 @@
    * 'footer'
   */
 
-@import 'home/index';
+@import "home/index";
 
 /*
    * 'hero'
@@ -15,3 +15,6 @@
    * 'slider'
    * 'let-our-work'
   */
+
+
+ @import "about/index";
