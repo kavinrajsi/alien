@@ -1,0 +1,47 @@
+@import 'reset';
+@import 'interpolate';
+@import 'variable';
+@import 'font';
+@import 'header';
+@import 'footer';
+
+body {
+  background: #0A0908;
+  color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: hidden;
+}
+
+.container {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  width: 100%;
+
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media(min-width: $ptablet) {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 1200px;
+  }
+
+  &-fluid {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    overflow: hidden;
+    width: 100%;
+  }
+
+}
+
+.no-padding{
+  padding: 0;
+}
