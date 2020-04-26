@@ -67,5 +67,11 @@
         "single"
       ]
     }
-  }
+  },
+  "name": "alien",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/kavinrajsi/alien.git",
+  "author": "kavinrajsi <we@sikavinraj.me>",
+  "license": "MIT"
 }

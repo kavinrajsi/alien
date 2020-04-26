@@ -183,7 +183,10 @@ a {
 }
 
 img {
+  max-width: 100%;
+  height: auto;
   vertical-align: middle;
+  border-style: none;
   border: 0;
 }
 
@@ -408,4 +411,9 @@ hr {
   border: 1px solid rgba(1, 88, 162, 0.2);
   padding: 0;
   margin: 0;
+}
+
+main {
+  margin-top: 76px;
+  position: relative;
 }
