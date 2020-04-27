@@ -172,13 +172,13 @@
   &.active {
     .wedo {
       &-title {
-        color: var(--blue-violet);
+        transition: all 0.5s ease-out;
         -webkit-text-stroke-color: transparent;
         -webkit-text-stroke-width: 0px;
         -webkit-text-stroke: 0px;
         &:after {
           width: 100%;
-          transition-delay: 150ms;
+          // transition-delay: 150ms;
         }
 
       }

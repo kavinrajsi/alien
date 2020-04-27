@@ -1,9 +1,23 @@
 .hear-them {
-  display: none !important;
 
   &-say-it {
-    margin-top: 200px;
-    display: grid;
+    &.view-mobile{
+      display: block;
+    }
+    &.view-desktop{
+      display: none;
+    }
+    @media(min-width: $tablet){
+      &.view-mobile{
+        display: none;
+      }
+      &.view-desktop{
+        display: grid;
+      }
+    }
+    // margin-top: 200px;
+    @include interpolate('margin-top', 375px, 90px, 992px, 200px, 'ease-in');
+    // display: grid;
     gap: 30px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: 'one action''. two';
@@ -38,6 +52,17 @@
         margin-bottom: 9px;
         display: block;
       }
+
+      .view-mobile & {
+        font-size: 46px;
+        line-height: 56px;
+        &:first-child {
+          margin-bottom: 5px;
+        }
+        &:last-child{
+          margin-bottom: 50px;
+        }
+      }
     }
 
     .action {
@@ -61,6 +86,10 @@
   &-one {
     position: relative;
     min-height: 352px;
+    .view-mobile & {
+    min-height: 420px;
+    min-height: 510px;
+  }
   }
 
   &-wrapper {}
@@ -68,10 +97,15 @@
   &-content {
     box-sizing: border-box;
     position: relative;
-    padding: 50px 80px;
+    // padding: 50px 80px;
     background: #0A0908;
     border: 1px solid #595D73;
     // z-index: 1;
+
+    @include interpolate('padding-top', 375px, 40px, 992px, 50px, 'ease-in');
+    @include interpolate('padding-bottom', 375px, 40px, 992px, 50px, 'ease-in');
+    @include interpolate('padding-left', 375px, 20px, 992px, 80px, 'ease-in');
+    @include interpolate('padding-right', 375px, 20px, 992px, 80px, 'ease-in');
 
     position: absolute;
     left: 0;
@@ -94,10 +128,13 @@
 
     blockquote {
       font-family: var(--font-400);
-      margin-bottom: 40px;
       font-size: 18px;
       line-height: 30px;
       color: var(--white);
+      margin-bottom: 40px;
+      .view-mobile & {
+        margin-bottom: 30px;
+    }
     }
 
     .author {
