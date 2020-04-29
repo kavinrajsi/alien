@@ -1,7 +1,7 @@
 // header hero
 .hero-unit {
   position: relative;
-  @include interpolate('padding-top', 576px, 206px, 992px, 192px, 'ease-in');
+  @include interpolate('padding-top', 576px, 206px, 992px, 194px, 'ease-in');
   @include interpolate('padding-bottom', 576px, 100px, 992px, 200px, 'ease-in');
 
   &:before {
@@ -44,8 +44,6 @@
       color: var(--white);
 
       width: 335px;
-      margin-left: auto;
-      margin-right: auto;
       padding-top: 30px;
 
       span {
