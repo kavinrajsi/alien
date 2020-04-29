@@ -14,11 +14,11 @@ header {
 
   // header logo
   .logo {
-    width: 189px;
+    width: 150px;
     height: auto;
 
     @media(min-width: $tablet) {
-      width: 150px;
+      width: 189px;
     }
 
     svg {
@@ -37,7 +37,7 @@ header {
       }
 
       height: 4px;
-      background: #FFFFFF;
+      background: var(--white);
 
       &:first-child {
         margin-bottom: 15px;
