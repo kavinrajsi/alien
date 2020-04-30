@@ -84,7 +84,7 @@ $('.requestacces').each(function (i) {
     reverse: true,
   })
     .setTween(animateIn)
-    .addIndicators()
+    .addIndicators({ name: 'send signal' })
     .addTo(controller);
 });
 
@@ -117,7 +117,6 @@ if ($('.hear-them-say-it')) {
       actionLeft = $('.view-mobile .testimonial-action .action-left'),
       actionRight = $('.view-mobile .testimonial-action .action-right'),
       active = $('.view-mobile .testimonial-one .active');
-
 
     function gotoPrevSlider(slideOut, slideIn) {
       console.log('left');
@@ -161,8 +160,8 @@ if ($('.hear-them-say-it')) {
         css: {
           color: '#fff',
           opacity: 1.0,
-          'pointer-events': 'initial'
-        }
+          'pointer-events': 'initial',
+        },
       });
 
       if (index === 0) {
@@ -170,11 +169,10 @@ if ($('.hear-them-say-it')) {
           css: {
             'pointer-events': 'none',
             color: '#fff',
-            opacity: 0.4
+            opacity: 0.4,
           },
         });
       }
-
     }
 
     function gotoNextSlider(slideOut, slideIn) {
@@ -189,29 +187,29 @@ if ($('.hear-them-say-it')) {
 
       if (slideIn !== 0) {
         rightCard
-        .set(slideOut, {
-          autoAlpha: 0,
-          css: {
-            className: '-=slide testimonial-content',
-          },
-        })
-        .set(slideIn, {
-          y: '-100%',
-          autoAlpha: 0,
-          css: {
-            className: '+=slide active testimonial-content',
-          },
-        })
-        .to(slideOut, {
-          autoAlpha: 0,
-          y: '100%',
-          ease: Power3.easeInOut,
-        })
-        .to(slideIn, {
-          y: '0',
-          autoAlpha: 1,
-          ease: Power3.easeInOut,
-        });
+          .set(slideOut, {
+            autoAlpha: 0,
+            css: {
+              className: '-=slide testimonial-content',
+            },
+          })
+          .set(slideIn, {
+            y: '-100%',
+            autoAlpha: 0,
+            css: {
+              className: '+=slide active testimonial-content',
+            },
+          })
+          .to(slideOut, {
+            autoAlpha: 0,
+            y: '100%',
+            ease: Power3.easeInOut,
+          })
+          .to(slideIn, {
+            y: '0',
+            autoAlpha: 1,
+            ease: Power3.easeInOut,
+          });
       }
 
       gsap.to(actionLeft, 0.3, {
@@ -239,7 +237,6 @@ if ($('.hear-them-say-it')) {
         slideIn = $('.view-mobile .testimonial-one .slide.active').next();
       gotoNextSlider(slideOut, slideIn);
     });
-
   } else {
     console.log('desktop');
     const slider_one = $('.view-desktop .testimonial-one .slide'),
@@ -399,4 +396,141 @@ if ($('.hear-them-say-it')) {
       gotoPrevSlider(slideOut, slideIn);
     });
   }
+}
+
+/* we let our work */
+if ($('.we-let-our-work')) {
+  /* Slide in add bg color */
+  new ScrollMagic.Scene({
+    triggerElement: '.we-let-our-work',
+    triggerHook: 0.5,
+    offset: '0',
+    reverse: true,
+  })
+
+    .setClassToggle('.we-let-our-work', 'wework-section')
+    .addIndicators({ name: 'bg color' })
+    .addTo(controller);
+
+  /* animation */
+  $('.project-list').each(function (i) {
+    const worklistTimeline = gsap.timeline(),
+      worklist = $(this).find('.project-wrapper');
+
+    worklistTimeline.staggerFromTo(
+      worklist,
+      0.25,
+      {
+        opacity: 0,
+        y: 30,
+        transformOrigin: 'bottom',
+        ease: Power4.easeOut,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        transformOrigin: 'bottom',
+        ease: Power4.easeOut,
+      },
+      0.25
+    );
+
+    const scene = new ScrollMagic.Scene({
+      triggerElement: this,
+      triggerHook: 0.5,
+      reverse: true,
+    })
+      .setTween(worklistTimeline)
+      .addIndicators({ name: 'work list' + i + '.' })
+      .addTo(controller);
+  });
+}
+
+/* hero unit */
+if ($('.hero-unit')) {
+  $('.hero-unit').each(function (i) {
+    const herounitTimeline = gsap.timeline(),
+      herounit = $(this).find('.page-title, .page-title-secondary');
+
+    herounitTimeline.staggerFromTo(
+      herounit,
+      1,
+      {
+        opacity: 0,
+        y: 30,
+        transformOrigin: 'bottom',
+        ease: Power4.easeOut,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        transformOrigin: 'bottom',
+        ease: Power4.easeOut,
+      },
+      0.5
+    );
+
+    const scene = new ScrollMagic.Scene({
+      triggerElement: this,
+      triggerHook: 1,
+      reverse: true,
+    })
+      .setTween(herounitTimeline)
+      .addIndicators({ name: 'hero section' })
+      .addTo(controller);
+  });
+}
+
+
+/* home page our service list */
+if ($('.wedo-content')) {
+  gsap.set('.wedo-content', {
+    autoAlpha: 0.3,
+    height: 0,
+  });
+
+  $('.asp').each(function (i) {
+    const wedocontentTimeline = gsap.timeline();
+    const wedocontent = $(this).find('.wedo-content');
+
+    wedocontentTimeline.staggerFromTo(
+      wedocontent,
+      0.5,
+      {
+        opacity: 0,
+        height: 0,
+        y: 30,
+        transformOrigin: 'bottom',
+        ease: Power4.easeOut,
+      },
+      {
+        opacity: 1,
+        height: '100%',
+        y: 0,
+        transformOrigin: 'bottom',
+        ease: Power4.easeOut,
+      },
+      0.25
+    );
+
+    // create a scene for each element
+    const wedoList = new ScrollMagic.Scene({
+      // triggerElement: revealElements[i],
+      triggerElement: this,
+      offset: '0',
+      triggerHook: 0.5,
+      duration: '160px',
+      reverse: true
+    })
+      .setClassToggle(this, 'active')
+      .setTween(wedocontentTimeline)
+      .addIndicators({
+        name: i + 1,
+        colorTrigger: 'white',
+        colorStart: 'white',
+        colorEnd: 'white',
+        indent: 25,
+      }) // add indicators (requires plugin)
+      .addTo(controller);
+  });
 }
