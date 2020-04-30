@@ -23,7 +23,7 @@
       </p>
     <![endif]-->
     <header>
-      <nav>
+      <nav class="menu--item">
         <div class="logo">
           <svg
             width="187"
@@ -90,10 +90,51 @@
           </svg>
         </div>
         <div class="menu--lists"></div>
-        <div class="menu--icon">
+        <div class="menu--icon trigger-menu">
           <span></span>
           <span></span>
         </div>
+      </nav>
+      <nav class="menu--item__content">
+        <!-- <div class="container"> -->
+        <div class="menu--item__content-left">
+          <ul class="menu--item__content-link">
+            <li><a data-text="WORK" href="#">WORK</a></li>
+            <li><a data-text="SERVICES" href="#">SERVICES</a></li>
+            <li><a data-text="ABOUT" href="#">ABOUT</a></li>
+            <li><a data-text="CONTACT" href="#">CONTACT</a></li>
+          </ul>
+        </div>
+        <div class="menu--item__content-right">
+          <div class="menu--secondary">
+            <p class="menu--item__content-label">
+              <span>PREFER MAIL?</span>You can always reach out to our team at
+            </p>
+            <a
+              class="menu--item__content-link small"
+              href="mailto:business@thealien.design"
+              >business@thealien.design
+            </a>
+          </div>
+          <div class="menu--secondary">
+            <p class="menu--item__content-label">NEED INDUSTRY INSIGHTS?</p>
+            <a class="menu--item__content-link small" href="/blog"
+              >Read our Blog</a
+            >
+          </div>
+        </div>
+        <div class="menu--item__content-footer">
+          <ul class="lead-me-out__link">
+            <li><a href="/index.html">ALIEN &copy; 2020</a></li>
+            <li><a href="#">Dribbble</a></li>
+            <li><a href="#">Behance</a></li>
+            <li><a href="#">Medium</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Linkedin</a></li>
+          </ul>
+        <!-- </div> -->
+      </div>
       </nav>
     </header>
     <main>
@@ -527,19 +568,19 @@
           <span>Ready for an encounter? </span> <span>Send us a signal.</span>
         </p>
         <a href="./contact.html" class="btn--cover">
-          <span class="btn--cover_text">Button</span>
+          <span class="btn--cover_text">Contact Now</span>
         </a>
       </div>
     </main>
     <footer class="container lead-me-out">
       <ul>
         <li><a href="/index.html">ALIEN</a>&copy; 2020</li>
-        <li><a href="#">Dribbble</a></li>
-        <li><a href="#">Behance</a></li>
-        <li><a href="#">Medium</a></li>
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">Twitter</a></li>
-        <li><a href="#">Linkedin</a></li>
+        <li><a href="https://dribbble.com/">Dribbble</a></li>
+        <li><a href="https://www.behance.net/">Behance</a></li>
+        <li><a href="http://medium.com/">Medium</a></li>
+        <li><a href="https://www.instagram.com/">Instagram</a></li>
+        <li><a href="https://twitter.com/">Twitter</a></li>
+        <li><a href="https://www.linkedin.com/">Linkedin</a></li>
       </ul>
     </footer>
     <!-- build:js scripts/vendor.js async -->
@@ -570,20 +611,6 @@
     <!-- endbuild -->
     <!-- build:js scripts/main.js async -->
     <script src="scripts/main.js"></script>
-    <script>
-      if ("loading" in HTMLImageElement.prototype) {
-        const images = document.querySelectorAll('img[loading="lazy"]');
-        images.forEach((img) => {
-          img.src = img.dataset.src;
-        });
-      } else {
-        // Dynamically import the LazySizes library
-        const script = document.createElement("script");
-        script.src =
-          "https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js";
-        document.body.appendChild(script);
-      }
-    </script>
     <!-- endbuild -->
   </body>
 </html>
