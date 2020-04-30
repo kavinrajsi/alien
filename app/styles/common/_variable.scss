@@ -22,6 +22,7 @@
 .wework-section{
   --wework-bg: #7DE2D1;
   --wework-color: #0A0908;
+  transition: all .65s ease-in;
 }
 
 $mobile: 576px;
