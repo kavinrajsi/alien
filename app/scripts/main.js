@@ -84,7 +84,7 @@ $('.requestacces').each(function (i) {
     reverse: true,
   })
     .setTween(animateIn)
-    .addIndicators()
+
     .addTo(controller);
 });
 
@@ -409,7 +409,7 @@ if ($('.we-let-our-work')) {
   })
 
     .setClassToggle('.we-let-our-work', 'wework-section')
-    .addIndicators()
+
     .addTo(controller);
 
   /* animation */
@@ -441,7 +441,7 @@ if ($('.we-let-our-work')) {
       reverse: true,
     })
       .setTween(worklistTimeline)
-      .addIndicators()
+
       .addTo(controller);
   });
 }
@@ -476,7 +476,7 @@ if ($('.hero-unit')) {
       reverse: true,
     })
       .setTween(herounitTimeline)
-      .addIndicators()
+
       .addTo(controller);
   });
 }
@@ -524,7 +524,7 @@ if ($('.wedo-content')) {
     })
       .setClassToggle(this, 'active')
       .setTween(wedocontentTimeline)
-      .addIndicators() // add indicators (requires plugin)
+       // add indicators (requires plugin)
       .addTo(controller);
   });
 }
