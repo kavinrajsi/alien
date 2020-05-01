@@ -15,17 +15,17 @@ if ('loading' in HTMLImageElement.prototype) {
 const body = document.body,
   headerMenu = gsap.timeline({ paused: true });
 
-headerMenu.to('.menu--icon span:first-child', 0.12, {
+headerMenu.to('.menu--icon span:first-child', 0.05, {
   css: { transform: 'rotate(30deg)' },
-  ease: Expo.easeOut,
+  ease: Expo.easeOut, /* ease in out need to add  */
 });
 
-headerMenu.to('.menu--icon span:last-child', 0.12, {
+headerMenu.to('.menu--icon span:last-child', 0.02, {
   css: { transform: 'rotate(-30deg)', top: '-22px' },
   ease: Expo.easeOut,
 });
 
-headerMenu.to('.menu--item__content', 0.3, {
+headerMenu.to('.menu--item__content', 0.05, {
   top: 90,
   visibility: 'visible',
   height: 'calc(100% - 80px)',
@@ -403,13 +403,14 @@ if ($('.we-let-our-work')) {
   /* Slide in add bg color */
   new ScrollMagic.Scene({
     triggerElement: '.we-let-our-work',
-    triggerHook: 0.5,
+    triggerHook: 0.3,
     offset: '0',
     reverse: true,
   })
 
-    .setClassToggle('.we-let-our-work', 'wework-section')
-
+    // .setClassToggle('.we-let-our-work', 'wework-section')
+    .setTween(".we-let-our-work", { backgroundColor: "#7de2d1", color: '#000'})
+    .addIndicators()
     .addTo(controller);
 
   /* animation */
@@ -419,7 +420,7 @@ if ($('.we-let-our-work')) {
 
     worklistTimeline.staggerFromTo(
       worklist,
-      0.25,
+      0.35,
       {
         opacity: 0,
         y: 30,
@@ -432,7 +433,7 @@ if ($('.we-let-our-work')) {
         transformOrigin: 'bottom',
         ease: Power4.easeOut,
       },
-      0.25
+      0.3
     );
 
     const scene = new ScrollMagic.Scene({
@@ -441,7 +442,6 @@ if ($('.we-let-our-work')) {
       reverse: true,
     })
       .setTween(worklistTimeline)
-
       .addTo(controller);
   });
 }
@@ -495,22 +495,21 @@ if ($('.wedo-content')) {
 
     wedocontentTimeline.staggerFromTo(
       wedocontent,
-      0.5,
+      0.3,
       {
         opacity: 0,
         height: 0,
-        y: 30,
-        transformOrigin: 'bottom',
+        y: -100,
+        transformOrigin: 'top',
         ease: Power4.easeOut,
       },
       {
         opacity: 1,
         height: '100%',
         y: 0,
-        transformOrigin: 'bottom',
+        transformOrigin: 'top',
         ease: Power4.easeOut,
-      },
-      0.25
+      }
     );
 
     // create a scene for each element

@@ -63,11 +63,13 @@ header {
 		&--item {
 			&__content {
 				position : fixed;
-				z-index : 5;
+				z-index : -1;
 				top : 0;
 				right : 0;
 				bottom : 0;
 				left : 0;
+				margin-left : auto;
+				margin-right : auto;
 				display : flex;
 				visibility : hidden;
 				overflow : hidden;
@@ -109,6 +111,8 @@ header {
 					span {
 						display : block;
 						margin-bottom : 10px;
+						font-size : 14px;
+						line-height : 21px;
 					}
 
 					font-family : var(--font-400);
@@ -133,38 +137,19 @@ header {
 						position : relative;
 						margin-bottom : 16px;
 						color : var(--white);
-						transition : all 0.5s ease-out;
+						transition : all 200ms ease;
 
 						@supports (-webkit-text-stroke: 1px var(--white)) {
 							color : transparent;
 							-webkit-text-stroke : 1px var(--white);
 							-webkit-text-stroke-width : 1px;
 							-webkit-text-stroke-color : var(--white);
-							transition : all 0.5s ease-out;
-						}
-
-						&:after {
-							position : absolute;
-							top : 0;
-							left : 0;
-							width : 0;
-							content : attr(data-text);
-							color : var(--white);
-							display : block;
-							overflow : hidden;
-							transition-property : width;
-							transition-duration : 1000ms;
-							white-space : nowrap;
-							transition-delay : 150ms;
+							transition : all 200ms ease;
 						}
 
 						&:hover {
-							transition : all 0.5s ease-out;
-
-							&:after {
-								transition-delay : 150ms;
-								width : 100%;
-							}
+							transition : all 200ms ease;
+							color : var(--white);
 						}
 					}
 
@@ -249,6 +234,10 @@ header {
 							}
 
 							margin-bottom : 60px;
+						}
+						.menu--item__content-label {
+							font-size : 14px;
+							line-height : 21px;
 						}
 					}
 				}

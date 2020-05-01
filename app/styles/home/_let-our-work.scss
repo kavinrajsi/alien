@@ -1,196 +1,196 @@
 .we-let-our-work {
-  @include interpolate('padding-top', 576px, 80px, 992px, 120px, 'ease-in');
-  @include interpolate('padding-bottom', 576px, 86px, 992px, 120px, 'ease-in');
+	transition : all 0.35s ease-in;
+	@include interpolate("padding-top", 576px, 80px, 992px, 120px, "ease-in");
+	@include interpolate("padding-bottom", 576px, 86px, 992px, 120px, "ease-in");
+	position : relative;
+	z-index : 1;
+	background : var(--wework-bg);
 
-  position: relative;
-  z-index: 1;
-  background: var(--wework-bg);
+	.section-title {
+		margin-bottom : 80px;
 
-  .section-title {
-    margin-bottom: 80px;
+		span {
+			display : block;
+			font-family : var(--font-500);
+			// color : var(--wework-color);
+			color : inherit;
+			background : inherit;
 
-    span {
-      display: block;
-      font-family: var(--font-500);
-      color: var(--wework-color);
+			@include interpolate("margin-bottom", 576px, 5px, 992px, 18px, "ease-in");
+			@include interpolate("font-size", 576px, 46px, 992px, 80px, "ease-in");
+			@include interpolate("line-height", 576px, 56px, 992px, 96px, "ease-in");
 
-      @include interpolate('margin-bottom', 576px, 5px, 992px, 18px, 'ease-in');
-      @include interpolate('font-size', 576px, 46px, 992px, 80px, 'ease-in');
-      @include interpolate('line-height', 576px, 56px, 992px, 96px, 'ease-in');
+			&:last-child {
+				margin-bottom : 0;
 
-      &:last-child {
-        margin-bottom: 0;
+				&:before {
+					content : "";
+					display : inline-block;
+					height : 4px;
+					position : relative;
+					top : -18px;
+					@include interpolate("width", 576px, 40px, 992px, 90px, "ease-in");
+					@include interpolate("margin-right", 576px, 15px, 992px, 30px, "ease-in");
+					background-color : var(--wework-color);
+					background : inherit;
+				}
+			}
+		}
+	}
 
-        &:before {
-          content: "";
-          display: inline-block;
-          height: 4px;
-          position: relative;
-          top: -18px;
-          @include interpolate('width', 576px, 40px, 992px, 90px, 'ease-in');
-          @include interpolate('margin-right', 576px, 15px, 992px, 30px, 'ease-in');
-          background-color: var(--wework-color);
-        }
-      }
-    }
-  }
+	.section-content {
+		.project {
+			&-list {
+				display : flex;
+				justify-content : space-between;
+				flex-wrap : wrap;
 
-  .section-content {
+				@media(min-width: $mobile) and (max-width: 1080px) {
+					.project-wrapper {
+						&:nth-child(1) {
+							padding-right : 15px;
+						}
 
-    .project {
-      &-list {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
+						&:nth-child(2) {
+							padding-left : 15px;
+						}
+					}
+				}
+			}
 
-        @media(min-width: $mobile) and (max-width: 1080px) {
-          .project-wrapper {
-            &:nth-child(1) {
-              padding-right: 15px;
-            }
+			&-wrapper {
+				@include interpolate("margin-bottom", 375px, 60px, 992px, 100px, "ease-in");
 
-            &:nth-child(2) {
-              padding-left: 15px;
-            }
-          }
-        }
-      }
+				a {
+					display : inline-block;
+				}
 
-      &-wrapper {
+				@media(min-width: $mobile) {
+					flex-grow : 1;
+					flex-shrink : 0;
+					flex-basis : 50%;
 
-        @include interpolate('margin-bottom', 375px, 60px, 992px, 100px, 'ease-in');
+					&:nth-child(3) {
+						flex-basis : 100%;
+					}
 
-        a {
-          display: inline-block;
-        }
+					&:nth-child(1) {
+						@include interpolate("width", 375px, 335px, 992px, 540px, "ease-in");
+					}
 
-        @media(min-width: $mobile) {
-          flex-grow: 1;
-          flex-shrink: 0;
-          flex-basis: 50%;
+					&:nth-child(2) {
+						@include interpolate("width", 375px, 335px, 992px, 460px, "ease-in");
+					}
 
-          &:nth-child(3) {
-            flex-basis: 100%;
-          }
+					&:nth-child(3) {
+						@include interpolate("width", 375px, 335px, 992px, 942px, "ease-in");
+					}
+				}
 
-          &:nth-child(1) {
-            @include interpolate('width', 375px, 335px, 992px, 540px, 'ease-in');
-          }
+				@media(min-width: 1040px) {
+					flex-grow : 0;
+					flex-shrink : 0;
 
-          &:nth-child(2) {
-            @include interpolate('width', 375px, 335px, 992px, 460px, 'ease-in');
-          }
+					&:nth-child(1) {
+						flex-basis : 540px;
+					}
 
-          &:nth-child(3) {
-            @include interpolate('width', 375px, 335px, 992px, 942px, 'ease-in');
-          }
-        }
+					&:nth-child(2) {
+						flex-basis : 460px;
+					}
 
-        @media(min-width: 1040px) {
-          flex-grow: 0;
-          flex-shrink: 0;
+					&:nth-child(3) {
+						flex-basis : 942px;
+					}
+				}
 
-          &:nth-child(1) {
-            flex-basis: 540px;
-          }
+				@media(min-width: 1060px) {
+					padding-left : 0;
+					padding-right : 0;
+				}
 
-          &:nth-child(2) {
-            flex-basis: 460px;
-          }
+				.image {
+					position : relative;
+					overflow : hidden;
+					width : 100%;
+					height : auto;
+					transition : 0.4s;
 
-          &:nth-child(3) {
-            flex-basis: 942px;
-          }
-        }
+					img {
+						width : 100%;
+						max-width : 100%;
+						height : 100%;
+						display : block;
+						object-fit : cover;
+						transition : 0.4s;
+						transform : scale(1);
+					}
 
-        @media(min-width: 1060px) {
-          padding-left: 0;
-          padding-right: 0;
-        }
+					&:hover {
+						transform : scale(0.95);
 
-        .image {
-          position: relative;
-          overflow: hidden;
-          width: 100%;
-          height: auto;
-          transition: .4s;
+						img {
+							transform : scale(1.1);
+						}
+					}
+				}
 
-          img {
-            width: 100%;
-            max-width: 100%;
-            height: 100%;
-            display: block;
-            object-fit: cover;
-            transition: .4s;
-            transform: scale(1);
-          }
+				.title {
+					font-family : var(--font-500);
+					font-size : 24px;
+					letter-spacing : -0.5px;
+					color : inherit;
+					color : var(--wework-bg);
+					margin-top : 20px;
 
-          &:hover {
-            transform: scale(.95);
+					@media(min-width: $tablet) {
+						margin-top : 30px;
+					}
 
-            img {
-              transform: scale(1.1);
-            }
-          }
-        }
+					@include interpolate("line-height", 375px, 36px, 992px, 29px, "ease-in");
 
-        .title {
-          font-family: var(--font-500);
-          font-size: 24px;
-          letter-spacing: -0.5px;
-          color: var(--wework-color);
-          margin-top: 20px;
+					span {
+						margin-top : 10px;
+						display : block;
+						font-family : var(--font-400);
+						font-style : normal;
+						font-weight : normal;
+						font-size : 18px;
+						line-height : 30px;
+						letter-spacing : 1px;
+						color : #363946;
+					}
+				}
+			}
 
-          @media(min-width: $tablet) {
-            margin-top: 30px;
-          }
+			&-list-readmore {
+				.link {
+					display : inline-block;
+					position : relative;
+					font-family : var(--font-500);
+					font-size : 20px;
+					line-height : 30px;
 
-          @include interpolate('line-height', 375px, 36px, 992px, 29px, 'ease-in');
+					@media(min-width: $tablet) {
+						font-size : 24px;
+						line-height : 36px;
+					}
 
-          span {
-            margin-top: 10px;
-            display: block;
-            font-family: var(--font-400);
-            font-style: normal;
-            font-weight: normal;
-            font-size: 18px;
-            line-height: 30px;
-            letter-spacing: 1px;
-            color: #363946;
-          }
-        }
+					color : var(--wework-color);
+					padding-bottom : 5px;
 
-      }
-
-      &-list-readmore {
-        .link {
-          display: inline-block;
-          position: relative;
-          font-family: var(--font-500);
-
-          font-size: 20px;
-          line-height: 30px;
-
-          @media(min-width: $tablet) {
-            font-size: 24px;
-            line-height: 36px;
-          }
-
-          color: var(--wework-color);
-          padding-bottom: 5px;
-
-          &:before {
-            content: "";
-            display: block;
-            width: 100%;
-            height: 1px;
-            background-color: var(--wework-color);
-            position: absolute;
-            left: 0;
-            bottom: 0;
-          }
-        }
-      }
-    }
-  }
+					&:before {
+						content : "";
+						display : block;
+						width : 100%;
+						height : 1px;
+						background-color : var(--wework-color);
+						position : absolute;
+						left : 0;
+						bottom : 0;
+					}
+				}
+			}
+		}
+	}
 }

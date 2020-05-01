@@ -10,9 +10,9 @@ body {
 	margin-left : auto;
 	margin-right : auto;
 	overflow-x : hidden;
-
+	transition : all 0.35s ease-in;
 	&.menu--open {
-		transition : all 0.5s ease-in;
+		transition : all 0.35s ease-in;
 		overflow : hidden;
 	}
 }
