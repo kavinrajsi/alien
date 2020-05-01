@@ -84,8 +84,7 @@ $('.requestacces').each(function (i) {
     reverse: true,
   })
     .setTween(animateIn)
-    .addIndicators({ name: 'send signal' })
-    .addTo(controller);
+    .addIndicators({ name: 'send signal' });
 });
 
 /* Slider */
@@ -409,8 +408,7 @@ if ($('.we-let-our-work')) {
   })
 
     .setClassToggle('.we-let-our-work', 'wework-section')
-    .addIndicators({ name: 'bg color' })
-    .addTo(controller);
+    .addIndicators({ name: 'bg color' });
 
   /* animation */
   $('.project-list').each(function (i) {
@@ -441,8 +439,7 @@ if ($('.we-let-our-work')) {
       reverse: true,
     })
       .setTween(worklistTimeline)
-      .addIndicators({ name: 'work list' + i + '.' })
-      .addTo(controller);
+      .addIndicators({ name: 'work list' + i + '.' });
   });
 }
 
@@ -476,11 +473,9 @@ if ($('.hero-unit')) {
       reverse: true,
     })
       .setTween(herounitTimeline)
-      .addIndicators({ name: 'hero section' })
-      .addTo(controller);
+      .addIndicators({ name: 'hero section' });
   });
 }
-
 
 /* home page our service list */
 if ($('.wedo-content')) {
@@ -520,7 +515,7 @@ if ($('.wedo-content')) {
       offset: '0',
       triggerHook: 0.5,
       duration: '160px',
-      reverse: true
+      reverse: true,
     })
       .setClassToggle(this, 'active')
       .setTween(wedocontentTimeline)
@@ -530,7 +525,6 @@ if ($('.wedo-content')) {
         colorStart: 'white',
         colorEnd: 'white',
         indent: 25,
-      }) // add indicators (requires plugin)
-      .addTo(controller);
+      }); // add indicators (requires plugin)
   });
 }
