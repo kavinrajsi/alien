@@ -1,496 +1,489 @@
 .section-row {
-  overflow: hidden;
-  @extend .container;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+	overflow : hidden;
+	@extend .container;
+	display : flex;
+	flex-wrap : wrap;
+	justify-content : space-between;
 }
 
 .page {
-  &__content {
-    &--header {
-      @include interpolate("margin-top", 576px, 76px, 992px, 83px, "ease-in");
-      @include interpolate("margin-bottom", 576px, 213px, 992px, 14px, "ease-in");
-
-      &_title {
-        font-family: var(--font-500);
-        letter-spacing: 3px;
-
-        @include interpolate("font-size", 576px, 48px, 992px, 200px, "ease-in");
-        @include interpolate("line-height", 576px, 58px, 992px, 243px, "ease-in");
-        color: var(--onyx);
-
-        @supports (-webkit-text-stroke: 2px var(--onyx)) {
-          -webkit-text-stroke: 2px var(--onyx);
-          color: transparent;
-          -webkit-text-stroke-width: 2px;
-          -webkit-text-stroke-color: var(--onyx);
-        }
-      }
-    }
-
-    &--about {
-      overflow: visible;
-      position: relative;
-      @include interpolate("margin-bottom", 576px, 90px, 992px, 381px, "ease-in");
-
-      .section-row {
-        &__text {
-          .text-content {
-
-            p {
-              strong {
-                font-family: var(--font-500);
-                @include interpolate("font-size", 576px, 38px, 992px, 65px, "ease-in");
-                @include interpolate("line-height", 576px, 50px, 992px, 90px, "ease-in");
-                display: block;
-                position: relative;
-                padding-bottom: 10px;
-
-                &:last-child {
-                  &:before {
-                    content: "";
-                    display: inline-block;
-                    width: 90px;
-                    height: 4px;
-                    margin-right: 20px;
-                    background-color: var(--white);
-                    vertical-align: middle;
-
-                    @media(min-width: $tablet) {
-                      margin-right: 40px;
-                    }
-                  }
-                }
-              }
-
-              max-width: 504px;
-              font-family : var(--font-400);
-              font-size : 18px;
-              line-height : 30px;
-              color : var(--white);
-
-              &:not(:last-child) {
-                margin-bottom: 20px;
-              }
-
-              &:not(:first-child) {
-                max-width: 464px;
-              }
-            }
-          }
-        }
-
-        &__image-wrapper {
-          z-index: -1;
-          position: absolute;
-          height: auto;
-          @include interpolate("width", 576px, 212px, 992px, 534px, "ease-in");
-          @include interpolate("top", 576px, -300px, 992px, 0px, "ease-in");
-          @include interpolate("right", 576px, -38px, 992px, 30px, "ease-in");
-        }
-      }
-
-      &__sourcing-power {
-        margin-bottom: 90px;
-        align-items: flex-start;
-        flex-direction: column;
-
-        @media(min-width: 842px) {
-          flex-wrap: nowrap;
-          align-items: flex-end;
-          flex-direction: row;
-        }
-
-        >div {
-          @media(min-width: 842px) and (max-width: 1080px) {
-            &:nth-child(1) {
-              margin-right: 15px;
-            }
-
-            &:nth-child(2) {
-              margin-left: 15px;
-            }
-          }
-
-          @media(min-width: 1069px) {
-            margin: 0;
-          }
-
-          @media(min-width: $tablet) {
-            flex: 1 0 50%;
-            max-width: 50%;
-          }
-        }
-
-
-        .section {
-          &-row__text {
-            max-width: 300px;
-            font-family: var(--font-400);
-            font-size: 18px;
-            line-height: 30px;
-            padding-top: 30px;
-            color: var(--white);
-            position: relative;
-
-            &:before {
-              content: "";
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 30px;
-              height: 4px;
-              background: var(--blue-violet);
-            }
-
-            &-special {
-              max-width: 490px;
-
-              @media(min-width: 1069px) {
-                max-width: 700px;
-              }
-
-              margin-bottom : 100px;
-
-              @media(min-width: 842px) {
-                margin-bottom: 0;
-              }
-
-              font-family : var(--font-500);
-              color : var(--blue-violet);
-              @include interpolate("font-size", 576px, 74px, 992px, 120px, "ease-in");
-              @include interpolate("line-height", 576px, 86px, 992px, 144px, "ease-in");
-            }
-          }
-        }
-      }
-
-      &__we-ideas {
-        .section-row {
-          &__text {
-            p {
-              strong {
-                display: block;
-                font-family: var(--font-500);
-                color: var(--white);
-                @include interpolate("font-size", 576px, 38px, 992px, 65px, "ease-in");
-                @include interpolate("line-height", 576px, 50px, 992px, 90px, "ease-in");
-              }
-
-              @include interpolate("margin-bottom", 576px, 40px, 992px, 120px, "ease-in");
-            }
-          }
-
-          &__card {
-            overflow: scroll;
-
-            .drag-container {
-              .scroller-content {
-                * {
-                  transition: all .3s ease;
-                }
-
-                overflow-y: auto;
-
-                .card-sections {
-                  display: flex;
-                  margin-left: -30px;
-
-                  @media(min-width: $tablet) {
-                    display: grid;
-                    gap: 40px;
-                    grid-template-columns: repeat(2, 1fr);
-                  }
-
-                  @media(min-width: $desktop) {
-                    margin-left: 0;
-                    display: grid;
-                    grid-template-columns: repeat(15, 1fr);
-                    grid-template-rows: repeat(2, 1fr);
-                    column-gap: 20px;
-                    @include interpolate("row-gap", 768px, 40px, 1024px, 138px, "ease-in");
-                  }
-
-                  .card {
-                    @media(min-width: $desktop) {
-                      &:nth-child(1n) {
-                        grid-area: 1 / 2 / 2 / 7;
-                      }
-
-                      &:nth-child(2n) {
-                        grid-area: 1 / 9 / 2 / 14;
-                      }
-
-                      &:nth-child(3n) {
-                        grid-area: 2 / 4 / 3 / 9;
-                      }
-
-                      &:nth-child(4n) {
-                        grid-area: 2 / 11 / 3 / 16;
-                      }
-                    }
-
-                    position: relative;
-                    max-width: 280px;
-                    flex: 0 0 280px;
-
-                    @media(min-width: $tablet) {
-                      max-width: 380px;
-                      flex: 0 0 380px;
-                    }
-
-                    @media(min-width: $desktop) {
-                      max-width: 380px;
-                      flex: 0 0 380px;
-                    }
-
-                    margin-left: 45px;
-
-                    &:last-child {
-                      margin-right: 45px;
-                    }
-
-                    @media(min-width: $desktop) {
-                      margin-left: 0;
-                    }
-
-                    &--content {
-                      white-space: normal;
-                      position: relative;
-                      background: var(--smoky-black);
-                      border: 1px solid var(--black-coral);
-                      margin-bottom: 40px;
-
-                      padding-top: 40px;
-                      padding-left: 30px;
-                      padding-right: 30px;
-                      padding-bottom: 54px;
-
-                      @media(min-width: $tablet) {
-                        padding: 30px;
-                      }
-
-                      @media(min-width: $desktop) {
-                        padding-top: 57px;
-                        padding-left: 40px;
-                        padding-right: 40px;
-                        padding-bottom: 54px;
-                      }
-
-                      &:after {
-                        z-index: -1;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        display: block;
-                        width: 100%;
-                        height: 100%;
-                        content: "";
-                        transform: translate(-15px, 20px);
-                        border: 1px solid var(--blue-violet);
-                        background: var(--smoky-black);
-                      }
-
-                      p {
-                        &:first-child {
-                          span {
-                            display: block;
-                            font-family: var(--font-500);
-                            font-size: 20px;
-                            line-height: 30px;
-
-                            @media(min-width: $tablet) {
-                              font-size: 24px;
-                              line-height: 36px;
-                            }
-
-                            letter-spacing: -0.5px;
-                            color: var(--white);
-                          }
-
-                          margin-bottom: 20px;
-                        }
-
-                        // &:last-child {
-                        //   max-width: 300px;
-                        // }
-
-                        font-family: var(--font-400);
-                        font-size: 18px;
-                        line-height: 30px;
-                        color: var(--white);
-                      }
-                    }
-                  }
-                }
-              }
-            }
-
-          }
-
-        }
-      }
-
-      &__doing-rigidity {
-        position: relative;
-        overflow: visible;
-        @include interpolate("margin-top", 576px, 100px, 992px, 200px, "ease-in");
-        @include interpolate("margin-bottom", 576px, 100px, 992px, 200px, "ease-in");
-
-        .section-row {
-          &__text {
-            p {
-              max-width: 735px;
-
-              strong {
-                display: block;
-                font-family: var(--font-500);
-                @include interpolate("font-size", 576px, 74px, 992px, 120px, "ease-in");
-                @include interpolate("line-height", 576px, 86px, 992px, 144px, "ease-in");
-                color: var(--blue-violet);
-
-                &:last-child {
-                  color: var(--black-coral);
-                  @include interpolate("margin-bottom", 576px, 30px, 992px, 60px, "ease-in");
-                }
-              }
-
-              +p {
-                max-width: 502px;
-                color: var(--white);
-                font-family: var(--font-400);
-                font-size: 24px;
-                line-height: 36px;
-              }
-            }
-          }
-
-          &__image-wrapper {
-            display: none;
-
-            @media(min-width: 768px) {
-              svg {
-                width: 100%;
-                height: 100%;
-              }
-
-              @include interpolate("width", 576px, 400px, 992px, 652px, "ease-in");
-              @include interpolate("height", 576px, 400px, 992px, 654px, "ease-in");
-              display : inline-block;
-              position : absolute;
-              right : -296px;
-              top: 0;
-              bottom: 0;
-            }
-          }
-        }
-      }
-
-      &__vision-process {
-        .event-what-we {
-          @include interpolate("margin-bottom", 576px, 60px, 992px, 120px, "ease-in");
-
-          span {
-            margin-bottom: 2px;
-            font-family: var(--font-500);
-
-            @include interpolate("font-size", 576px, 74px, 992px, 120px, "ease-in");
-            @include interpolate("line-height", 576px, 86px, 992px, 144px, "ease-in");
-            display: block;
-
-            &:nth-child(odd) {
-              color: var(--blue-green);
-
-              @supports (-webkit-text-stroke: 2px var(--blue-green)) {
-                color: transparent;
-                -webkit-text-stroke: 2px var(--blue-green);
-                -webkit-text-stroke-width: 2px;
-                -webkit-text-stroke-color: var(--blue-green);
-              }
-            }
-
-            &:nth-child(even) {
-              color: var(--blue-green);
-            }
-
-            &:last-child {
-              margin-bottom: 0;
-              position: relative;
-
-              &:after {
-                @media(min-width: $tablet) {
-                  content: "";
-                  display: inline-block;
-                  vertical-align: baseline;
-                  width: 108px;
-                  width: 10%;
-                  height: 4px;
-                  background: var(--blue-green);
-                  width: 13vw;
-                }
-
-                @media(min-width: $desktop) {
-                  width: 29vw;
-                }
-              }
-            }
-          }
-        }
-
-        .section-row__card {
-          display: grid;
-
-          @include interpolate("row-gap", 576px, 60px, 1200px, 107px, "ease-in");
-          @include interpolate("column-gap", 576px, 30px, 1200px, 130px, "ease-in");
-
-          grid-template-columns: 1fr;
-
-          @media(min-width: 576px) {
-            grid-template-columns: 1fr 1fr;
-          }
-
-          @media(min-width: $ptablet) {
-            @include interpolate("margin-left", 576px, 30px, 1200px, 240px, "ease-in");
-          }
-
-          .card {
-            max-width: 373px;
-            display: flex;
-            flex-direction: column;
-
-            @media(min-width: $ptablet) {
-              flex-direction: row;
-            }
-          }
-
-          .card-header {
-            width: 48px;
-            height: 48px;
-            margin-bottom: 20px;
-
-            @media(min-width: $ptablet) {
-              margin-bottom: 0;
-              margin-right: 25px;
-            }
-          }
-
-          .text {
-            font-family: var(--font-500);
-            font-size: 20px;
-            line-height: 30px;
-            color: var(--white);
-            margin-bottom: 10px;
-          }
-
-          p {
-            font-family: var(--font-400);
-            font-size: 18px;
-            line-height: 30px;
-            color: var(--white);
-          }
-        }
-      }
-    }
-  }
+	&__content {
+		&--header {
+			@include interpolate("margin-top", 576px, 76px, 992px, 83px, "ease-in");
+			@include interpolate("margin-bottom", 576px, 213px, 992px, 14px, "ease-in");
+
+			&_title {
+				font-family : var(--font-500);
+				letter-spacing : 3px;
+
+				@include interpolate("font-size", 576px, 48px, 992px, 200px, "ease-in");
+				@include interpolate("line-height", 576px, 58px, 992px, 243px, "ease-in");
+				color : var(--onyx);
+
+				@supports (-webkit-text-stroke: 2px var(--onyx)) {
+					-webkit-text-stroke : 2px var(--onyx);
+					color : transparent;
+					-webkit-text-stroke-width : 2px;
+					-webkit-text-stroke-color : var(--onyx);
+				}
+			}
+		}
+
+		&--about {
+			overflow : visible;
+			position : relative;
+			@include interpolate("margin-bottom", 576px, 90px, 992px, 381px, "ease-in");
+
+			.section-row {
+				&__text {
+					.text-content {
+						p {
+							strong {
+								font-family : var(--font-500);
+								@include interpolate("font-size", 576px, 38px, 992px, 65px, "ease-in");
+								@include interpolate("line-height", 576px, 50px, 992px, 90px, "ease-in");
+								display : block;
+								position : relative;
+								padding-bottom : 10px;
+
+								&:last-child {
+									&:before {
+										content : "";
+										display : inline-block;
+										width : 90px;
+										height : 4px;
+										margin-right : 20px;
+										background-color : var(--white);
+										vertical-align : middle;
+
+										@media(min-width: $tablet) {
+											margin-right : 40px;
+										}
+									}
+								}
+							}
+
+							max-width : 504px;
+							font-family : var(--font-400);
+							font-size : 18px;
+							line-height : 30px;
+							color : var(--white);
+
+							&:not(:last-child) {
+								margin-bottom : 20px;
+							}
+
+							&:not(:first-child) {
+								max-width : 464px;
+							}
+						}
+					}
+				}
+
+				&__image-wrapper {
+					z-index : -1;
+					position : absolute;
+					height : auto;
+					@include interpolate("width", 576px, 212px, 992px, 534px, "ease-in");
+					@include interpolate("top", 576px, -300px, 992px, 0px, "ease-in");
+					@include interpolate("right", 576px, -38px, 992px, 30px, "ease-in");
+				}
+			}
+
+			&__sourcing-power {
+				margin-bottom : 90px;
+				align-items : flex-start;
+				flex-direction : column;
+
+				@media(min-width: 842px) {
+					flex-wrap : nowrap;
+					align-items : flex-end;
+					flex-direction : row;
+				}
+
+				> div {
+					@media(min-width: 842px) and (max-width: 1080px) {
+						&:nth-child(1) {
+							margin-right : 15px;
+						}
+
+						&:nth-child(2) {
+							margin-left : 15px;
+						}
+					}
+
+					@media(min-width: 1069px) {
+						margin : 0;
+					}
+
+					@media(min-width: $tablet) {
+						flex : 1 0 50%;
+						max-width : 50%;
+					}
+				}
+
+
+				.section {
+					&-row__text {
+						max-width : 300px;
+						font-family : var(--font-400);
+						font-size : 18px;
+						line-height : 30px;
+						padding-top : 30px;
+						color : var(--white);
+						position : relative;
+
+						&:before {
+							content : "";
+							position : absolute;
+							top : 0;
+							left : 0;
+							width : 30px;
+							height : 4px;
+							background : var(--blue-violet);
+						}
+
+						&-special {
+							max-width : 490px;
+
+							@media(min-width: 1069px) {
+								max-width : 700px;
+							}
+
+							margin-bottom : 100px;
+
+							@media(min-width: 842px) {
+								margin-bottom : 0;
+							}
+
+							font-family : var(--font-500);
+							color : var(--blue-violet);
+							@include interpolate("font-size", 576px, 74px, 992px, 120px, "ease-in");
+							@include interpolate("line-height", 576px, 86px, 992px, 144px, "ease-in");
+						}
+					}
+				}
+			}
+
+			&__we-ideas {
+				.section-row {
+					&__text {
+						p {
+							strong {
+								display : block;
+								font-family : var(--font-500);
+								color : var(--white);
+								@include interpolate("font-size", 576px, 38px, 992px, 65px, "ease-in");
+								@include interpolate("line-height", 576px, 50px, 992px, 90px, "ease-in");
+							}
+
+							@include interpolate("margin-bottom", 576px, 40px, 992px, 120px, "ease-in");
+						}
+					}
+
+					&__card {
+						overflow : scroll;
+						@media(min-width: $tablet) {
+							overflow : hidden;
+						}
+
+						.drag-container {
+							.scroller-content {
+								overflow-y : auto;
+								.card-sections {
+									display : flex;
+									margin-left : -30px;
+
+									@media(min-width: $tablet) {
+										display : grid;
+										gap : 40px;
+										grid-template-columns : repeat(2, 1fr);
+									}
+
+									@media(min-width: $desktop) {
+										margin-left : 0;
+										display : grid;
+										grid-template-columns : repeat(15, 1fr);
+										grid-template-rows : repeat(2, 1fr);
+										column-gap : 20px;
+										@include interpolate("row-gap", 768px, 40px, 1024px, 138px, "ease-in");
+									}
+
+									.card {
+										@media(min-width: $desktop) {
+											&:nth-child(1n) {
+												grid-area : 1 / 2 / 2 / 7;
+											}
+
+											&:nth-child(2n) {
+												grid-area : 1 / 9 / 2 / 14;
+											}
+
+											&:nth-child(3n) {
+												grid-area : 2 / 4 / 3 / 9;
+											}
+
+											&:nth-child(4n) {
+												grid-area : 2 / 11 / 3 / 16;
+											}
+										}
+
+										position : relative;
+										max-width : 280px;
+										flex : 0 0 280px;
+
+										@media(min-width: $tablet) {
+											max-width : 380px;
+											flex : 0 0 380px;
+										}
+
+										@media(min-width: $desktop) {
+											max-width : 380px;
+											flex : 0 0 380px;
+										}
+
+										margin-left : 45px;
+
+										&:last-child {
+											margin-right : 45px;
+										}
+
+										@media(min-width: $desktop) {
+											margin-left : 0;
+										}
+
+										&--content {
+											white-space : normal;
+											position : relative;
+											background : var(--smoky-black);
+											border : 1px solid var(--black-coral);
+											margin-bottom : 40px;
+											padding-top : 40px;
+											padding-left : 30px;
+											padding-right : 30px;
+											padding-bottom : 54px;
+
+											@media(min-width: $tablet) {
+												padding : 30px;
+											}
+
+											@media(min-width: $desktop) {
+												padding-top : 57px;
+												padding-left : 40px;
+												padding-right : 40px;
+												padding-bottom : 54px;
+											}
+
+											&:after {
+												z-index : -1;
+												position : absolute;
+												top : 0;
+												left : 0;
+												display : block;
+												width : 100%;
+												height : 100%;
+												content : "";
+												transform : translate(-15px, 20px);
+												border : 1px solid var(--blue-violet);
+												background : var(--smoky-black);
+											}
+
+											p {
+												&:first-child {
+													span {
+														display : block;
+														font-family : var(--font-500);
+														font-size : 20px;
+														line-height : 30px;
+
+														@media(min-width: $tablet) {
+															font-size : 24px;
+															line-height : 36px;
+														}
+
+														letter-spacing : -0.5px;
+														color : var(--white);
+													}
+
+													margin-bottom : 20px;
+												}
+
+												// &:last-child {
+												//   max-width: 300px;
+												// }
+
+												font-family : var(--font-400);
+												font-size : 18px;
+												line-height : 30px;
+												color : var(--white);
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			&__doing-rigidity {
+				position : relative;
+				overflow : visible;
+				@include interpolate("margin-top", 576px, 100px, 992px, 200px, "ease-in");
+				@include interpolate("margin-bottom", 576px, 100px, 992px, 200px, "ease-in");
+
+				.section-row {
+					&__text {
+						p {
+							max-width : 735px;
+
+							strong {
+								display : block;
+								font-family : var(--font-500);
+								@include interpolate("font-size", 576px, 74px, 992px, 120px, "ease-in");
+								@include interpolate("line-height", 576px, 86px, 992px, 144px, "ease-in");
+								color : var(--blue-violet);
+
+								&:last-child {
+									color : var(--black-coral);
+									@include interpolate("margin-bottom", 576px, 30px, 992px, 60px, "ease-in");
+								}
+							}
+
+							+ p {
+								max-width : 502px;
+								color : var(--white);
+								font-family : var(--font-400);
+								font-size : 24px;
+								line-height : 36px;
+							}
+						}
+					}
+
+					&__image-wrapper {
+						display : none;
+
+						@media(min-width: 768px) {
+							svg {
+								width : 100%;
+								height : 100%;
+							}
+
+							@include interpolate("width", 576px, 400px, 992px, 652px, "ease-in");
+							@include interpolate("height", 576px, 400px, 992px, 654px, "ease-in");
+							display : inline-block;
+							position : absolute;
+							right : -296px;
+							top : 0;
+							bottom : 0;
+						}
+					}
+				}
+			}
+
+			&__vision-process {
+				.event-what-we {
+					@include interpolate("margin-bottom", 576px, 60px, 992px, 120px, "ease-in");
+
+					span {
+						margin-bottom : 2px;
+						font-family : var(--font-500);
+
+						@include interpolate("font-size", 576px, 74px, 992px, 120px, "ease-in");
+						@include interpolate("line-height", 576px, 86px, 992px, 144px, "ease-in");
+						display : block;
+
+						&:nth-child(odd) {
+							color : var(--blue-green);
+
+							@supports (-webkit-text-stroke: 2px var(--blue-green)) {
+								color : transparent;
+								-webkit-text-stroke : 2px var(--blue-green);
+								-webkit-text-stroke-width : 2px;
+								-webkit-text-stroke-color : var(--blue-green);
+							}
+						}
+
+						&:nth-child(even) {
+							color : var(--blue-green);
+						}
+
+						&:last-child {
+							margin-bottom : 0;
+							position : relative;
+
+							&:after {
+								@media(min-width: $tablet) {
+									content : "";
+									display : inline-block;
+									vertical-align : baseline;
+									width : 108px;
+									width : 10%;
+									height : 4px;
+									background : var(--blue-green);
+									width : 13vw;
+								}
+
+								@media(min-width: $desktop) {
+									width : 29vw;
+								}
+							}
+						}
+					}
+				}
+
+				.section-row__card {
+					display : grid;
+
+					@include interpolate("row-gap", 576px, 60px, 1200px, 107px, "ease-in");
+					@include interpolate("column-gap", 576px, 30px, 1200px, 130px, "ease-in");
+					grid-template-columns : 1fr;
+
+					@media(min-width: 576px) {
+						grid-template-columns : 1fr 1fr;
+					}
+
+					@media(min-width: $ptablet) {
+						@include interpolate("margin-left", 576px, 30px, 1200px, 240px, "ease-in");
+					}
+
+					.card {
+						max-width : 373px;
+						display : flex;
+						flex-direction : column;
+
+						@media(min-width: $ptablet) {
+							flex-direction : row;
+						}
+					}
+
+					.card-header {
+						width : 48px;
+						height : 48px;
+						margin-bottom : 20px;
+
+						@media(min-width: $ptablet) {
+							margin-bottom : 0;
+							margin-right : 25px;
+						}
+					}
+
+					.text {
+						font-family : var(--font-500);
+						font-size : 20px;
+						line-height : 30px;
+						color : var(--white);
+						margin-bottom : 10px;
+					}
+
+					p {
+						font-family : var(--font-400);
+						font-size : 18px;
+						line-height : 30px;
+						color : var(--white);
+					}
+				}
+			}
+		}
+	}
 }
