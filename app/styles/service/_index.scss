@@ -1,0 +1,333 @@
+.container {
+  padding: 0 20px;
+}
+
+.page__content {
+  &--service {
+
+    // page header
+    &.page__content--header {
+      color: var(--onyx);
+      @include interpolate("margin-top", 576px, 72px, 992px, 83px, "ease-in");
+      @include interpolate("margin-bottom", 576px, 64px, 992px, 80px, "ease-in");
+
+      .page__content--header_title {
+        font-family: var(--font-500);
+        letter-spacing: 3px;
+        @include interpolate("font-size", 576px, 48px, 992px, 180px, "ease-in");
+        @include interpolate("line-height", 576px, 58px, 992px, 180px, "ease-in");
+
+        @media(min-width: $desktop) {
+          font-size: 200px;
+          line-height: 243px;
+        }
+
+        @supports (-webkit-text-stroke: 2px var(--onyx)) {
+          -webkit-text-stroke: 2px var(--onyx);
+          color: transparent;
+          -webkit-text-stroke-width: 2px;
+          -webkit-text-stroke-color: var(--onyx);
+        }
+      }
+    }
+
+    // wield our forces of design
+    &__forces--design {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      @include interpolate('margin-bottom', 600px, 70px, 900px, 196px, 'ease-in');
+
+      >div {
+        @media(min-width: $tablet) {
+          flex: 1 0 50%;
+          max-width: 50%;
+        }
+      }
+
+      .section-row {
+        &__text {
+          & {
+            font-family: var(--font-400);
+            font-size: 18px;
+            line-height: 30px;
+            color: var(--white);
+            padding-top: 30px;
+            position: relative;
+            max-width: 300px;
+
+            @media(min-width: $tablet) {
+              // padding-right: 160px;
+              padding-right: 10.2vw;
+              box-sizing: content-box;
+            }
+
+            &:after {
+              content: "";
+              display: block;
+              width: 30px;
+              height: 4px;
+              background: var(--blue-green);
+              background: #7DE2D1;
+              position: absolute;
+              top: 0;
+              left: 0;
+            }
+          }
+
+          &--heading {
+            color: var(--white);
+            font-family: var(--font-500);
+            margin-bottom: 30px;
+            padding-right: 0;
+            max-width: 562px;
+            @include interpolate('font-size', 600px, 38px, 900px, 65px, 'ease-in');
+            @include interpolate('line-height', 600px, 50px, 900px, 90px, 'ease-in');
+
+            strong {
+              display: block;
+            }
+
+            @media(min-width: $tablet) {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+
+    // list of service
+    &__brand--lost {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      @include interpolate('margin-bottom', 600px, 70px, 900px, 200px, 'ease-in');
+
+      @media(min-width: $tablet) {
+        &:nth-child(even) {
+          >div {
+            &:last-child {
+              padding-left: 80px;
+            }
+
+            &:first-child {
+              order: 1;
+            }
+          }
+        }
+      }
+
+      // grid align
+      >div {
+        @media(min-width: $tablet) {
+          flex: 1 0 50%;
+          max-width: 50%;
+
+          &:first-child {
+            padding-right: 15px;
+          }
+
+          &:last-child {
+            padding-left: 15px;
+          }
+        }
+
+        @media(min-width: $desktop) {
+          &:first-child {
+            padding: 0;
+          }
+
+          &:last-child {
+            padding: 0;
+          }
+        }
+      }
+
+      &.service {
+        &--design {
+          .section-row__text {
+            max-width: 449px;
+          }
+        }
+
+        &--digital {
+          @media(min-width: $desktop) {
+            padding-left: 80px;
+            padding-right: 80px;
+          }
+
+          .section-row__text {
+            max-width: 362px;
+          }
+        }
+      }
+
+      .section-row {
+
+        // image
+        &__image-wrapper {
+          text-align: center;
+          margin-right: -15px;
+          margin-left: -15px;
+
+          @media(min-width: $tablet) {
+            margin-left: 0;
+            margin-right: 0;
+          }
+
+          img {
+            max-width: 100%;
+            height: auto;
+          }
+        }
+
+        // content
+        &__text {
+          h3 {
+            span {
+              padding-top: 60px;
+              padding-bottom: 10px;
+
+              @media(min-width: $tablet) {
+                padding-top: 0px;
+                padding-bottom: 6px;
+              }
+
+              display: block;
+              font-family: var(--font-500);
+              font-size: 14px;
+              line-height: 21px;
+              letter-spacing: 1px;
+              color: var(--blue-violet);
+            }
+
+            font-family: var(--font-500);
+            @include interpolate('font-size', 600px, 38px, 900px, 65px, 'ease-in');
+            @include interpolate('line-height', 600px, 50px, 900px, 90px, 'ease-in');
+            color: var(--white);
+            margin-bottom: 20px;
+          }
+
+          p {
+            max-width: 380px;
+            color: var(--white);
+            font-family: var(--font-400);
+            font-size: 18px;
+            line-height: 30px;
+            margin-bottom: 10px;
+
+            @media(min-width: $tablet) {
+              // padding-right: 64px;
+              margin-bottom: 20px;
+            }
+
+            @media(min-width: $desktop) {
+              // padding-right: 8.3vw;
+            }
+          }
+
+          ul {
+            li {
+              font-family: var(--font-400);
+              font-size: 14px;
+              line-height: 32px;
+              color: var(--white);
+              opacity: 0.6;
+            }
+          }
+        }
+      }
+    }
+
+    // what makes us
+    &__page--title {
+      @include interpolate('margin-bottom', 600px, 60px, 900px, 170px, 'ease-in');
+
+      span {
+        display: block;
+        width: 100%;
+        font-family: var(--font-500);
+
+        @include interpolate('font-size', 600px, 74px, 900px, 120px, 'ease-in');
+        @include interpolate('line-height', 600px, 86px, 900px, 144px, 'ease-in');
+
+        @supports (-webkit-text-stroke: 2px var(--blue-green)) {
+          -webkit-text-stroke: 2px var(--blue-green);
+          color: transparent;
+          -webkit-text-stroke-width: 1px;
+          -webkit-text-stroke-color: var(--blue-green);
+        }
+
+        &:last-child {
+          color: var(--blue-green);
+        }
+
+      }
+    }
+
+    // what make us content card
+    &__make-us {
+      .section-row__card {
+        display: grid;
+        column-gap: 60px;
+        row-gap: 30px;
+
+        @media(min-width: $mobile) {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        @media(min-width: $tablet) {
+          margin-left: 6vw;
+          row-gap: 9.4vw;
+          column-gap: 7.8vw;
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      .card {
+        max-width: 335px;
+
+        @media(min-width: $tablet) {
+          display: flex;
+          max-width: 380px;
+        }
+
+        &--header {
+          margin-bottom: 20px;
+
+          @media(min-width: $tablet) {
+            margin-bottom: 0;
+            margin-right: 20px;
+          }
+        }
+
+        &--icon {
+          min-width: 52px;
+        }
+
+        &--text {
+          &_title {
+            font-family: var(--font-500);
+            font-size: 20px;
+            line-height: 30px;
+            color: var(--white);
+            margin-bottom: 10px;
+
+            @media(min-width: $tablet) {
+              margin-bottom: 15px;
+            }
+          }
+
+          &_content {
+            font-family: var(--font-400);
+            font-size: 18px;
+            line-height: 30px;
+            color: var(--white);
+          }
+        }
+      }
+    }
+
+  }
+}
