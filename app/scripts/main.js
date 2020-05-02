@@ -533,7 +533,7 @@ if ($('.wedo-content')) {
 $('.container').each(function (i) {
   const animateIn = gsap.timeline(),
     requestaccesContent = $(this).find(
-      '.section-row__image-wrapper, .section-row__text .service--design p, .section-row__text .service--design ul, .section-row__text .service--design h3, .section-row__text--heading, .page__content--header_title, .card, .section-row__text-special, .section-row__text-special + .section-row__text, .section-row__text.event-what-we span'
+      '.section-row__image-wrapper, .section-row__image-wrapper + .section-row__text p, .section-row__image-wrapper + .section-row__text ul, .section-row__image-wrapper + .section-row__text h3, .section-row__text--heading,  .section-row__text--heading + .section-row__text, .page__content--header_title, .card, .section-row__text-special, .section-row__text-special + .section-row__text, .section-row__text.event-what-we span'
     );
 
   animateIn.staggerFromTo(

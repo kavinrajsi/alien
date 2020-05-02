@@ -32,7 +32,7 @@
 <g filter="url(#filter10_ddi)">
 <rect x="533.632" y="56.7029" width="60.1109" height="12.8247" rx="6.41234" fill="#7DE2D1"/>
 </g>
-<g filter="url(#filter11_ddi)">
+<!-- <g filter="url(#filter11_ddi)"> -->
 <g filter="url(#filter12_ddi)">
 <ellipse cx="64.8793" cy="63.7566" rx="5.95157" ry="6.41234" fill="#7DE2D1"/>
 </g>
@@ -42,7 +42,7 @@
 <g filter="url(#filter14_ddi)">
 <ellipse cx="117.253" cy="63.7566" rx="5.95157" ry="6.41234" fill="#7DE2D1"/>
 </g>
-</g>
+<!-- </g> -->
 <g filter="url(#filter15_di)">
 <rect x="333.562" y="280" width="149.431" height="38" rx="8" fill="#8816E1"/>
 </g>
