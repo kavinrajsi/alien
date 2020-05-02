@@ -47,10 +47,12 @@
 
 				@media(min-width: $mobile) and (max-width: 1080px) {
 					.project-wrapper {
+						&:nth-child(4) ,
 						&:nth-child(1) {
 							padding-right : 15px;
 						}
 
+						&:nth-child(5) ,
 						&:nth-child(2) {
 							padding-left : 15px;
 						}
@@ -74,10 +76,12 @@
 						flex-basis : 100%;
 					}
 
+					&:nth-child(4) ,
 					&:nth-child(1) {
 						@include interpolate("width", 375px, 335px, 992px, 540px, "ease-in");
 					}
 
+					&:nth-child(5) ,
 					&:nth-child(2) {
 						@include interpolate("width", 375px, 335px, 992px, 460px, "ease-in");
 					}
@@ -91,10 +95,12 @@
 					flex-grow : 0;
 					flex-shrink : 0;
 
+					&:nth-child(4) ,
 					&:nth-child(1) {
 						flex-basis : 540px;
 					}
 
+					&:nth-child(5) ,
 					&:nth-child(2) {
 						flex-basis : 460px;
 					}
