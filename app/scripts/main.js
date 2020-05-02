@@ -533,7 +533,7 @@ if ($('.wedo-content')) {
 $('.container').each(function (i) {
   const animateIn = gsap.timeline(),
     requestaccesContent = $(this).find(
-      '.section-row__image-wrapper, .section-row__text , .section-row__text .service--design p, .section-row__text .service--design ul, .section-row__text .service--design h3, .section-row__text--heading, .page__content--header_title, .card'
+      '.section-row__image-wrapper, .section-row__text .service--design p, .section-row__text .service--design ul, .section-row__text .service--design h3, .section-row__text--heading, .page__content--header_title, .card, .section-row__text-special, .section-row__text-special + .section-row__text, .section-row__text.event-what-we span'
     );
 
   animateIn.staggerFromTo(
@@ -563,7 +563,6 @@ $('.container').each(function (i) {
     .setTween(animateIn)
     .addTo(controller);
 });
-
 
 $('.page__content--service__page--title').each(function (i) {
   const animateInTitle = gsap.timeline(),
@@ -596,5 +595,110 @@ $('.page__content--service__page--title').each(function (i) {
     reverse: true,
   })
     .setTween(animateInTitle)
+    .addTo(controller);
+});
+
+
+/* page : about */
+
+$('.page__content--about__we-ideas').each(function (i) {
+  const animateIn = gsap.timeline(),
+    requestaccesContent = $(this).find(
+      '.section-row__text, .card'
+    );
+
+  animateIn.staggerFromTo(
+    requestaccesContent,
+    1,
+    {
+      opacity: 0,
+      y: 30,
+      transformOrigin: 'bottom',
+      ease: Power4.easeOut,
+    },
+    {
+      opacity: 1,
+      y: 0,
+      transformOrigin: 'bottom',
+      ease: Power4.easeOut,
+    },
+    0.5
+  );
+
+  const scene = new ScrollMagic.Scene({
+    triggerElement: this,
+    triggerHook: 0.5,
+    offset: '0',
+    reverse: true,
+  })
+    .setTween(animateIn)
+    .addTo(controller);
+});
+
+$('.page__content--about__doing-rigidity').each(function (i) {
+  const animateIn = gsap.timeline(),
+    requestaccesContent = $(this).find(
+      '.section-row__text p strong, .section-row__text  p+p'
+    );
+
+  animateIn.staggerFromTo(
+    requestaccesContent,
+    1,
+    {
+      opacity: 0,
+      y: 30,
+      transformOrigin: 'bottom',
+      ease: Power4.easeOut,
+    },
+    {
+      opacity: 1,
+      y: 0,
+      transformOrigin: 'bottom',
+      ease: Power4.easeOut,
+    },
+    0.5
+  );
+
+  const scene = new ScrollMagic.Scene({
+    triggerElement: this,
+    triggerHook: 0.5,
+    offset: '0',
+    reverse: true,
+  })
+    .setTween(animateIn)
+    .addTo(controller);
+});
+
+$('.page__content--about').each(function (i) {
+  const animateIn = gsap.timeline(),
+    requestaccesContent = $(this).find(
+      '.text-content p strong, .text-content p + p'
+    );
+
+  animateIn.staggerFromTo(
+    requestaccesContent,
+    1,
+    {
+      opacity: 0,
+      y: 30,
+      transformOrigin: 'bottom',
+      ease: Power4.easeOut,
+    },
+    {
+      opacity: 1,
+      y: 0,
+      transformOrigin: 'bottom',
+      ease: Power4.easeOut,
+    },
+    0.5
+  );
+
+  const scene = new ScrollMagic.Scene({
+    triggerElement: this,
+    triggerHook: 0.5,
+    offset: '0',
+    reverse: true,
+  })
+    .setTween(animateIn)
     .addTo(controller);
 });

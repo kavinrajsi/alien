@@ -91,7 +91,8 @@
 			}
 
 			&__sourcing-power {
-				margin-bottom : 90px;
+				@include interpolate("margin-bottom", 576px, 90px, 992px, 200px, "ease-in");
+				display : flex;
 				align-items : flex-start;
 				flex-direction : column;
 
@@ -182,6 +183,20 @@
 					}
 
 					&__card {
+						* {
+							scrollbar-width : none;
+							-ms-overflow-style : none;
+
+							&::-webkit-scrollbar {
+								display : none;
+								width : 0;
+								background : transparent;
+							}
+
+							&::-webkit-scrollbar-thumb {
+								background : var(--smoky-black);
+							}
+						}
 						overflow : scroll;
 						@media(min-width: $tablet) {
 							overflow : hidden;
@@ -426,6 +441,9 @@
 
 								@media(min-width: $desktop) {
 									width : 29vw;
+								}
+								@media(min-width: 1397px) {
+									width : 16vw;
 								}
 							}
 						}
