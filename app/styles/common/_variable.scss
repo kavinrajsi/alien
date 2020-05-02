@@ -9,6 +9,7 @@
 	--egg-blue : #81e2d1;
 	--font-400 : "maison_neueextended_book";
 	--font-500 : "maison_neueextended_medium";
+	--font-600 : "maison_neueextended_demibold";
 	--mobileM : 375px;
 	--mobileL : 425px;
 	--mobile : 576px;
@@ -18,6 +19,15 @@
 	--blue-green : #7de2d1;
 	--wework-bg : #0a0908;
 	--wework-color : #7de2d1;
+	--ease-in : cubic-bezier(0.49,0.025,0.65,0.65);
+	--ease-out : cubic-bezier(0.28,0.44,0.49,1);
+	--ease-in-out : cubic-bezier(0.49,0.025,0.49,1);
+	--bounce : cubic-bezier(0.6,0,0.1,1.4);
+	--ease-in-soft : cubic-bezier(0.49,0.025,0.685,1);
+	--ease-out-soft : cubic-bezier(0.28,0,0.49,1);
+	--ease-in-out-soft : cubic-bezier(0.72,0,0.28,1);
+	--ease-in-out-hard : cubic-bezier(0.77,0,0.175,1);
+	--ease-garret : cubic-bezier(0.5,0,0,1);
 }
 
 .wework-section {
@@ -39,7 +49,7 @@ $desktop : 1200px;
 	font-family : "maison_neueextended_book";
 	src : url("../fonts/maisonneueextended-book-webfont.woff2") format("woff2"),
 	url("../fonts/maisonneueextended-book-webfont.woff") format("woff");
-	font-weight : normal;
+	font-weight : 400;
 	font-style : normal;
 	// font-display: auto;
 }
@@ -48,7 +58,16 @@ $desktop : 1200px;
 	font-family : "maison_neueextended_medium";
 	src : url("../fonts/maisonneueextended-medium-webfont.woff2") format("woff2"),
 	url("../fonts/maisonneueextended-medium-webfont.woff") format("woff");
-	font-weight : normal;
+	font-weight : 500;
+	font-style : normal;
+	// font-display: auto;
+}
+
+@font-face {
+	font-family : "maison_neueextended_demibold";
+	src : url("../fonts/maisonneueextended-demi-webfont.woff2") format("woff2"),
+	url("../fonts/maisonneueextended-demi-webfont.woff") format("woff");
+	font-weight : 600;
 	font-style : normal;
 	// font-display: auto;
 }

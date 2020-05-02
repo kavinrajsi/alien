@@ -6,15 +6,21 @@
 @import "footer";
 
 body {
+	font-family : var(--font-400);
 	background : var(--smoky-black);
 	margin-left : auto;
 	margin-right : auto;
 	overflow-x : hidden;
 	transition : all 0.35s ease-in;
+
 	&.menu--open {
 		transition : all 0.35s ease-in;
 		overflow : hidden;
 	}
+
+	transition : background-color 0.65s var(--ease-in-out-soft),
+	color 0.65s var(--ease-in-out-soft),
+	border 0.65s var(--ease-in-out-soft);
 }
 
 .container {

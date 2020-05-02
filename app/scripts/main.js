@@ -26,9 +26,8 @@ headerMenu.to('.menu--icon span:last-child', 0.02, {
 });
 
 headerMenu.to('.menu--item__content', 0.05, {
-  top: 90,
+  top: 0,
   visibility: 'visible',
-  height: 'calc(100% - 80px)',
   x: 0,
   y: 0,
   opacity: 1,

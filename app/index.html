@@ -98,31 +98,34 @@
         </div>
       </nav>
       <nav class="menu--item__content">
-        <!-- <div class="container"> -->
-        <div class="menu--item__content-left">
-          <ul class="menu--item__content-link">
-            <li><a data-text="WORK" href="./work.html">WORK</a></li>
-            <li><a data-text="SERVICES" href="./service.html">SERVICES</a></li>
-            <li><a data-text="ABOUT" href="./about.html">ABOUT</a></li>
-            <li><a data-text="CONTACT" href="./contact.html">CONTACT</a></li>
-          </ul>
-        </div>
-        <div class="menu--item__content-right">
-          <div class="menu--secondary">
-            <p class="menu--item__content-label">
-              <span>PREFER MAIL?</span>You can always reach out to our team at
-            </p>
-            <a
-              class="menu--item__content-link small"
-              href="mailto:business@thealien.design"
-              >business@thealien.design
-            </a>
+        <div class="menu--scroller">
+          <div class="menu--item__content-left">
+            <ul class="menu--item__content-link">
+              <li><a data-text="WORK" href="./work.html">WORK</a></li>
+              <li>
+                <a data-text="SERVICES" href="./service.html">SERVICES</a>
+              </li>
+              <li><a data-text="ABOUT" href="./about.html">ABOUT</a></li>
+              <li><a data-text="CONTACT" href="./contact.html">CONTACT</a></li>
+            </ul>
           </div>
-          <div class="menu--secondary">
-            <p class="menu--item__content-label">NEED INDUSTRY INSIGHTS?</p>
-            <a class="menu--item__content-link small" href="/blog"
-              >Read our Blog</a
-            >
+          <div class="menu--item__content-right">
+            <div class="menu--secondary">
+              <p class="menu--item__content-label">
+                <span>PREFER MAIL?</span>You can always reach out to our team at
+              </p>
+              <a
+                class="menu--item__content-link small"
+                href="mailto:business@thealien.design"
+                >business@thealien.design
+              </a>
+            </div>
+            <div class="menu--secondary">
+              <p class="menu--item__content-label">NEED INDUSTRY INSIGHTS?</p>
+              <a class="menu--item__content-link small" href="/blog"
+                >Read our Blog</a
+              >
+            </div>
           </div>
         </div>
         <div class="menu--item__content-footer">
@@ -135,7 +138,6 @@
             <li><a href="https://twitter.com/">Twitter</a></li>
             <li><a href="https://www.linkedin.com/">Linkedin</a></li>
           </ul>
-          <!-- </div> -->
         </div>
       </nav>
     </header>
@@ -194,7 +196,7 @@
           <span>
             We let our
           </span>
-          <span>work speak </span>
+          <span> <strong class="indicator"></strong>work speak </span>
         </div>
         <div class="container no-padding section-content">
           <div class="project-list">
@@ -601,9 +603,11 @@
         <p>
           <span>Ready for an encounter? </span> <span>Send us a signal.</span>
         </p>
-        <a href="./contact.html" class="btn--cover">
-          <span class="btn--cover_text">Contact Now</span>
-        </a>
+        <div class="callTo">
+          <a href="./contact.html" class="btn--cover">
+            <span class="btn--cover_text">Contact Now</span>
+          </a>
+        </div>
       </div>
     </main>
     <footer class="container lead-me-out">
@@ -649,6 +653,55 @@
       /* we let our work */
 
       if ($(".we-let-our-work")) {
+        // build tween
+        const animateIn = gsap.timeline();
+        animateIn
+          .staggerFromTo(
+            ".we-let-our-work",
+            0.32,
+            {
+              backgroundColor: "#000",
+              transformOrigin: "bottom",
+              ease: Back.easeOut,
+            },
+            {
+              backgroundColor: "#7de2d1",
+              transformOrigin: "bottom",
+              ease: Back.easeOut,
+            }
+          )
+          .staggerFromTo(
+            ".section-title span",
+            0.32,
+            {
+              color: "#7de2d1",
+              y: 30,
+              transformOrigin: "bottom",
+              ease: Back.easeOut,
+            },
+            {
+              color: "#000",
+              y: 0,
+              transformOrigin: "bottom",
+              ease: Back.easeOut,
+            }
+          )
+          .staggerFromTo(
+            ".we-let-our-work .section-title .indicator",
+            0.32,
+            {
+              backgroundColor: "#7de2d1",
+              y: 30,
+              ease: Back.easeOut,
+            },
+            {
+              backgroundColor: "#000",
+              y: 0,
+              ease: Back.easeOut,
+            },
+            0.32
+          );
+
         /* Slide in add bg color */
         new ScrollMagic.Scene({
           triggerElement: ".we-let-our-work",
@@ -656,12 +709,7 @@
           offset: "0",
           reverse: true,
         })
-
-          // .setClassToggle('.we-let-our-work', 'wework-section')
-          .setTween(".we-let-our-work", {
-            backgroundColor: "#7de2d1",
-            color: "#000",
-          })
+          .setTween(animateIn)
           .addIndicators()
           .addTo(controller);
 

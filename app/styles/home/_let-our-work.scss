@@ -1,5 +1,7 @@
 .we-let-our-work {
-	transition : all 0.35s ease-in;
+	transition : background-color 0.65s var(--ease-in-out-soft),
+	color 0.65s var(--ease-in-out-soft),
+	border 0.65s var(--ease-in-out-soft);
 	@include interpolate("padding-top", 576px, 80px, 992px, 120px, "ease-in");
 	@include interpolate("padding-bottom", 576px, 86px, 992px, 120px, "ease-in");
 	position : relative;
@@ -12,9 +14,9 @@
 		span {
 			display : block;
 			font-family : var(--font-500);
-			// color : var(--wework-color);
-			color : inherit;
-			background : inherit;
+			color : var(--wework-color);
+			// color : inherit;
+			background : transparent !important;
 
 			@include interpolate("margin-bottom", 576px, 5px, 992px, 18px, "ease-in");
 			@include interpolate("font-size", 576px, 46px, 992px, 80px, "ease-in");
@@ -22,17 +24,13 @@
 
 			&:last-child {
 				margin-bottom : 0;
-
-				&:before {
-					content : "";
+				.indicator {
 					display : inline-block;
 					height : 4px;
-					position : relative;
-					top : -18px;
 					@include interpolate("width", 576px, 40px, 992px, 90px, "ease-in");
 					@include interpolate("margin-right", 576px, 15px, 992px, 30px, "ease-in");
-					background-color : var(--wework-color);
-					background : inherit;
+					position : relative;
+					top : -18px;
 				}
 			}
 		}
