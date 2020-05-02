@@ -138,7 +138,7 @@ if ($('.hear-them-say-it')) {
             },
           })
           .set(slideIn, {
-            y: '-100%',
+            x: '-100%',
             autoAlpha: 0,
             css: {
               className: '+=slide active testimonial-content',
@@ -146,11 +146,11 @@ if ($('.hear-them-say-it')) {
           })
           .to(slideOut, {
             autoAlpha: 0,
-            y: '100%',
+            x: '100%',
             ease: Power3.easeInOut,
           })
           .to(slideIn, {
-            y: '0',
+            x: '0',
             autoAlpha: 1,
             ease: Power3.easeInOut,
           });
@@ -194,7 +194,7 @@ if ($('.hear-them-say-it')) {
             },
           })
           .set(slideIn, {
-            y: '-100%',
+            x: '-100%',
             autoAlpha: 0,
             css: {
               className: '+=slide active testimonial-content',
@@ -202,11 +202,11 @@ if ($('.hear-them-say-it')) {
           })
           .to(slideOut, {
             autoAlpha: 0,
-            y: '100%',
+            x: '100%',
             ease: Power3.easeInOut,
           })
           .to(slideIn, {
-            y: '0',
+            x: '0',
             autoAlpha: 1,
             ease: Power3.easeInOut,
           });
@@ -278,7 +278,7 @@ if ($('.hear-them-say-it')) {
           })
           // init in
           .set(slideIn, {
-            y: '100%',
+            x: '100%',
             autoAlpha: 0,
             css: {
               className: '+=slide active testimonial-content',
@@ -289,7 +289,7 @@ if ($('.hear-them-say-it')) {
             slideOut,
             {
               autoAlpha: 0,
-              y: '100%',
+              x: '100%',
               ease: Power3.easeInOut,
             },
             0
@@ -298,7 +298,7 @@ if ($('.hear-them-say-it')) {
           .to(
             slideIn,
             {
-              y: '0',
+              x: '0',
               autoAlpha: 1,
               ease: Power3.easeInOut,
             },
@@ -397,55 +397,6 @@ if ($('.hear-them-say-it')) {
     });
   }
 }
-
-/* we let our work */
-
-// if ($('.we-let-our-work')) {
-//   /* Slide in add bg color */
-//   new ScrollMagic.Scene({
-//     triggerElement: '.we-let-our-work',
-//     triggerHook: 0.3,
-//     offset: '0',
-//     reverse: true,
-//   })
-
-//     // .setClassToggle('.we-let-our-work', 'wework-section')
-//     .setTween('.we-let-our-work', { backgroundColor: '#7de2d1', color: '#000' })
-//     .addIndicators()
-//     .addTo(controller);
-
-//   /* animation */
-//   $('.project-list').each(function (i) {
-//     const worklistTimeline = gsap.timeline(),
-//       worklist = $(this).find('.project-wrapper');
-
-//     worklistTimeline.staggerFromTo(
-//       worklist,
-//       0.35,
-//       {
-//         opacity: 0,
-//         y: 30,
-//         transformOrigin: 'bottom',
-//         ease: Power4.easeOut,
-//       },
-//       {
-//         opacity: 1,
-//         y: 0,
-//         transformOrigin: 'bottom',
-//         ease: Power4.easeOut,
-//       },
-//       0.3
-//     );
-
-//     const scene = new ScrollMagic.Scene({
-//       triggerElement: this,
-//       triggerHook: 0.5,
-//       reverse: true,
-//     })
-//       .setTween(worklistTimeline)
-//       .addTo(controller);
-//   });
-// }
 
 /* hero unit */
 if ($('.hero-unit')) {
