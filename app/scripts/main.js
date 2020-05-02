@@ -17,7 +17,7 @@ const body = document.body,
 
 headerMenu.to('.menu--icon span:first-child', 0.05, {
   css: { transform: 'rotate(30deg)' },
-  ease: Expo.easeOut, /* ease in out need to add  */
+  ease: Expo.easeOut /* ease in out need to add  */,
 });
 
 headerMenu.to('.menu--icon span:last-child', 0.02, {
@@ -57,7 +57,7 @@ const controller = new ScrollMagic.Controller();
 /* last section */
 $('.requestacces').each(function (i) {
   const animateIn = gsap.timeline(),
-    requestaccesContent = $(this).find('p span');
+    requestaccesContent = $(this).find('p span, .callTo');
 
   animateIn.staggerFromTo(
     requestaccesContent,
@@ -350,7 +350,7 @@ if ($('.hear-them-say-it')) {
           })
           // init in
           .set(slideIn, {
-            y: '-100%',
+            x: '-100%',
             autoAlpha: 0,
             css: {
               className: '+=slide active testimonial-content',
@@ -361,7 +361,7 @@ if ($('.hear-them-say-it')) {
             slideOut,
             {
               autoAlpha: 0,
-              y: '100%',
+              x: '100%',
               ease: Power3.easeInOut,
             },
             0
@@ -370,7 +370,7 @@ if ($('.hear-them-say-it')) {
           .to(
             slideIn,
             {
-              y: '0',
+              x: '0',
               autoAlpha: 1,
               ease: Power3.easeInOut,
             },
@@ -399,52 +399,53 @@ if ($('.hear-them-say-it')) {
 }
 
 /* we let our work */
-if ($('.we-let-our-work')) {
-  /* Slide in add bg color */
-  new ScrollMagic.Scene({
-    triggerElement: '.we-let-our-work',
-    triggerHook: 0.3,
-    offset: '0',
-    reverse: true,
-  })
 
-    // .setClassToggle('.we-let-our-work', 'wework-section')
-    .setTween(".we-let-our-work", { backgroundColor: "#7de2d1", color: '#000'})
-    .addIndicators()
-    .addTo(controller);
+// if ($('.we-let-our-work')) {
+//   /* Slide in add bg color */
+//   new ScrollMagic.Scene({
+//     triggerElement: '.we-let-our-work',
+//     triggerHook: 0.3,
+//     offset: '0',
+//     reverse: true,
+//   })
 
-  /* animation */
-  $('.project-list').each(function (i) {
-    const worklistTimeline = gsap.timeline(),
-      worklist = $(this).find('.project-wrapper');
+//     // .setClassToggle('.we-let-our-work', 'wework-section')
+//     .setTween('.we-let-our-work', { backgroundColor: '#7de2d1', color: '#000' })
+//     .addIndicators()
+//     .addTo(controller);
 
-    worklistTimeline.staggerFromTo(
-      worklist,
-      0.35,
-      {
-        opacity: 0,
-        y: 30,
-        transformOrigin: 'bottom',
-        ease: Power4.easeOut,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        transformOrigin: 'bottom',
-        ease: Power4.easeOut,
-      },
-      0.3
-    );
+//   /* animation */
+//   $('.project-list').each(function (i) {
+//     const worklistTimeline = gsap.timeline(),
+//       worklist = $(this).find('.project-wrapper');
 
-    const scene = new ScrollMagic.Scene({
-      triggerElement: this,
-      triggerHook: 0.5,
-      reverse: true,
-    })
-      .setTween(worklistTimeline)
-      .addTo(controller);
-  });
-}
+//     worklistTimeline.staggerFromTo(
+//       worklist,
+//       0.35,
+//       {
+//         opacity: 0,
+//         y: 30,
+//         transformOrigin: 'bottom',
+//         ease: Power4.easeOut,
+//       },
+//       {
+//         opacity: 1,
+//         y: 0,
+//         transformOrigin: 'bottom',
+//         ease: Power4.easeOut,
+//       },
+//       0.3
+//     );
+
+//     const scene = new ScrollMagic.Scene({
+//       triggerElement: this,
+//       triggerHook: 0.5,
+//       reverse: true,
+//     })
+//       .setTween(worklistTimeline)
+//       .addTo(controller);
+//   });
+// }
 
 /* hero unit */
 if ($('.hero-unit')) {
@@ -480,7 +481,6 @@ if ($('.hero-unit')) {
       .addTo(controller);
   });
 }
-
 
 /* home page our service list */
 if ($('.wedo-content')) {
@@ -519,11 +519,82 @@ if ($('.wedo-content')) {
       offset: '0',
       triggerHook: 0.5,
       duration: '160px',
-      reverse: true
+      reverse: true,
     })
       .setClassToggle(this, 'active')
       .setTween(wedocontentTimeline)
-       // add indicators (requires plugin)
+      // add indicators (requires plugin)
       .addTo(controller);
   });
 }
+
+/* page : service */
+
+$('.container').each(function (i) {
+  const animateIn = gsap.timeline(),
+    requestaccesContent = $(this).find(
+      '.section-row__image-wrapper, .section-row__text , .section-row__text .service--design p, .section-row__text .service--design ul, .section-row__text .service--design h3, .section-row__text--heading, .page__content--header_title, .card'
+    );
+
+  animateIn.staggerFromTo(
+    requestaccesContent,
+    1,
+    {
+      opacity: 0,
+      y: 30,
+      transformOrigin: 'bottom',
+      ease: Power4.easeOut,
+    },
+    {
+      opacity: 1,
+      y: 0,
+      transformOrigin: 'bottom',
+      ease: Power4.easeOut,
+    },
+    0.5
+  );
+
+  const scene = new ScrollMagic.Scene({
+    triggerElement: this,
+    triggerHook: 0.5,
+    offset: '0',
+    reverse: true,
+  })
+    .setTween(animateIn)
+    .addTo(controller);
+});
+
+
+$('.page__content--service__page--title').each(function (i) {
+  const animateInTitle = gsap.timeline(),
+    requestaccesContentSpan = $(this).find(
+      'span'
+    );
+
+    animateInTitle.staggerFromTo(
+      requestaccesContentSpan,
+    1,
+    {
+      opacity: 0,
+      y: 30,
+      transformOrigin: 'bottom',
+      ease: Power4.easeOut,
+    },
+    {
+      opacity: 1,
+      y: 0,
+      transformOrigin: 'bottom',
+      ease: Power4.easeOut,
+    },
+    0.5
+  );
+
+  const scene = new ScrollMagic.Scene({
+    triggerElement: this,
+    triggerHook: 0.5,
+    offset: '0',
+    reverse: true,
+  })
+    .setTween(animateInTitle)
+    .addTo(controller);
+});
