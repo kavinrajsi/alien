@@ -157,7 +157,6 @@
 					line-height : 27px;
 					position : relative;
 					padding-bottom : 5px;
-
 					&:after {
 						content : "";
 						display : block;
@@ -168,6 +167,15 @@
 						left : 0;
 						right : 0;
 						bottom : 0;
+						will-change : width, transition;
+						transform-origin : right;
+						transition : width 0.95s ease-in-out;
+					}
+					&:hover {
+						&:after {
+							width : 0;
+							transition : width 0.95s ease-in-out;
+						}
 					}
 				}
 			}

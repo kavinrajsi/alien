@@ -435,30 +435,41 @@ if ($('.hero-unit')) {
 /* home page our service list */
 if ($('.wedo-content')) {
   gsap.set('.wedo-content', {
-    autoAlpha: 0.3,
-    height: 0,
+    height:0,
+    autoAlpha: 0,
+    display: 'none',
+  });
+  gsap.set('.asp:first-child .wedo-title', {
+    autoAlpha: 1,
+  });
+  gsap.set('.asp:first-child .wedo-content', {
+    autoAlpha: 1,
+    height: 'auto',
   });
 
   $('.asp').each(function (i) {
     const wedocontentTimeline = gsap.timeline();
     const wedocontent = $(this).find('.wedo-content');
+    const thisHeight = $(this).find('.wedo-content').outerHeight() + 20;
 
     wedocontentTimeline.staggerFromTo(
       wedocontent,
-      0.3,
+      0.36,
       {
-        opacity: 0,
+        autoAlpha: 0,
         height: 0,
-        y: -100,
+        y: -34,
         transformOrigin: 'top',
-        ease: Power4.easeOut,
+        ease: Linear.easeNone
       },
       {
-        opacity: 1,
-        height: '100%',
+        height: thisHeight,
+        autoAlpha: 1,
+        display: 'block',
+        ease: Cubic.easeInOut,
+        overwrite: 'none',
         y: 0,
         transformOrigin: 'top',
-        ease: Power4.easeOut,
       }
     );
 
@@ -466,14 +477,12 @@ if ($('.wedo-content')) {
     const wedoList = new ScrollMagic.Scene({
       // triggerElement: revealElements[i],
       triggerElement: this,
-      offset: '0',
       triggerHook: 0.5,
-      duration: '160px',
       reverse: true,
     })
       .setClassToggle(this, 'active')
       .setTween(wedocontentTimeline)
-      // add indicators (requires plugin)
+      // .addIndicators({ name: [i] }) // add indicators (requires plugin)
       .addTo(controller);
   });
 }
@@ -516,12 +525,10 @@ $('.container').each(function (i) {
 
 $('.page__content--service__page--title').each(function (i) {
   const animateInTitle = gsap.timeline(),
-    requestaccesContentSpan = $(this).find(
-      'span'
-    );
+    requestaccesContentSpan = $(this).find('span');
 
-    animateInTitle.staggerFromTo(
-      requestaccesContentSpan,
+  animateInTitle.staggerFromTo(
+    requestaccesContentSpan,
     1,
     {
       opacity: 0,
@@ -548,14 +555,11 @@ $('.page__content--service__page--title').each(function (i) {
     .addTo(controller);
 });
 
-
 /* page : about */
 
 $('.page__content--about__we-ideas').each(function (i) {
   const animateIn = gsap.timeline(),
-    requestaccesContent = $(this).find(
-      '.section-row__text, .card'
-    );
+    requestaccesContent = $(this).find('.section-row__text, .card');
 
   animateIn.staggerFromTo(
     requestaccesContent,

@@ -654,25 +654,29 @@
 
       if ($(".we-let-our-work")) {
         // build tween
-        const animateIn = gsap.timeline();
+        const animateIn = gsap.timeline(),
+          time = 0.65;
         animateIn
           .staggerFromTo(
             ".we-let-our-work",
-            0.32,
+            // "body",
+            time,
             {
               backgroundColor: "#0a0908",
-              transformOrigin: "bottom",
-              // ease: Back.easeOut,
+              // backgroundColor: "#7de2d1",
+              // transformOrigin: "bottom",
+              // ease: Power2.easeOut,
             },
             {
               backgroundColor: "#7de2d1",
-              transformOrigin: "bottom",
-              // ease: Back.easeOut,
+              // backgroundColor: "#0a0908",
+              // transformOrigin: "bottom",
+              // ease: Power2.easeOut,
             }
           )
           .staggerFromTo(
             ".section-title span",
-            0.32,
+            time,
             {
               color: "#7de2d1",
               // y: 20,
@@ -685,66 +689,61 @@
               // transformOrigin: "bottom",
               // ease: Back.easeOut,
             },
-            0.32
-          )
-          .staggerFromTo(
-            ".we-let-our-work .section-title .indicator",
-            0.32,
-            {
-              backgroundColor: "#7de2d1",
-              // y: 30,
-              // ease: Back.easeOut,
-            },
-            {
-              backgroundColor: "#0a0908",
-              // y: 0,
-              // ease: Back.easeOut,
-            },
-            0.32
+            "-=0.31"
           );
 
         /* Slide in add bg color */
         new ScrollMagic.Scene({
           triggerElement: ".we-let-our-work",
           triggerHook: 0.3,
-          offset: "0",
           reverse: true,
         })
           .setTween(animateIn)
-          .addIndicators()
+          // .addIndicators()
           .addTo(controller);
 
         /* animation */
-        $(".project-list").each(function (i) {
-          const worklistTimeline = gsap.timeline(),
-            worklist = $(this).find(".project-wrapper");
+        // loop
+        function loop(elements, callback) {
+          for (let i = 0; i < elements.length; i++) {
+            callback(elements[i]);
+          }
+        }
 
-          worklistTimeline.staggerFromTo(
-            worklist,
-            0.35,
-            {
-              opacity: 0,
-              y: 30,
-              transformOrigin: "bottom",
-              ease: Power4.easeOut,
-            },
-            {
-              opacity: 1,
-              y: 0,
-              transformOrigin: "bottom",
-              ease: Power4.easeOut,
-            },
-            0.3
-          );
+        // const controller = new ScrollMagic.Controller();
 
-          const scene = new ScrollMagic.Scene({
-            triggerElement: this,
-            triggerHook: 0.5,
-            reverse: true,
-          })
-            .setTween(worklistTimeline)
-            .addTo(controller);
-        });
+        loop(
+          document.querySelectorAll(".project-list .project-wrapper"),
+          (elem) => {
+            const tl = new TimelineMax();
+
+            tl.fromTo(
+              elem,
+              0.6,
+              {
+                y: 30,
+                transformOrigin: "bottom",
+                ease: Back.easeOut,
+                autoAlpha: 0,
+              },
+              {
+                y: 0,
+                transformOrigin: "bottom",
+                ease: Back.easeOut,
+                autoAlpha: 1,
+              }
+            );
+
+            new ScrollMagic.Scene({
+              triggerElement: elem,
+              triggerHook: 0.75,
+              reverse: true,
+            })
+              .setTween(tl)
+              // .addIndicators({ name: "Box Tween" })
+              .addTo(controller);
+          }
+        );
       }
     </script>
     <!-- endbuild -->

@@ -6,7 +6,7 @@
 	@include interpolate("padding-bottom", 576px, 86px, 992px, 120px, "ease-in");
 	position : relative;
 	z-index : 1;
-	background : var(--wework-bg);
+	background : var(--smoky-black);
 
 	.section-title {
 		margin-bottom : 80px;
@@ -59,6 +59,7 @@
 			}
 
 			&-wrapper {
+				opacity : 0;
 				@include interpolate("margin-bottom", 375px, 60px, 992px, 100px, "ease-in");
 
 				a {

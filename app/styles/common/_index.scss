@@ -5,13 +5,21 @@
 @import "header";
 @import "footer";
 
+html {
+	backface-visibility : hidden;
+	will-change : background-color,color;
+	transition : background-color 0.65s var(--ease-in-out-soft),
+	color 0.65s var(--ease-in-out-soft),
+	border 0.65s var(--ease-in-out-soft);
+}
+
 body {
 	font-family : var(--font-400);
 	background : var(--smoky-black);
 	margin-left : auto;
 	margin-right : auto;
 	overflow-x : hidden;
-	transition : all 0.35s ease-in;
+	// transition : all 0.35s ease-in;
 
 	&.menu--open {
 		transition : all 0.35s ease-in;
