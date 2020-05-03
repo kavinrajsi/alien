@@ -281,10 +281,18 @@ select:focus {
 
 /* All of our custom controls should be what we expect them to be */
 input,
+select,
 textarea {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus{
+    border: 0px;
+    -webkit-text-fill-color: transition;
+    -webkit-box-shadow: none;
+  }
 }
 
 /* These elements are usually rendered a certain way by the browser */
