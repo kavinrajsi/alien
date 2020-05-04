@@ -244,7 +244,9 @@
 		flex-wrap : wrap;
 
 		.form-check {
-			flex : 1 0 calc(50% - 100px);
+			flex : 1 0 50%;
+			// min-width : 190px;
+			// margin-right : 79px;
 		}
 
 		label {
@@ -259,7 +261,7 @@
 
 	&-check-inline {
 		position : relative;
-		margin-right : 100px;
+		margin-top : 30px;
 
 		input {
 			width : 0;
@@ -291,7 +293,8 @@
 
 	&-radio-inline {
 		position : relative;
-		margin-right : 100px;
+		margin-top : 37px;
+		// margin-right : 100px;
 
 		input {
 			width : 0;
@@ -300,8 +303,20 @@
 			position : absolute;
 			left : 0;
 			top : 0;
+
 			&:checked + label::before {
-				background-color : red;
+				background-color : var(--blue-violet);
+			}
+			&:checked + label::after {
+				border-radius : 50%;
+				background-color : var(--white);
+				content : "";
+				display : inline-block;
+				position : absolute;
+				left : 6px;
+				right : 0;
+				width : 12px;
+				height : 12px;
 			}
 		}
 
@@ -325,8 +340,10 @@
 	}
 
 	textarea {
+		resize : none;
 		max-height : 100px;
 		padding-top : 30px;
+
 		+ label {
 			top : 0;
 		}
@@ -343,6 +360,11 @@
 			@media(min-width: $mobileM) {
 				padding : 14px 56px;
 			}
+			font-family : var(--font-600);
+			font-size : 18px;
+			line-height : 30px;
+			text-align : center;
+			letter-spacing : 1px;
 			color : var(--white);
 			cursor : pointer;
 			transition : background-color 0.3s,
