@@ -223,177 +223,185 @@
           </div>
         </div>
         <div class="right">
-          <form class="form" method="post" autocomplete="off" action="tryme.php">
+          <form
+            id="form"
+            class="form"
+            method="post"
+            autocomplete="off"
+            name="myForm"
+            action="/tryme.php"
+          >
             <div class="form-group">
-              <div class="form-group-control">
+              <div class="form-row">
                 <label for="">What are the services you are looking for?</label>
-                <div class="form-row">
-                  <div class="form-check form-check-inline">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      id="branding"
-                      value="Branding"
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="branding"
+                    name="service[]"
+                    value="Branding"
+                  />
+                  <label class="form-check-label" for="branding"
+                    >Branding</label
+                  >
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="design"
+                    name="service[]"
+                    value="UX/UI Design"
+                  />
+                  <label class="form-check-label" for="design"
+                    >UX/UI Design</label
+                  >
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="development"
+                    name="service[]"
+                    value="Development"
+                  />
+                  <label class="form-check-label" for="development"
+                    >Development</label
+                  >
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="digital"
+                    name="service[]"
+                    value="Digital Marketing"
+                  />
+                  <label class="form-check-label" for="digital"
+                    >Digital Marketing</label
+                  >
+                </div>
 
-                    />
-                    <label class="form-check-label" for="branding"
-                      >Branding</label
-                    >
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      id="design"
-                      value="UX/UI Design"
-                    />
-                    <label class="form-check-label" for="design"
-                      >UX/UI Design</label
-                    >
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      id="development"
-                      value="Development"
-                    />
-                    <label class="form-check-label" for="development"
-                      >Development</label
-                    >
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      id="digital"
-                      value="Digital Marketing"
-                    />
-                    <label class="form-check-label" for="digital"
-                      >Digital Marketing</label
-                    >
-                  </div>
-                </div>
-                <div class="form-control-status invalid-feedback">
-                  Please provide a valid city.
-                </div>
+                <div class="errorCheck"></div>
               </div>
             </div>
             <div class="form-group">
               <input
                 type="text"
-                class="form-control"
+                class="form-group-control"
                 name="name"
                 id="name"
                 placeholder=""
                 autocomplete="off"
+                required
               />
-              <label for="name">Name</label>
-              <div class="form-control-status invalid-feedback">
-                Please provide a valid city.
-              </div>
+              <label class="form-group-label" for="name">Name</label>
             </div>
             <div class="form-group">
               <input
                 type="email"
-                class="form-control"
+                class="form-group-control"
                 name="email"
                 id="email"
                 placeholder=""
                 autocomplete="off"
+                required
               />
-              <label for="email">Email</label>
-              <div class="form-control-status invalid-feedback">
-                Please provide a valid city.
-              </div>
+              <label class="form-group-label" for="email">Email</label>
             </div>
             <div class="form-group">
               <input
                 type="tel"
-                class="form-control"
+                class="form-group-control"
                 name="phoneNumber"
                 id="phoneNumber"
                 placeholder=""
                 autocomplete="off"
+                required
+                minlength="10"
+                maxlength="10"
+                pattern="^\d{10}$"
               />
-              <label for="phoneNumber">Phone number</label>
-              <div class="form-control-status invalid-feedback">
-                Please provide a valid city.
-              </div>
+              <label class="form-group-label" for="phoneNumber"
+                >Phone number</label
+              >
             </div>
             <div class="form-group">
               <textarea
-                class="form-control"
+                class="form-group-control"
                 name="projectDetails"
                 id="projectDetails"
                 cols="30"
                 rows="10"
+                required
               ></textarea>
-              <label for="projectDetails">Project Details</label>
-              <div class="form-control-status invalid-feedback">
-                Please provide a valid city.
-              </div>
+              <label class="form-group-label" for="projectDetails"
+                >Project Details</label
+              >
             </div>
 
             <div class="form-group">
-              <div class="form-group-control">
+              <div class="form-row">
                 <label for="">How did you hear about us?</label>
-                <div class="form-row">
-                  <div class="form-check form-radio-inline">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="hearAboutus"
-                      id="referral"
-                      value="Referral"
-                    />
-                    <label class="form-check-label" for="referral"
-                      >Referral</label
-                    >
-                  </div>
-                  <div class="form-check form-radio-inline">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="hearAboutus"
-                      id="instalinked"
-                      value="Instagram/Linkedin"
-                    />
-                    <label class="form-check-label" for="instalinked"
-                      >Instagram/Linkedin</label
-                    >
-                  </div>
-                  <div class="form-check form-radio-inline">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="hearAboutus"
-
-                      id="google"
-                      value="Google"
-                    />
-                    <label class="form-check-label" for="google">Google</label>
-                  </div>
-                  <div class="form-check form-radio-inline">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="hearAboutus"
-                      id="other"
-                      value="Other"
-                    />
-                    <label class="form-check-label" for="other">Other</label>
-                  </div>
+                <div class="form-check form-radio-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="hearAboutus"
+                    id="referral"
+                    value="Referral"
+                    required
+                  />
+                  <label class="form-check-label" for="referral"
+                    >Referral</label
+                  >
                 </div>
-
-                <div class="form-control-status invalid-feedback">
-                  Please provide a valid city.
+                <div class="form-check form-radio-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="hearAboutus"
+                    id="instalinked"
+                    value="Instagram/Linkedin"
+                    required
+                  />
+                  <label class="form-check-label" for="instalinked"
+                    >Instagram/Linkedin</label
+                  >
                 </div>
+                <div class="form-check form-radio-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="hearAboutus"
+                    id="google"
+                    value="Google"
+                    required
+                  />
+                  <label class="form-check-label" for="google">Google</label>
+                </div>
+                <div class="form-check form-radio-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="hearAboutus"
+                    id="other"
+                    value="Other"
+                    required
+                  />
+                  <label class="form-check-label" for="other">Other</label>
+                </div>
+                <div class="errorRadio"></div>
               </div>
             </div>
 
             <div class="form-group">
-              <button type="submit" class="btn--cover">
+              <button
+                type="submit"
+                class="btn--cover"
+                onsubmit="return validateForm()"
+              >
                 <span class="btn--cover_text">Send Message</span>
               </button>
             </div>
@@ -447,9 +455,47 @@
       type="text/javascript"
       src="/node_modules/scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js"
     ></script>
+    <script
+      type="text/javascript"
+      src="/node_modules/jquery-validation/dist/jquery.validate.js"
+    ></script>
     <!-- endbuild -->
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
+    <script>
+      $(".form").validate({
+        errorPlacement: function (error, element) {
+          if (element.attr("name") == "service[]") {
+            $(".errorCheck").html(error);
+          } else if (element.attr("name") == "hearAboutus") {
+            $(".errorRadio").html(error);
+          } else {
+            // the default error placement for the rest
+            error.insertAfter(element);
+          }
+        },
+        rules: {
+          "service[]": {
+            required: true,
+            minlength: 1,
+          },
+          name: {
+            required: true,
+          },
+          email: {
+            required: true,
+            email: true,
+          },
+          phoneNumber: {
+            required: true,
+            number: true,
+          },
+        },
+        messages: {
+          "service[]": "Please select at least two types of spam.",
+        },
+      });
+    </script>
     <!-- endbuild -->
   </body>
 </html>
