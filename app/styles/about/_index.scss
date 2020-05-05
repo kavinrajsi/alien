@@ -368,8 +368,12 @@
 								max-width : 502px;
 								color : var(--white);
 								font-family : var(--font-400);
-								font-size : 24px;
-								line-height : 36px;
+								font-size : 18px;
+								line-height : 30px;
+								@media(min-width: $tablet) {
+									font-size : 24px;
+									line-height : 36px;
+								}
 							}
 						}
 					}
