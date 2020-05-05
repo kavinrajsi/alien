@@ -24,3 +24,28 @@
 @import "contact/index";
 
 @import "work/index";
+
+
+@keyframes scale-in {
+	0% {
+		transform : scaleX(0);
+		transform-origin : left;
+	}
+
+	to {
+		transform : scaleX(1);
+		transform-origin : left;
+	}
+}
+
+@keyframes scale-out {
+	0% {
+		transform : scaleX(1);
+		transform-origin : right;
+	}
+
+	to {
+		transform : scaleX(0);
+		transform-origin : right;
+	}
+}

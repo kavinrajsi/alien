@@ -183,12 +183,11 @@ header {
 							background-color : var(--white);
 							will-change : width, transition;
 							transform-origin : right;
-							transition : width 0.95s ease-in-out;
 						}
 						&:hover {
 							&:after {
-								width : 0;
-								transition : width 0.95s ease-in-out;
+								opacity : 1;
+								animation : 0.25s var(--ease-out) 0s scale-out forwards,0.25s var(--ease-out) 0.25s scale-in forwards;
 							}
 						}
 					}
@@ -333,12 +332,11 @@ header {
 									background : var(--black-coral);
 									will-change : width, transition;
 									transform-origin : right;
-									transition : width 0.95s ease-in-out;
 								}
 								&:hover {
 									&:after {
-										width : 0;
-										transition : width 0.95s ease-in-out;
+										opacity : 1;
+										animation : 0.25s var(--ease-out) 0s scale-out forwards,0.25s var(--ease-out) 0.25s scale-in forwards;
 									}
 								}
 							}
