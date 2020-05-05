@@ -59,7 +59,7 @@
 			}
 
 			&-wrapper {
-				opacity : 0;
+				// opacity : 0;
 				@include interpolate("margin-bottom", 375px, 60px, 992px, 100px, "ease-in");
 
 				a {
