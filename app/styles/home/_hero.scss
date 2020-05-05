@@ -165,7 +165,7 @@
 		&:hover {
 			&:after {
 				opacity : 1;
-				animation : 0.25s var(--ease-out) 0s scale-out forwards,0.25s var(--ease-out) 0.25s scale-in forwards;
+				animation : 0.35s ease-out 0s scale-out forwards,0.35s ease-out 0.35s scale-in forwards;
 			}
 		}
 	}

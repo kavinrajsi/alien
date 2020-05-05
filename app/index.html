@@ -284,27 +284,7 @@
                 </div>
               </a>
             </div>
-            <div class="project-wrapper">
-              <a href="#" class="project-link">
-                <div class="image">
-                  <picture>
-                    <source srcset="/images/pathway.webp" type="image/webp" />
-                    <source srcset="/images/pathway.jpg 1x" />
-                    <img
-                      data-src="/images/pathway.jpg"
-                      src="/images/pathway.jpg"
-                      loading="lazy"
-                      class="lazyload"
-                      alt="Interactive teaching for Special children"
-                    />
-                  </picture>
-                </div>
-                <div class="title">
-                  Interactive teaching for Special children
-                  <span>Pathways</span>
-                </div>
-              </a>
-            </div>
+
             <div class="project-wrapper">
               <a href="#" class="project-link">
                 <div class="image">
@@ -750,15 +730,14 @@
       if ($(".we-let-our-work")) {
         // build tween
         const animateIn = gsap.timeline(),
-          time = 0.65;
+          time = 0.75;
         animateIn
           .staggerFromTo(
             ".we-let-our-work",
-            // "body",
             time,
             {
               backgroundColor: "#0a0908",
-              y: 20,
+              y: -40,
               transformOrigin: "bottom",
               ease: Back.easeOut,
             },
@@ -767,16 +746,14 @@
               y: 0,
               transformOrigin: "bottom",
               ease: Back.easeOut,
-            },
-            "-=0.31"
+            }
           )
           .staggerFromTo(
             ".indicator",
-            // "body",
             time,
             {
               backgroundColor: "#7de2d1",
-              y: 20,
+              y: -40,
               transformOrigin: "bottom",
               ease: Back.easeOut,
             },
@@ -785,15 +762,14 @@
               y: 0,
               transformOrigin: "bottom",
               ease: Back.easeOut,
-            },
-            "-=0.31"
+            }
           )
           .staggerFromTo(
             ".section-title span",
             time,
             {
               color: "#7de2d1",
-              y: 20,
+              y: -40,
               transformOrigin: "bottom",
               ease: Back.easeOut,
             },
@@ -802,18 +778,17 @@
               y: 0,
               transformOrigin: "bottom",
               ease: Back.easeOut,
-            },
-            "-=0.31"
+            }
           );
 
         /* Slide in add bg color */
         new ScrollMagic.Scene({
           triggerElement: ".we-let-our-work",
-          triggerHook: 0.3,
+          triggerHook: 1,
           reverse: true,
         })
           .setTween(animateIn)
-          // .addIndicators()
+          .addIndicators()
           .addTo(controller);
 
         /* animation */
@@ -851,7 +826,7 @@
             new ScrollMagic.Scene({
               triggerElement: elem,
               triggerHook: 0.75,
-              reverse: true,
+              reverse: false,
             })
               .setTween(tl)
               // .addIndicators({ name: "Box Tween" })
