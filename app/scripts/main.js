@@ -18,39 +18,39 @@
 
 // smoothScroll();
 
-if ("loading" in HTMLImageElement.prototype) {
+if ('loading' in HTMLImageElement.prototype) {
   const images = document.querySelectorAll('img[loading="lazy"]');
   images.forEach((img) => {
     img.src = img.dataset.src;
   });
 } else {
   // Dynamically import the LazySizes library
-  const script = document.createElement("script");
+  const script = document.createElement('script');
   script.src =
-    "https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js";
+    'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js';
   document.body.appendChild(script);
 }
 
 // menu transition and action on click
 const body = document.body,
   headerMenu = gsap.timeline({ paused: true });
-headerMenu.to(".menu--icon span:first-child", 0.035, {
+headerMenu.to('.menu--icon span:first-child', 0.035, {
   opacity: 1,
   rotation: 30,
   ease: Power4.easeOut,
 });
 
-headerMenu.to(".menu--icon span:last-child", 0.0354, {
+headerMenu.to('.menu--icon span:last-child', 0.0354, {
   opacity: 1,
   rotation: -30,
   y: -24,
   ease: Power4.easeOut,
 });
 
-headerMenu.to(".menu--item__content", 0.35, {
+headerMenu.to('.menu--item__content', 0.35, {
   top: 0,
-  visibility: "visible",
-  height: "auto",
+  visibility: 'visible',
+  height: 'auto',
   x: 0,
   y: 0,
   opacity: 1,
@@ -58,29 +58,29 @@ headerMenu.to(".menu--item__content", 0.35, {
 });
 
 headerMenu.staggerFrom(
-  ".menu--item__content-link",
+  '.menu--item__content-link',
   0.35,
   {
     y: -30,
     opacity: 0,
     ease: Expo.easeIn,
   },
-  "-=0.35"
+  '-=0.35'
 );
 
 headerMenu.staggerFrom(
-  ".menu--secondary",
+  '.menu--secondary',
   0.25,
   {
     y: -30,
     opacity: 0,
     ease: Expo.easeIn,
   },
-  "+=0.35"
+  '+=0.35'
 );
 
 headerMenu.staggerFrom(
-  ".lead-me-out__link li",
+  '.lead-me-out__link li',
   0.25,
   {
     y: 30,
@@ -95,8 +95,8 @@ headerMenu.staggerFrom(
 );
 
 headerMenu.reverse();
-$(document).on("click", ".trigger-menu, .menu--item__content a", function () {
-  body.classList.toggle("menu--open");
+$(document).on('click', '.trigger-menu, .menu--item__content a', function () {
+  body.classList.toggle('menu--open');
   headerMenu.reversed(!headerMenu.reversed());
 });
 
@@ -104,9 +104,9 @@ $(document).on("click", ".trigger-menu, .menu--item__content a", function () {
 const controller = new ScrollMagic.Controller();
 
 /* last section */
-$(".requestacces").each(function (i) {
+$('.requestacces').each(function (i) {
   const animateIn = gsap.timeline(),
-    requestaccesContent = $(this).find("p span, .callTo");
+    requestaccesContent = $(this).find('p span, .callTo');
 
   animateIn.staggerFromTo(
     requestaccesContent,
@@ -114,13 +114,13 @@ $(".requestacces").each(function (i) {
     {
       opacity: 0,
       y: 30,
-      transformOrigin: "bottom",
+      transformOrigin: 'bottom',
       ease: Power4.easeOut,
     },
     {
       opacity: 1,
       y: 0,
-      transformOrigin: "bottom",
+      transformOrigin: 'bottom',
       ease: Power4.easeOut,
     },
     0.5
@@ -129,7 +129,7 @@ $(".requestacces").each(function (i) {
   const scene = new ScrollMagic.Scene({
     triggerElement: this,
     triggerHook: 0.5,
-    offset: "0",
+    offset: '0',
     reverse: false,
   })
     .setTween(animateIn)
@@ -138,11 +138,11 @@ $(".requestacces").each(function (i) {
 });
 
 /* Slider */
-if ($(".hear-them-say-it")) {
-  const slider_one = $(".view-mobile .testimonial-one .slide"),
-    actionLeft = $(".view-mobile .testimonial-action .action-left"),
-    actionRight = $(".view-mobile .testimonial-action .action-right"),
-    active = $(".view-mobile .testimonial-one .active");
+if ($('.hear-them-say-it')) {
+  const slider_one = $('.view-mobile .testimonial-one .slide'),
+    actionLeft = $('.view-mobile .testimonial-action .action-left'),
+    actionRight = $('.view-mobile .testimonial-action .action-right'),
+    active = $('.view-mobile .testimonial-one .active');
 
   function init() {
     gsap.set(slider_one.not(active), {
@@ -150,32 +150,32 @@ if ($(".hear-them-say-it")) {
     });
 
     gsap.set(actionLeft, {
-      css: { "pointer-events": "none", color: "#fff", opacity: 0.4 },
+      css: { 'pointer-events': 'none', color: '#fff', opacity: 0.4 },
     });
 
     gsap.set(actionRight, {
-      css: { color: "#fff", opacity: 1.0, "pointer-events": "initial" },
+      css: { color: '#fff', opacity: 1.0, 'pointer-events': 'initial' },
     });
   }
   init();
 
   if ($(window).width() < 992) {
-    console.log("mobile");
+    console.log('mobile');
 
-    const slider_one = $(".view-mobile .testimonial-one .slide"),
-      actionLeft = $(".view-mobile .testimonial-action .action-left"),
-      actionRight = $(".view-mobile .testimonial-action .action-right"),
-      active = $(".view-mobile .testimonial-one .active");
+    const slider_one = $('.view-mobile .testimonial-one .slide'),
+      actionLeft = $('.view-mobile .testimonial-action .action-left'),
+      actionRight = $('.view-mobile .testimonial-action .action-right'),
+      active = $('.view-mobile .testimonial-one .active');
 
     function gotoPrevSlider(slideOut, slideIn) {
-      console.log("left");
+      console.log('left');
       const leftCard = gsap.timeline(),
-        content = slideIn.find("blockquote"),
-        author = slideIn.find("footer"),
+        content = slideIn.find('blockquote'),
+        author = slideIn.find('footer'),
         index = slideIn.index(),
-        size = $(".view-mobile .testimonial-one .slide").length;
+        size = $('.view-mobile .testimonial-one .slide').length;
 
-      console.log("leftCard: " + index + "," + size);
+      console.log('leftCard: ' + index + ',' + size);
 
       if (slideIn !== 0) {
         // go to prev slider
@@ -183,23 +183,23 @@ if ($(".hear-them-say-it")) {
           .set(slideOut, {
             autoAlpha: 0,
             css: {
-              className: "-=slide testimonial-content",
+              className: '-=slide testimonial-content',
             },
           })
           .set(slideIn, {
-            x: "-100%",
+            x: '-100%',
             autoAlpha: 0,
             css: {
-              className: "+=slide active testimonial-content",
+              className: '+=slide active testimonial-content',
             },
           })
           .to(slideOut, {
             autoAlpha: 0,
-            x: "100%",
+            x: '100%',
             ease: Power3.easeInOut,
           })
           .to(slideIn, {
-            x: "0",
+            x: '0',
             autoAlpha: 1,
             ease: Power3.easeInOut,
           });
@@ -207,17 +207,17 @@ if ($(".hear-them-say-it")) {
 
       gsap.to(actionRight, 0.3, {
         css: {
-          color: "#fff",
+          color: '#fff',
           opacity: 1.0,
-          "pointer-events": "initial",
+          'pointer-events': 'initial',
         },
       });
 
       if (index === 0) {
         gsap.to(actionLeft, 0.3, {
           css: {
-            "pointer-events": "none",
-            color: "#fff",
+            'pointer-events': 'none',
+            color: '#fff',
             opacity: 0.4,
           },
         });
@@ -225,73 +225,73 @@ if ($(".hear-them-say-it")) {
     }
 
     function gotoNextSlider(slideOut, slideIn) {
-      console.log("right");
+      console.log('right');
       const rightCard = gsap.timeline(),
-        content = slideIn.find("blockquote"),
-        author = slideIn.find("footer"),
+        content = slideIn.find('blockquote'),
+        author = slideIn.find('footer'),
         index = slideIn.index(),
-        size = $(".view-mobile .testimonial-one .slide").length;
+        size = $('.view-mobile .testimonial-one .slide').length;
 
-      console.log("rightCard: " + index + "," + size);
+      console.log('rightCard: ' + index + ',' + size);
 
       if (slideIn !== 0) {
         rightCard
           .set(slideOut, {
             autoAlpha: 0,
             css: {
-              className: "-=slide testimonial-content",
+              className: '-=slide testimonial-content',
             },
           })
           .set(slideIn, {
-            x: "-100%",
+            x: '-100%',
             autoAlpha: 0,
             css: {
-              className: "+=slide active testimonial-content",
+              className: '+=slide active testimonial-content',
             },
           })
           .to(slideOut, {
             autoAlpha: 0,
-            x: "100%",
+            x: '100%',
             ease: Power3.easeInOut,
           })
           .to(slideIn, {
-            x: "0",
+            x: '0',
             autoAlpha: 1,
             ease: Power3.easeInOut,
           });
       }
 
       gsap.to(actionLeft, 0.3, {
-        css: { color: "#fff", opacity: 1.0, "pointer-events": "initial" },
+        css: { color: '#fff', opacity: 1.0, 'pointer-events': 'initial' },
       });
 
       if (index == 3) {
         gsap.to(actionRight, 0.3, {
-          css: { "pointer-events": "none", color: "#fff", opacity: 0.4 },
+          css: { 'pointer-events': 'none', color: '#fff', opacity: 0.4 },
         });
       }
     }
 
     actionLeft.click(function (e) {
       e.preventDefault();
-      const slideOut = $(".view-mobile .testimonial-one .slide"),
-        slideIn = $(".view-mobile .testimonial-one .slide.active").prev();
+      const slideOut = $('.view-mobile .testimonial-one .slide'),
+        slideIn = $('.view-mobile .testimonial-one .slide.active').prev();
       gotoPrevSlider(slideOut, slideIn);
     });
 
     actionRight.click(function (e) {
-      console.log("right click");
+      console.log('right click');
       e.preventDefault();
-      const slideOut = $(".view-mobile .testimonial-one .slide"),
-        slideIn = $(".view-mobile .testimonial-one .slide.active").next();
+      const slideOut = $('.view-mobile .testimonial-one .slide'),
+        slideIn = $('.view-mobile .testimonial-one .slide.active').next();
       gotoNextSlider(slideOut, slideIn);
     });
   } else {
-    console.log("desktop");
-    const slider_one = $(".view-desktop .testimonial-one .slide"),
-      actionLeft = $(".view-desktop .testimonial-action .action-left"),
-      actionRight = $(".view-desktop .testimonial-action .action-right"),
-      active = $(".view-desktop .testimonial-one .active");
+    console.log('desktop');
+    const slider_one = $('.view-desktop .testimonial-one .slide'),
+      actionLeft = $('.view-desktop .testimonial-action .action-left'),
+      actionRight = $('.view-desktop .testimonial-action .action-right'),
+      active = $('.view-desktop .testimonial-one .active');
 
     function init() {
       TweenLite.set(slider_one.not(active), {
@@ -299,21 +299,21 @@ if ($(".hear-them-say-it")) {
       });
 
       TweenLite.set(actionLeft, {
-        css: { "pointer-events": "none", color: "#fff", opacity: 0.4 },
+        css: { 'pointer-events': 'none', color: '#fff', opacity: 0.4 },
       });
 
       TweenLite.set(actionRight, {
-        css: { color: "#fff", opacity: 1.0, "pointer-events": "initial" },
+        css: { color: '#fff', opacity: 1.0, 'pointer-events': 'initial' },
       });
     }
     init();
 
     function gotoNextSlider(slideOut, slideIn) {
       const tl = gsap.timeline(),
-        content = slideIn.find("blockquote"),
-        author = slideIn.find("footer"),
+        content = slideIn.find('blockquote'),
+        author = slideIn.find('footer'),
         index = slideIn.index(),
-        size = $(".view-desktop .testimonial-one .slide").length;
+        size = $('.view-desktop .testimonial-one .slide').length;
 
       if (slideIn !== 0) {
         // go to next slider
@@ -322,15 +322,15 @@ if ($(".hear-them-say-it")) {
           .set(slideOut, {
             autoAlpha: 0,
             css: {
-              className: "-=slide testimonial-content",
+              className: '-=slide testimonial-content',
             },
           })
           // init in
           .set(slideIn, {
-            x: "100%",
+            x: '100%',
             autoAlpha: 0,
             css: {
-              className: "+=slide active testimonial-content",
+              className: '+=slide active testimonial-content',
             },
           })
           // move out
@@ -338,7 +338,7 @@ if ($(".hear-them-say-it")) {
             slideOut,
             {
               autoAlpha: 0,
-              x: "100%",
+              x: '100%',
               ease: Power3.easeInOut,
             },
             0
@@ -347,7 +347,7 @@ if ($(".hear-them-say-it")) {
           .to(
             slideIn,
             {
-              x: "0",
+              x: '0',
               autoAlpha: 1,
               ease: Power3.easeInOut,
             },
@@ -356,36 +356,36 @@ if ($(".hear-them-say-it")) {
       }
 
       TweenLite.to(actionLeft, 0.3, {
-        css: { color: "#fff", opacity: 1.0, "pointer-events": "initial" },
+        css: { color: '#fff', opacity: 1.0, 'pointer-events': 'initial' },
       });
 
       console.log(index);
 
       if (index == 1) {
         TweenLite.to(actionRight, 0.3, {
-          css: { "pointer-events": "none", color: "#fff", opacity: 0.4 },
+          css: { 'pointer-events': 'none', color: '#fff', opacity: 0.4 },
         });
       }
     }
 
     actionRight.click(function (e) {
-      console.log("right");
+      console.log('right');
       e.preventDefault();
-      const slideOut = $(".view-desktop .testimonial-one .slide"),
-        slideIn = $(".view-desktop .testimonial-one .slide.active").next();
+      const slideOut = $('.view-desktop .testimonial-one .slide'),
+        slideIn = $('.view-desktop .testimonial-one .slide.active').next();
       gotoNextSlider(slideOut, slideIn);
     });
 
     function gotoPrevSlider(slideOut, slideIn) {
-      console.log("left");
+      console.log('left');
 
       const tl = gsap.timeline(),
-        content = slideIn.find("blockquote"),
-        author = slideIn.find("footer"),
+        content = slideIn.find('blockquote'),
+        author = slideIn.find('footer'),
         index = slideIn.index(),
-        size = $(".view-desktop .testimonial-one .slide").length;
+        size = $('.view-desktop .testimonial-one .slide').length;
 
-      console.log(index + "," + size);
+      console.log(index + ',' + size);
 
       if (slideIn !== 0) {
         // go to prev slider
@@ -394,15 +394,15 @@ if ($(".hear-them-say-it")) {
           .set(slideOut, {
             autoAlpha: 0,
             css: {
-              className: "-=slide testimonial-content",
+              className: '-=slide testimonial-content',
             },
           })
           // init in
           .set(slideIn, {
-            x: "-100%",
+            x: '-100%',
             autoAlpha: 0,
             css: {
-              className: "+=slide active testimonial-content",
+              className: '+=slide active testimonial-content',
             },
           })
           // move out
@@ -410,7 +410,7 @@ if ($(".hear-them-say-it")) {
             slideOut,
             {
               autoAlpha: 0,
-              x: "100%",
+              x: '100%',
               ease: Power3.easeInOut,
             },
             0
@@ -419,7 +419,7 @@ if ($(".hear-them-say-it")) {
           .to(
             slideIn,
             {
-              x: "0",
+              x: '0',
               autoAlpha: 1,
               ease: Power3.easeInOut,
             },
@@ -428,30 +428,30 @@ if ($(".hear-them-say-it")) {
       }
 
       TweenLite.to(actionRight, 0.3, {
-        css: { color: "#fff", opacity: 1.0, "pointer-events": "initial" },
+        css: { color: '#fff', opacity: 1.0, 'pointer-events': 'initial' },
       });
 
       if (index === 0) {
         TweenLite.to(actionLeft, 0.3, {
-          css: { "pointer-events": "none", color: "#fff", opacity: 0.4 },
+          css: { 'pointer-events': 'none', color: '#fff', opacity: 0.4 },
         });
       }
     }
 
     actionLeft.click(function (e) {
       e.preventDefault();
-      const slideOut = $(".view-desktop .testimonial-one .slide"),
-        slideIn = $(".view-desktop .testimonial-one .slide.active").prev();
+      const slideOut = $('.view-desktop .testimonial-one .slide'),
+        slideIn = $('.view-desktop .testimonial-one .slide.active').prev();
       gotoPrevSlider(slideOut, slideIn);
     });
   }
 }
 
 /* hero unit */
-if ($(".hero-unit")) {
-  $(".hero-unit").each(function (i) {
+if ($('.hero-unit')) {
+  $('.hero-unit').each(function (i) {
     const herounitTimeline = gsap.timeline(),
-      herounit = $(this).find(".page-title, .page-title-secondary");
+      herounit = $(this).find('.page-title, .page-title-secondary');
 
     herounitTimeline.staggerFromTo(
       herounit,
@@ -459,13 +459,13 @@ if ($(".hero-unit")) {
       {
         opacity: 0,
         y: 30,
-        transformOrigin: "bottom",
+        transformOrigin: 'bottom',
         ease: Power4.easeOut,
       },
       {
         opacity: 1,
         y: 0,
-        transformOrigin: "bottom",
+        transformOrigin: 'bottom',
         ease: Power4.easeOut,
       },
       0.5
@@ -483,24 +483,24 @@ if ($(".hero-unit")) {
 }
 
 /* home page our service list */
-if ($(".wedo-content")) {
-  gsap.set(".wedo-content", {
+if ($('.wedo-content')) {
+  gsap.set('.wedo-content', {
     height: 0,
     autoAlpha: 0,
-    display: "none",
+    display: 'none',
   });
-  gsap.set(".asp:first-child .wedo-title", {
+  gsap.set('.asp:first-child .wedo-title', {
     autoAlpha: 1,
   });
-  gsap.set(".asp:first-child .wedo-content", {
+  gsap.set('.asp:first-child .wedo-content', {
     autoAlpha: 1,
-    height: "auto",
+    height: 'auto',
   });
 
-  $(".asp").each(function (i) {
+  $('.asp').each(function (i) {
     const wedocontentTimeline = gsap.timeline();
-    const wedocontent = $(this).find(".wedo-content");
-    const thisHeight = $(this).find(".wedo-content").outerHeight() + 20;
+    const wedocontent = $(this).find('.wedo-content');
+    const thisHeight = $(this).find('.wedo-content').outerHeight() + 20;
 
     wedocontentTimeline.staggerFromTo(
       wedocontent,
@@ -509,17 +509,17 @@ if ($(".wedo-content")) {
         autoAlpha: 0,
         height: 0,
         y: -34,
-        transformOrigin: "top",
+        transformOrigin: 'top',
         ease: Linear.easeNone,
       },
       {
         height: thisHeight,
         autoAlpha: 1,
-        display: "block",
+        display: 'block',
         ease: Cubic.easeInOut,
-        overwrite: "none",
+        overwrite: 'none',
         y: 0,
-        transformOrigin: "top",
+        transformOrigin: 'top',
       }
     );
 
@@ -530,7 +530,7 @@ if ($(".wedo-content")) {
       triggerHook: 0.5,
       reverse: false,
     })
-      .setClassToggle(this, "active")
+      .setClassToggle(this, 'active')
       .setTween(wedocontentTimeline)
       // .addIndicators({ name: [i] }) // add indicators (requires plugin)
       .addTo(controller);
@@ -539,10 +539,10 @@ if ($(".wedo-content")) {
 
 /* page : service */
 
-$(".container").each(function (i) {
+$('.container').each(function (i) {
   const animateIn = gsap.timeline(),
     requestaccesContent = $(this).find(
-      ".section-row__image-wrapper, .section-row__image-wrapper + .section-row__text p, .section-row__image-wrapper + .section-row__text ul, .section-row__image-wrapper + .section-row__text h3, .section-row__text--heading,  .section-row__text--heading + .section-row__text, .page__content--header_title, .card, .section-row__text-special, .section-row__text-special + .section-row__text, .section-row__text.event-what-we span"
+      '.section-row__image-wrapper, .section-row__image-wrapper + .section-row__text p, .section-row__image-wrapper + .section-row__text ul, .section-row__image-wrapper + .section-row__text h3, .section-row__text--heading,  .section-row__text--heading + .section-row__text, .page__content--header_title, .card, .section-row__text-special, .section-row__text-special + .section-row__text, .section-row__text.event-what-we span'
     );
 
   animateIn.staggerFromTo(
@@ -551,13 +551,13 @@ $(".container").each(function (i) {
     {
       opacity: 0,
       y: 30,
-      transformOrigin: "bottom",
+      transformOrigin: 'bottom',
       ease: Power4.easeOut,
     },
     {
       opacity: 1,
       y: 0,
-      transformOrigin: "bottom",
+      transformOrigin: 'bottom',
       ease: Power4.easeOut,
     },
     0.5
@@ -566,16 +566,16 @@ $(".container").each(function (i) {
   const scene = new ScrollMagic.Scene({
     triggerElement: this,
     triggerHook: 0.5,
-    offset: "0",
+    offset: '0',
     reverse: false,
   })
     .setTween(animateIn)
     .addTo(controller);
 });
 
-$(".page__content--service__page--title").each(function (i) {
+$('.page__content--service__page--title').each(function (i) {
   const animateInTitle = gsap.timeline(),
-    requestaccesContentSpan = $(this).find("span");
+    requestaccesContentSpan = $(this).find('span');
 
   animateInTitle.staggerFromTo(
     requestaccesContentSpan,
@@ -583,13 +583,13 @@ $(".page__content--service__page--title").each(function (i) {
     {
       opacity: 0,
       y: 30,
-      transformOrigin: "bottom",
+      transformOrigin: 'bottom',
       ease: Power4.easeOut,
     },
     {
       opacity: 1,
       y: 0,
-      transformOrigin: "bottom",
+      transformOrigin: 'bottom',
       ease: Power4.easeOut,
     },
     0.5
@@ -598,7 +598,7 @@ $(".page__content--service__page--title").each(function (i) {
   const scene = new ScrollMagic.Scene({
     triggerElement: this,
     triggerHook: 0.5,
-    offset: "0",
+    offset: '0',
     reverse: false,
   })
     .setTween(animateInTitle)
@@ -607,9 +607,9 @@ $(".page__content--service__page--title").each(function (i) {
 
 /* page : about */
 
-$(".page__content--about__we-ideas").each(function (i) {
+$('.page__content--about__we-ideas').each(function (i) {
   const animateIn = gsap.timeline(),
-    requestaccesContent = $(this).find(".section-row__text, .card");
+    requestaccesContent = $(this).find('.section-row__text, .card');
 
   animateIn.staggerFromTo(
     requestaccesContent,
@@ -617,13 +617,13 @@ $(".page__content--about__we-ideas").each(function (i) {
     {
       opacity: 0,
       y: 30,
-      transformOrigin: "bottom",
+      transformOrigin: 'bottom',
       ease: Power4.easeOut,
     },
     {
       opacity: 1,
       y: 0,
-      transformOrigin: "bottom",
+      transformOrigin: 'bottom',
       ease: Power4.easeOut,
     },
     0.5
@@ -632,17 +632,17 @@ $(".page__content--about__we-ideas").each(function (i) {
   const scene = new ScrollMagic.Scene({
     triggerElement: this,
     triggerHook: 0.5,
-    offset: "0",
+    offset: '0',
     reverse: false,
   })
     .setTween(animateIn)
     .addTo(controller);
 });
 
-$(".page__content--about__doing-rigidity").each(function (i) {
+$('.page__content--about__doing-rigidity').each(function (i) {
   const animateIn = gsap.timeline(),
     requestaccesContent = $(this).find(
-      ".section-row__text p strong, .section-row__text  p+p"
+      '.section-row__text p strong, .section-row__text  p+p'
     );
 
   animateIn.staggerFromTo(
@@ -651,13 +651,13 @@ $(".page__content--about__doing-rigidity").each(function (i) {
     {
       opacity: 0,
       y: 30,
-      transformOrigin: "bottom",
+      transformOrigin: 'bottom',
       ease: Power4.easeOut,
     },
     {
       opacity: 1,
       y: 0,
-      transformOrigin: "bottom",
+      transformOrigin: 'bottom',
       ease: Power4.easeOut,
     },
     0.5
@@ -666,17 +666,17 @@ $(".page__content--about__doing-rigidity").each(function (i) {
   const scene = new ScrollMagic.Scene({
     triggerElement: this,
     triggerHook: 0.5,
-    offset: "0",
+    offset: '0',
     reverse: false,
   })
     .setTween(animateIn)
     .addTo(controller);
 });
 
-$(".page__content--about").each(function (i) {
+$('.page__content--about').each(function (i) {
   const animateIn = gsap.timeline(),
     requestaccesContent = $(this).find(
-      ".text-content p strong, .text-content p + p"
+      '.text-content p strong, .text-content p + p'
     );
 
   animateIn.staggerFromTo(
@@ -685,13 +685,13 @@ $(".page__content--about").each(function (i) {
     {
       opacity: 0,
       y: 30,
-      transformOrigin: "bottom",
+      transformOrigin: 'bottom',
       ease: Power4.easeOut,
     },
     {
       opacity: 1,
       y: 0,
-      transformOrigin: "bottom",
+      transformOrigin: 'bottom',
       ease: Power4.easeOut,
     },
     0.5
@@ -700,7 +700,7 @@ $(".page__content--about").each(function (i) {
   const scene = new ScrollMagic.Scene({
     triggerElement: this,
     triggerHook: 0.5,
-    offset: "0",
+    offset: '0',
     reverse: false,
   })
     .setTween(animateIn)
