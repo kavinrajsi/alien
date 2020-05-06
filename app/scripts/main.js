@@ -100,6 +100,38 @@ $(document).on('click', '.trigger-menu, .menu--item__content a', function () {
   headerMenu.reversed(!headerMenu.reversed());
 });
 
+
+/* accordion begin */
+console.clear();
+$(".accordion-group .button").click(playAnimation);
+
+function playAnimation(event) {
+  event.preventDefault();
+
+  var $this = $(this).parent();
+  var $thisContent = $this.find(".accordion-content");
+
+  // close any open ones
+  TweenMax.to(".expanded .accordion-content", 0.2, { height: "0", ease: Sine.easeInOut });
+  TweenMax.to(".expanded", 0.2, { className: "-=expanded", ease: Sine.easeInOut });
+
+  $this.toggleClass("expanded");
+
+  if ($this.hasClass("expanded")) {
+    var self = this;
+    setTimeout(function() {
+      theOffset = $(self).offset();
+      TweenMax.to(window, 1, { scrollTo: theOffset.top - 56 });
+    }, 310);
+
+    TweenMax.set($thisContent[0], { height: "auto" });
+    TweenMax.from($thisContent[0], 0.2, { height: 0 });
+  }
+
+}
+
+/* accordion end */
+
 // init controller
 const controller = new ScrollMagic.Controller();
 
@@ -136,6 +168,7 @@ $('.requestacces').each(function (i) {
 
     .addTo(controller);
 });
+
 
 /* Slider */
 if ($('.hear-them-say-it')) {
