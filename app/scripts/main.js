@@ -83,7 +83,7 @@ headerMenu.staggerFrom(
   '.lead-me-out__link li',
  0.30,
   {
-    y: 20,
+    y: 30,
     opacity: 0,
     ease: Expo.easeIn,
   },
@@ -141,7 +141,7 @@ headerMenu2.staggerFrom(
   '.lead-me-out__link li',
   time2,
   {
-    y: 20,
+    y: 30,
     opacity: 0,
     ease: Expo.easeIn,
   },
@@ -205,7 +205,7 @@ $('.requestacces').each(function (i) {
     1,
     {
       opacity: 0,
-      y: 20,
+      y: 30,
       transformOrigin: 'bottom',
       ease: Power4.easeOut,
     },
@@ -551,7 +551,7 @@ if ($('.hero-unit')) {
       1,
       {
         opacity: 0,
-        y: 20,
+        y: 30,
         transformOrigin: 'bottom',
         ease: Power4.easeOut,
       },
@@ -643,7 +643,7 @@ $('.container').each(function (i) {
    0.30,
     {
       opacity: 0,
-      y: 20,
+      y: 30,
       transformOrigin: 'bottom',
       ease: Power4.easeOut,
     },
@@ -674,7 +674,7 @@ $('.page__content--service__page--title').each(function (i) {
    0.30,
     {
       opacity: 0,
-      y: 20,
+      y: 30,
       transformOrigin: 'bottom',
       ease: Power4.easeOut,
     },
@@ -707,7 +707,7 @@ $('.page__content--about__we-ideas').each(function (i) {
    0.30,
     {
       opacity: 0,
-      y: 20,
+      y: 30,
       transformOrigin: 'bottom',
       ease: Power4.easeOut,
     },
@@ -740,7 +740,7 @@ $('.page__content--about__doing-rigidity').each(function (i) {
    0.30,
     {
       opacity: 0,
-      y: 20,
+      y: 30,
       transformOrigin: 'bottom',
       ease: Power4.easeOut,
     },
@@ -773,7 +773,7 @@ $('.page__content--about').each(function (i) {
    0.30,
     {
       opacity: 0,
-      y: 20,
+      y: 30,
       transformOrigin: 'bottom',
       ease: Power4.easeOut,
     },
