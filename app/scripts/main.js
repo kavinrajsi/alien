@@ -47,7 +47,7 @@ headerMenu.to('.menu--icon span:last-child', 0.0354, {
   ease: Power4.easeOut,
 });
 
-headerMenu.to('.menu--item__content', 0.35, {
+headerMenu.to('.menu--item__content',0.30, {
   top: 0,
   visibility: 'visible',
   height: 'auto',
@@ -59,7 +59,7 @@ headerMenu.to('.menu--item__content', 0.35, {
 
 headerMenu.staggerFrom(
   '.menu--item__content-link',
-  0.35,
+ 0.30,
   {
     y: -30,
     opacity: 0,
@@ -70,7 +70,7 @@ headerMenu.staggerFrom(
 
 headerMenu.staggerFrom(
   '.menu--secondary',
-  0.25,
+ 0.30,
   {
     y: -30,
     opacity: 0,
@@ -81,9 +81,9 @@ headerMenu.staggerFrom(
 
 headerMenu.staggerFrom(
   '.lead-me-out__link li',
-  0.25,
+ 0.30,
   {
-    y: 30,
+    y: 20,
     opacity: 0,
     ease: Expo.easeIn,
   },
@@ -94,11 +94,71 @@ headerMenu.staggerFrom(
   }
 );
 
+
 headerMenu.reverse();
-$(document).on('click', '.trigger-menu, .menu--item__content a', function () {
+$(document).on('click', '.trigger-menu', function () {
   body.classList.toggle('menu--open');
   headerMenu.reversed(!headerMenu.reversed());
 });
+
+/* timeline 2 for header  */
+const
+time2 = 0.0011,
+headerMenu2 = gsap.timeline({ paused: true });
+
+
+headerMenu2.to('.menu--item__content', time2, {
+  top: 0,
+  visibility: 'visible',
+  height: 'auto',
+  x: 0,
+  y: 0,
+  opacity: 1,
+  ease: Expo.Power3,
+});
+
+headerMenu2.staggerFrom(
+  '.menu--item__content-link',
+  time2,
+  {
+    y: -30,
+    opacity: 0,
+    ease: Expo.easeIn,
+  },'-=0.2'
+);
+
+headerMenu2.staggerFrom(
+  '.menu--secondary',
+  time2,
+  {
+    y: -30,
+    opacity: 0,
+    ease: Expo.easeIn,
+  },'-=0.2'
+);
+
+headerMenu2.staggerFrom(
+  '.lead-me-out__link li',
+  time2,
+  {
+    y: 20,
+    opacity: 0,
+    ease: Expo.easeIn,
+  },
+  {
+    y: 0,
+    opacity: 1,
+    ease: Expo.easeIn,
+  },'-=0.2'
+);
+
+$(document).on('click', '.menu--open header .trigger-menu, .menu--scroller a, .lead-me-out__link a', function () {
+  body.classList.toggle('menu--open');
+  console.log('2');
+  headerMenu2.reversed(!headerMenu2.reversed());
+});
+
+/* timeline 2 for header end  */
 
 
 /* accordion begin */
@@ -145,7 +205,7 @@ $('.requestacces').each(function (i) {
     1,
     {
       opacity: 0,
-      y: 30,
+      y: 20,
       transformOrigin: 'bottom',
       ease: Power4.easeOut,
     },
@@ -491,7 +551,7 @@ if ($('.hero-unit')) {
       1,
       {
         opacity: 0,
-        y: 30,
+        y: 20,
         transformOrigin: 'bottom',
         ease: Power4.easeOut,
       },
@@ -580,10 +640,10 @@ $('.container').each(function (i) {
 
   animateIn.staggerFromTo(
     requestaccesContent,
-    1,
+   0.30,
     {
       opacity: 0,
-      y: 30,
+      y: 20,
       transformOrigin: 'bottom',
       ease: Power4.easeOut,
     },
@@ -592,8 +652,7 @@ $('.container').each(function (i) {
       y: 0,
       transformOrigin: 'bottom',
       ease: Power4.easeOut,
-    },
-    0.5
+    }
   );
 
   const scene = new ScrollMagic.Scene({
@@ -612,10 +671,10 @@ $('.page__content--service__page--title').each(function (i) {
 
   animateInTitle.staggerFromTo(
     requestaccesContentSpan,
-    1,
+   0.30,
     {
       opacity: 0,
-      y: 30,
+      y: 20,
       transformOrigin: 'bottom',
       ease: Power4.easeOut,
     },
@@ -624,8 +683,7 @@ $('.page__content--service__page--title').each(function (i) {
       y: 0,
       transformOrigin: 'bottom',
       ease: Power4.easeOut,
-    },
-    0.5
+    }
   );
 
   const scene = new ScrollMagic.Scene({
@@ -646,10 +704,10 @@ $('.page__content--about__we-ideas').each(function (i) {
 
   animateIn.staggerFromTo(
     requestaccesContent,
-    1,
+   0.30,
     {
       opacity: 0,
-      y: 30,
+      y: 20,
       transformOrigin: 'bottom',
       ease: Power4.easeOut,
     },
@@ -658,8 +716,7 @@ $('.page__content--about__we-ideas').each(function (i) {
       y: 0,
       transformOrigin: 'bottom',
       ease: Power4.easeOut,
-    },
-    0.5
+    }
   );
 
   const scene = new ScrollMagic.Scene({
@@ -680,10 +737,10 @@ $('.page__content--about__doing-rigidity').each(function (i) {
 
   animateIn.staggerFromTo(
     requestaccesContent,
-    1,
+   0.30,
     {
       opacity: 0,
-      y: 30,
+      y: 20,
       transformOrigin: 'bottom',
       ease: Power4.easeOut,
     },
@@ -692,8 +749,7 @@ $('.page__content--about__doing-rigidity').each(function (i) {
       y: 0,
       transformOrigin: 'bottom',
       ease: Power4.easeOut,
-    },
-    0.5
+    }
   );
 
   const scene = new ScrollMagic.Scene({
@@ -714,10 +770,10 @@ $('.page__content--about').each(function (i) {
 
   animateIn.staggerFromTo(
     requestaccesContent,
-    1,
+   0.30,
     {
       opacity: 0,
-      y: 30,
+      y: 20,
       transformOrigin: 'bottom',
       ease: Power4.easeOut,
     },
@@ -726,8 +782,7 @@ $('.page__content--about').each(function (i) {
       y: 0,
       transformOrigin: 'bottom',
       ease: Power4.easeOut,
-    },
-    0.5
+    }
   );
 
   const scene = new ScrollMagic.Scene({
