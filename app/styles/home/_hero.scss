@@ -3,24 +3,26 @@
 	position : relative;
 	@include interpolate("padding-top", 576px, 206px, 992px, 194px, "ease-in");
 	@include interpolate("padding-bottom", 576px, 100px, 992px, 200px, "ease-in");
-
+	overflow : visible;
 	&:before {
 		content : "";
 		/* TODO : Need to change the width and height, then convert into WEBGL interaction effect */
-		content : none;
 		z-index : -1;
 		display : block;
 		width : 100%;
 		height : 100%;
-		width : 1371.88px;
-		height : 1371.88px;
+		width : 1370px;
+		// height : 1370px;
 		position : absolute;
-		left : -124px;
-		top : -80px;
+		left : -460px;
+		top : 40px;
 		background-repeat : no-repeat;
 		background-image : url("../images/header-image.svg");
 		background-color : transparent;
+		background-size : contain;
 		background-position : 0 0;
+		transform : rotate(26.94deg);
+		transform : rotate(6deg);
 	}
 
 	.page-title {
