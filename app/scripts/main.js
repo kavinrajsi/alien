@@ -38,13 +38,13 @@ const body = document.body,
 headerMenu.to('.menu--icon span:first-child', 0.035, {
   opacity: 1,
   rotation: 30,
+  y: 24,
   ease: Power4.easeOut,
 });
 
 headerMenu.to('.menu--icon span:last-child', 0.0354, {
   opacity: 1,
   rotation: -30,
-  y: -24,
   ease: Power4.easeOut,
 });
 
@@ -117,7 +117,7 @@ headerMenu2.to('.menu--item__content', 0.01, {
 headerMenu2.reverse();
 $(document).on('click', '.menu--open .trigger-menu, .menu--open .menu--scroller a', function () {
   // alert('1');
-  body.classList.toggle('menu--open');
+  // body.classList.toggle('menu--open');
   headerMenu2.reversed(!headerMenu2.reversed());
 });
 

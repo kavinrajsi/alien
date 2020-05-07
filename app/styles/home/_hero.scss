@@ -83,6 +83,8 @@
 			display : flex;
 			align-items : center;	.wedo {
 				&-title {
+					transition : all 200ms ease;
+					color : var(--white);
 					font-family : var(--font-600);
 					letter-spacing : 3px;
 					position : relative;
@@ -147,9 +149,8 @@
 						-webkit-text-stroke-color : transparent;
 						-webkit-text-stroke-width : 0;
 						-webkit-text-stroke : 0;
-						&:after {
-							width : 100%;
-						}
+						transition : all 200ms ease;
+						color : var(--blue-violet);
 					}
 				}
 				.button {

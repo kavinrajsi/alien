@@ -1,5 +1,4 @@
 header {
-	background : var(--smoky-black);
 	width : 100%;
 	z-index : 5;
 	position : fixed;
@@ -11,6 +10,7 @@ header {
 		transform : translateY(-100px);
 	}
 	&.scrollDown {
+		background : var(--smoky-black);
 		.menu--item {
 			padding-top : 20px;
 		}
@@ -377,14 +377,17 @@ header {
 
 				// menu open
 				.menu--open & {
-					/* move to js */
-					// overflow : auto;
 					transition : all 0.3s ease;
-					.menu--item__content {
-						// max-width : initial;
-					}
 				}
 			}
 		}
+	}
+}
+
+
+// menu open
+.menu--open {
+	.menu--icon {
+		height : 45px;
 	}
 }
