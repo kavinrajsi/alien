@@ -95,6 +95,7 @@
 				display : flex;
 				align-items : flex-start;
 				flex-direction : column;
+				justify-content : space-between;
 
 				@media(min-width: 842px) {
 					flex-wrap : nowrap;
