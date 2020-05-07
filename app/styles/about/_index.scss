@@ -440,14 +440,7 @@
 									width : 10%;
 									height : 4px;
 									background : var(--blue-green);
-									width : 13vw;
-								}
-
-								@media(min-width: $desktop) {
-									width : 29vw;
-								}
-								@media(min-width: 1397px) {
-									width : 16vw;
+									width : calc(100% - 775px);
 								}
 							}
 						}
