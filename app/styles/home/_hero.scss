@@ -94,7 +94,7 @@
 						-webkit-text-stroke : 2px var(--blue-violet);
 						color : transparent;
 						/* Will override color (regardless of order) */
-						-webkit-text-stroke-width : 1px;
+						-webkit-text-stroke-width : 2px;
 						-webkit-text-stroke-color : var(--blue-violet);
 					}
 
@@ -119,18 +119,24 @@
 			opacity : 0;
 			visibility : hidden;
 			height : 0;
+			display : none;
 			max-width : 778px;
-			font-family : (--font-600);
-			font-size : 24px;
-			line-height : 36px;
+			font-family : var(--font-500);
+			@include interpolate("font-size", 576px, 18px, 992px, 24px, "ease-in");
+			@include interpolate("line-height", 576px, 30px, 992px, 36px, "ease-in");
 			color : var(--white);
 			mix-blend-mode : normal;
 			transition : all 0.26s ease-in-out;
 			transform : translateY(-20px);
+			margin-top : 20px;
 		}
 		&-group {
-			@include interpolate("margin-bottom", 576px, 20px, 992px, 40px, "ease-in");
+			@include interpolate("margin-bottom", 576px, 10px, 992px, 40px, "ease-in");
 			.button {
+				display : none;
+				@media(min-width: $tablet) {
+					display : block;
+				}
 				margin-left : 30px;
 				transition : all 0.26s ease-in-out;
 			}
@@ -151,10 +157,15 @@
 					transition : all 0.26s ease-in-out;
 				}
 				.accordion-content {
+					display : block;
 					opacity : 1;
 					visibility : visible;
 					height : 100%;
 					transform : translateY(0px);
+					margin-bottom : 20px;
+					@media(min-width: $tablet) {
+						margin-bottom : 0;
+					}
 				}
 			}
 		}
@@ -191,27 +202,3 @@
 		}
 	}
 }
-
-
-
-
-
-
-
-// // home page about section active
-// .asp {
-// 	&.active {
-
-
-// 			&-content {
-// 				display : block !important;
-// 				overflow : hidden !important;
-// 				height : 100% !important;
-// 				opacity : 1 !important;
-// 				visibility : visible !important;
-// 				transition : all 0.5s ease-out !important;
-// 				will-change : transition, height !important;
-// 			}
-// 		}
-// 	}
-// }
