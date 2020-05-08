@@ -540,6 +540,7 @@
               $("#form")[0].reset();
             },
           });
+          return false; // required to block normal submit since you used ajax
         },
       });
     </script>
