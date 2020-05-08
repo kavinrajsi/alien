@@ -1,0 +1,205 @@
+// header hero
+.hero-unit {
+	position : relative;
+	@include interpolate("padding-top", 576px, 206px, 992px, 194px, "ease-in");
+	@include interpolate("padding-bottom", 576px, 100px, 992px, 200px, "ease-in");
+	overflow : visible;
+	&:before {
+		content : "";
+		/* TODO : Need to change the width and height, then convert into WEBGL interaction effect */
+		z-index : -1;
+		display : block;
+		width : 100%;
+		height : 100%;
+		width : 1370px;
+		// height : 1370px;
+		position : absolute;
+		left : -460px;
+		top : 40px;
+		background-repeat : no-repeat;
+		background-image : url("../images/header-image.svg");
+		background-color : transparent;
+		background-size : contain;
+		background-position : 0 0;
+		transform : rotate(26.94deg);
+		transform : rotate(6deg);
+	}
+
+	.page-title {
+		font-family : var(--font-500);
+		color : var(--white);
+
+		@include interpolate("font-size", 576px, 38px, 992px, 65px, "ease-in");
+		@include interpolate("line-height", 576px, 50px, 992px, 90px, "ease-in");
+		@include interpolate("margin-bottom", 576px, 40px, 992px, 168px, "ease-in");
+
+		span {
+			display : block;
+		}
+
+		&-secondary {
+			position : relative;
+			font-family : var(--font-400);
+			font-size : 18px;
+			line-height : 30px;
+			color : var(--white);
+			width : 335px;
+			padding-top : 30px;
+
+			span {
+				display : inline-block;
+			}
+
+			@media(min-width: $mobile) {
+				width : 300px;
+				margin-left : auto;
+				margin-right : 0;
+
+				span {
+					display : inline;
+				}
+			}
+
+			&:before {
+				content : "";
+				display : block;
+				background : #7de2d1;
+				width : 30px;
+				height : 4px;
+				position : absolute;
+				top : 0;
+				left : 0;
+			}
+		}
+	}
+}
+
+// home page about
+.about-what-we-do {
+	@include interpolate("margin-bottom", 576px, 90px, 992px, 206px, "ease-in");
+	.accordion {
+		&-menu {
+			cursor : pointer;
+			display : flex;
+			align-items : center;	.wedo {
+				&-title {
+					transition : all 200ms ease;
+					color : var(--white);
+					font-family : var(--font-600);
+					letter-spacing : 3px;
+					position : relative;
+					@include interpolate("font-size", 576px, 36px, 992px, 100px, "ease-in");
+					@include interpolate("line-height", 576px, 54px, 992px, 120px, "ease-in");
+					color : var(--blue-violet);
+
+					@supports (-webkit-text-stroke: 2px var(--blue-violet)) {
+						-webkit-text-stroke : 2px var(--blue-violet);
+						color : transparent;
+						/* Will override color (regardless of order) */
+						-webkit-text-stroke-width : 2px;
+						-webkit-text-stroke-color : var(--blue-violet);
+					}
+
+					&:after {
+						position : absolute;
+						top : 0;
+						bottom : 0;
+						left : 0;
+						width : 0;
+						content : attr(data-text);
+						color : var(--blue-violet);
+						display : block;
+						overflow : hidden;
+						transition-property : width;
+						transition-duration : 1000ms;
+						white-space : nowrap;
+					}
+				}
+			}
+		}
+		&-content {
+			opacity : 0;
+			visibility : hidden;
+			height : 0;
+			display : none;
+			max-width : 778px;
+			font-family : var(--font-500);
+			@include interpolate("font-size", 576px, 18px, 992px, 24px, "ease-in");
+			@include interpolate("line-height", 576px, 30px, 992px, 36px, "ease-in");
+			color : var(--white);
+			mix-blend-mode : normal;
+			transition : all 0.26s ease-in-out;
+			transform : translateY(-20px);
+			margin-top : 20px;
+		}
+		&-group {
+			@include interpolate("margin-bottom", 576px, 10px, 992px, 40px, "ease-in");
+			.button {
+				display : none;
+				@media(min-width: $tablet) {
+					display : block;
+				}
+				margin-left : 30px;
+				transition : all 0.26s ease-in-out;
+			}
+			&.active {
+				.wedo {
+					&-title {
+						transition : all 0.5s ease-out;
+						-webkit-text-stroke-color : transparent;
+						-webkit-text-stroke-width : 0;
+						-webkit-text-stroke : 0;
+						transition : all 200ms ease;
+						color : var(--blue-violet);
+					}
+				}
+				.button {
+					transform : rotate(180deg);
+					transition : all 0.26s ease-in-out;
+				}
+				.accordion-content {
+					display : block;
+					opacity : 1;
+					visibility : visible;
+					height : 100%;
+					transform : translateY(0px);
+					margin-bottom : 20px;
+					@media(min-width: $tablet) {
+						margin-bottom : 0;
+					}
+				}
+			}
+		}
+	}
+
+	.link--text {
+		@include interpolate("margin-top", 576px, 30px, 992px, 40px, "ease-in");
+		@include interpolate("font-size", 576px, 20px, 992px, 24px, "ease-in");
+		@include interpolate("line-height", 576px, 30px, 992px, 36px, "ease-in");
+		display : inline-block;
+		font-family : var(--font-500);
+		color : var(--white);
+		position : relative;
+		padding-bottom : 5px;
+
+		&:after {
+			content : "";
+			display : block;
+			width : 100%;
+			height : 1px;
+			background-color : var(--white);
+			content : "";
+			position : absolute;
+			bottom : 0;
+			left : 0;
+			will-change : width, transition;
+			transform-origin : right;
+		}
+		&:hover {
+			&:after {
+				opacity : 1;
+				animation : 0.35s ease-out 0s scale-out forwards,0.35s ease-out 0.35s scale-in forwards;
+			}
+		}
+	}
+}

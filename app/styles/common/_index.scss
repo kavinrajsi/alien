@@ -1,0 +1,66 @@
+@import "reset";
+@import "interpolate";
+@import "variable";
+@import "font";
+@import "header";
+@import "footer";
+
+html {
+	backface-visibility : hidden;
+	will-change : background-color,color;
+	transition : background-color 0.65s var(--ease-in-out-soft),
+	color 0.65s var(--ease-in-out-soft),
+	border 0.65s var(--ease-in-out-soft);
+}
+
+body {
+	font-family : var(--font-400);
+	background : var(--smoky-black);
+	margin-left : auto;
+	margin-right : auto;
+	overflow-x : hidden;
+	// transition : all 0.35s ease-in;
+
+	&.menu--open {
+		transition : all 0.35s ease-in;
+		overflow : hidden;
+	}
+
+	transition : background-color 0.65s var(--ease-in-out-soft),
+	color 0.65s var(--ease-in-out-soft),
+	border 0.65s var(--ease-in-out-soft);
+}
+
+.container {
+	position : relative;
+	margin-left : auto;
+	margin-right : auto;
+	overflow : hidden;
+	width : 100%;
+	padding-left : 20px;
+	padding-right : 20px;
+
+	@media(min-width: $ptablet) {
+		max-width : 1180px;
+	}
+
+	@media(min-width: $desktop) {
+		padding-left : 0;
+		padding-right : 0;
+		max-width : 1180px;
+	}
+
+	&-fluid {
+		position : relative;
+		margin-left : auto;
+		margin-right : auto;
+		padding-left : 20px;
+		padding-right : 20px;
+		overflow : hidden;
+		width : 100%;
+	}
+}
+
+.no-padding {
+	padding : 0;
+}

@@ -195,14 +195,15 @@ function startTestServer() {
 
 function startDistServer() {
   server.init({
-    notify: false,
+    notify: true,
     port,
     server: {
       baseDir: 'dist',
       routes: {
         '/node_modules': 'node_modules'
       }
-    }
+    },
+    open: false
   });
 }
 
