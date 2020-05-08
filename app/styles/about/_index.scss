@@ -198,12 +198,31 @@
 							}
 						}
 						overflow : scroll;
+						& {
+							scrollbar-width : none;
+							-ms-overflow-style : none;
+
+							&::-webkit-scrollbar {
+								display : none;
+								width : 0;
+								background : transparent;
+							}
+
+							&::-webkit-scrollbar-thumb {
+								background : var(--smoky-black);
+							}
+						}
+
 						@media(min-width: $tablet) {
 							overflow : hidden;
 						}
 
 						.drag-container {
+							margin : 0 -20px;
+							width : calc(100% + 80px);
 							.scroller-content {
+								padding-right : 80px;
+								padding-left : 20px;
 								overflow-y : auto;
 								.card-sections {
 									display : flex;
