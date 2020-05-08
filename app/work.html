@@ -51,6 +51,7 @@
     <!-- Place favicon.ico in the root directory -->
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="/node_modules/aos/dist/aos.css" />
     <!-- endbuild -->
   </head>
   <body>
@@ -270,7 +271,7 @@
       </div>
       <div class="container page__content--work__data-content">
         <div class="project-list" id="mix-wrapper">
-          <div class="project-wrapper mix uiux">
+          <div data-aos="fade-up" data-aos-duration="3000" data-aos-anchor-placement="center-bottom" class="project-wrapper mix uiux">
             <a href="javascript:void(0);" class="project-link">
               <div class="image">
                 <picture>
@@ -290,7 +291,7 @@
               </div>
             </a>
           </div>
-          <div class="project-wrapper mix digitial">
+          <div data-aos="fade-up" data-aos-duration="3000" data-aos-anchor-placement="center-bottom" class="project-wrapper mix digitial">
             <a href="javascript:void(0);" class="project-link">
               <div class="image">
                 <picture>
@@ -310,27 +311,7 @@
               </div>
             </a>
           </div>
-          <div class="project-wrapper mix branding">
-            <a href="javascript:void(0);" class="project-link">
-              <div class="image">
-                <picture>
-                  <source srcset="./images/labeldata.webp" type="image/webp" />
-                  <source srcset="./images/labeldata.jpg 1x" />
-                  <img
-                    src="./images/labeldata.jpg"
-                    loading="lazy"
-                    class="lazyload"
-                    alt="labeldata"
-                  />
-                </picture>
-              </div>
-              <div class="title">
-                Fresh new look for data consulting
-                <span>labeldata</span>
-              </div>
-            </a>
-          </div>
-          <div class="project-wrapper mix development">
+          <div data-aos="fade-up" data-aos-duration="3000" data-aos-anchor-placement="center-bottom" class="project-wrapper mix development">
             <a href="javascript:void(0);" class="project-link">
               <div class="image">
                 <picture>
@@ -350,7 +331,7 @@
               </div>
             </a>
           </div>
-          <div class="project-wrapper mix uiux">
+          <div data-aos="fade-up" data-aos-duration="3000" data-aos-anchor-placement="center-bottom" class="project-wrapper mix branding">
             <a href="javascript:void(0);" class="project-link">
               <div class="image">
                 <picture>
@@ -370,27 +351,7 @@
               </div>
             </a>
           </div>
-          <div class="project-wrapper mix digitial">
-            <a href="javascript:void(0);" class="project-link">
-              <div class="image">
-                <picture>
-                  <source srcset="./images/coinspinner.webp" type="image/webp" />
-                  <source srcset="./images/coinspinner.jpg 1x" />
-                  <img
-                    src="./images/coinspinner.jpg"
-                    loading="lazy"
-                    class="lazyload"
-                    alt="coinspinner"
-                  />
-                </picture>
-              </div>
-              <div class="title">
-                Visual brand alignment for fintech
-                <span>coinspinner</span>
-              </div>
-            </a>
-          </div>
-          <div class="project-wrapper mix uiux">
+          <div data-aos="fade-up" data-aos-duration="3000" data-aos-anchor-placement="center-bottom" class="project-wrapper mix uiux">
             <a href="javascript:void(0);" class="project-link">
               <div class="image">
                 <picture>
@@ -410,7 +371,7 @@
               </div>
             </a>
           </div>
-          <div class="project-wrapper mix uiux">
+          <div data-aos="fade-up" data-aos-duration="3000" data-aos-anchor-placement="center-bottom" class="project-wrapper mix digitial">
             <a href="javascript:void(0);" class="project-link">
               <div class="image">
                 <picture>
@@ -427,6 +388,46 @@
               <div class="title">
                 Visual brand alignment for fintech
                 <span>coinspinner</span>
+              </div>
+            </a>
+          </div>
+          <div data-aos="fade-up" data-aos-duration="3000" data-aos-anchor-placement="center-bottom" class="project-wrapper mix uiux">
+            <a href="javascript:void(0);" class="project-link">
+              <div class="image">
+                <picture>
+                  <source srcset="./images/coinspinner.webp" type="image/webp" />
+                  <source srcset="./images/coinspinner.jpg 1x" />
+                  <img
+                    src="./images/coinspinner.jpg"
+                    loading="lazy"
+                    class="lazyload"
+                    alt="coinspinner"
+                  />
+                </picture>
+              </div>
+              <div class="title">
+                Visual brand alignment for fintech
+                <span>coinspinner</span>
+              </div>
+            </a>
+          </div>
+          <div data-aos="fade-up" data-aos-duration="3000" data-aos-anchor-placement="center-bottom" class="project-wrapper mix uiux">
+            <a href="javascript:void(0);" class="project-link">
+              <div class="image">
+                <picture>
+                  <source srcset="./images/labeldata.webp" type="image/webp" />
+                  <source srcset="./images/labeldata.jpg 1x" />
+                  <img
+                    src="./images/labeldata.jpg"
+                    loading="lazy"
+                    class="lazyload"
+                    alt="labeldata"
+                  />
+                </picture>
+              </div>
+              <div class="title">
+                Fresh new look for data consulting
+                <span>labeldata</span>
               </div>
             </a>
           </div>
@@ -478,6 +479,10 @@
     <script
       type="text/javascript"
       src="/node_modules/scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/node_modules/aos/dist/aos.js"
     ></script>
     <!-- endbuild -->
     <!-- build:js scripts/main.js  -->

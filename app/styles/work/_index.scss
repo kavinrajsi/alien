@@ -133,7 +133,6 @@
 
 		&__data-content {
 			margin-top : 80px;
-
 			.project {
 				&-list {
 					display : flex;
@@ -143,34 +142,43 @@
 					@media(min-width: $mobile) and (max-width: 1080px) {
 						.project-wrapper {
 							&:nth-child(even) {
-								padding-right : 15px;
+								padding-left : 15px;
 							}
 
 							&:nth-child(odd) {
-								padding-left : 15px;
+								padding-right : 15px;
 							}
 						}
 					}
 				}
-
 				&-wrapper {
-					@include interpolate("margin-bottom", 375px, 60px, 992px, 100px, "ease-in");
-
+					width : 100%;
 					a {
+						width : 100%;
 						display : inline-block;
 					}
 
+					@include interpolate("margin-bottom", 375px, 60px, 992px, 100px, "ease-in");
+
 					@media(min-width: $mobile) {
+						width : auto;
 						flex-grow : 1;
 						flex-shrink : 0;
 						flex-basis : 50%;
 
 						&:nth-child(even) {
-							@include interpolate("width", 375px, 335px, 992px, 540px, "ease-in");
+							text-align : right;
+							.project-link {
+								text-align : left;
+							}
 						}
 
-						&:nth-child(odd) {
-							@include interpolate("width", 375px, 335px, 992px, 460px, "ease-in");
+						&:nth-child(11) ,
+						&:nth-child(8) ,
+						&:nth-child(5) ,
+						&:nth-child(4) ,
+						&:nth-child(1) {
+							@include interpolate("margin-top", 576px, 30px, 992px, 60px, "ease-in");
 						}
 					}
 
@@ -243,42 +251,6 @@
 							color : var(--white);
 							opacity : 0.6;
 						}
-					}
-
-					&:nth-child(odd) {
-						margin-top : 60px;
-					}
-
-					&:nth-child(1n) {
-						order : 0;
-					}
-
-					&:nth-child(2n) {
-						order : 1;
-					}
-
-					&:nth-child(3n) {
-						order : 3;
-					}
-
-					&:nth-child(4n) {
-						order : 2;
-					}
-
-					&:nth-child(5n) {
-						order : 4;
-					}
-
-					&:nth-child(6n) {
-						order : 5;
-					}
-
-					&:nth-child(7n) {
-						order : 7;
-					}
-
-					&:nth-child(8n) {
-						order : 6;
 					}
 				}
 			}
