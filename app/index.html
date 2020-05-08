@@ -570,8 +570,10 @@
       src="/node_modules/scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
     <!-- endbuild -->
     <!-- build:js scripts/main.js  -->
-    <script src="scripts/jquery.scrollie.min.js"></script>
     <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/scroll.js  -->
+    <script src="scripts/jquery.scrollie.min.js"></script>
     <!-- endbuild -->
     <script>
 
@@ -618,63 +620,6 @@ $(function () {
 			var controller = new ScrollMagic.Controller();
 
       if ($(".we-let-our-work")) {
-        // build tween
-        // const animateIn = gsap.timeline(),
-        //   time = 0.75;
-        // animateIn
-        //   .staggerFromTo(
-        //     ".we-let-our-work",
-        //     time, {
-        //       backgroundColor: "#0a0908",
-        //       y: -40,
-        //       transformOrigin: "bottom",
-        //       ease: Back.easeOut,
-        //     }, {
-        //       backgroundColor: "#7de2d1",
-        //       y: 0,
-        //       transformOrigin: "bottom",
-        //       ease: Back.easeOut,
-        //     }
-        //   )
-        //   .staggerFromTo(
-        //     ".indicator",
-        //     time, {
-        //       backgroundColor: "#7de2d1",
-        //       y: -40,
-        //       transformOrigin: "bottom",
-        //       ease: Back.easeOut,
-        //     }, {
-        //       backgroundColor: "#0a0908",
-        //       y: 0,
-        //       transformOrigin: "bottom",
-        //       ease: Back.easeOut,
-        //     }
-        //   )
-        //   .staggerFromTo(
-        //     ".section-title span",
-        //     time, {
-        //       color: "#7de2d1",
-        //       y: -40,
-        //       transformOrigin: "bottom",
-        //       ease: Back.easeOut,
-        //     }, {
-        //       color: "#0a0908",
-        //       y: 0,
-        //       transformOrigin: "bottom",
-        //       ease: Back.easeOut,
-        //     }
-        //   );
-
-        // /* Slide in add bg color */
-        // new ScrollMagic.Scene({
-        //     triggerElement: ".we-let-our-work",
-        //     triggerHook: 1,
-        //     reverse: true,
-        //   })
-        //   .setTween(animateIn)
-        //   // .addIndicators()
-        //   .addTo(controller);
-
         /* animation */
         // loop
         function loop(elements, callback) {
