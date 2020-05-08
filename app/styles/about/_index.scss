@@ -8,26 +8,26 @@
 
 .page {
 	&__content {
-		&--header {
-			@include interpolate("margin-top", 576px, 76px, 992px, 83px, "ease-in");
-			@include interpolate("margin-bottom", 576px, 213px, 992px, 14px, "ease-in");
+		// &--header {
+		// 	@include interpolate("margin-top", 576px, 76px, 992px, 83px, "ease-in");
+		// 	@include interpolate("margin-bottom", 576px, 213px, 992px, 14px, "ease-in");
 
-			&_title {
-				font-family : var(--font-500);
-				letter-spacing : 3px;
+		// 	&_title {
+		// 		font-family : var(--font-500);
+		// 		letter-spacing : 3px;
 
-				@include interpolate("font-size", 576px, 48px, 992px, 200px, "ease-in");
-				@include interpolate("line-height", 576px, 58px, 992px, 243px, "ease-in");
-				color : var(--onyx);
+		// 		@include interpolate("font-size", 576px, 48px, 992px, 200px, "ease-in");
+		// 		@include interpolate("line-height", 576px, 58px, 992px, 243px, "ease-in");
+		// 		color : var(--onyx);
 
-				@supports (-webkit-text-stroke: 2px var(--onyx)) {
-					-webkit-text-stroke : 2px var(--onyx);
-					color : transparent;
-					-webkit-text-stroke-width : 2px;
-					-webkit-text-stroke-color : var(--onyx);
-				}
-			}
-		}
+		// 		@supports (-webkit-text-stroke: 2px var(--onyx)) {
+		// 			-webkit-text-stroke : 2px var(--onyx);
+		// 			color : transparent;
+		// 			-webkit-text-stroke-width : 2px;
+		// 			-webkit-text-stroke-color : var(--onyx);
+		// 		}
+		// 	}
+		// }
 
 		&--about {
 			overflow : visible;
@@ -307,7 +307,7 @@
 												&:first-child {
 													span {
 														display : block;
-														font-family : var(--font-500);
+														font-family : var(--font-600);
 														font-size : 20px;
 														line-height : 30px;
 

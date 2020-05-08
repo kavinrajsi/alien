@@ -3,27 +3,27 @@
 		// page header
 		&.page__content--header {
 			color : var(--onyx);
-			@include interpolate("margin-top", 576px, 72px, 992px, 83px, "ease-in");
-			@include interpolate("margin-bottom", 576px, 64px, 992px, 80px, "ease-in");
+			// @include interpolate("margin-top", 576px, 72px, 992px, 83px, "ease-in");
+			// @include interpolate("margin-bottom", 576px, 64px, 992px, 80px, "ease-in");
 
-			.page__content--header_title {
-				font-family : var(--font-500);
-				letter-spacing : 3px;
-				@include interpolate("font-size", 576px, 48px, 992px, 180px, "ease-in");
-				@include interpolate("line-height", 576px, 58px, 992px, 180px, "ease-in");
+			// .page__content--header_title {
+			// 	font-family : var(--font-500);
+			// 	letter-spacing : 3px;
+			// 	@include interpolate("font-size", 576px, 48px, 992px, 180px, "ease-in");
+			// 	@include interpolate("line-height", 576px, 58px, 992px, 180px, "ease-in");
 
-				@media(min-width: $desktop) {
-					font-size : 200px;
-					line-height : 243px;
-				}
+			// 	@media(min-width: $desktop) {
+			// 		font-size : 200px;
+			// 		line-height : 243px;
+			// 	}
 
-				@supports (-webkit-text-stroke: 2px var(--onyx)) {
-					-webkit-text-stroke : 2px var(--onyx);
-					color : transparent;
-					-webkit-text-stroke-width : 2px;
-					-webkit-text-stroke-color : var(--onyx);
-				}
-			}
+			// 	@supports (-webkit-text-stroke: 2px var(--onyx)) {
+			// 		-webkit-text-stroke : 2px var(--onyx);
+			// 		color : transparent;
+			// 		-webkit-text-stroke-width : 2px;
+			// 		-webkit-text-stroke-color : var(--onyx);
+			// 	}
+			// }
 		}
 
 		// intro

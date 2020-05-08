@@ -6,15 +6,19 @@ header {
 	left : 0;
 	z-index : 9998;
 	transition : all 0.5s;
+
 	&.scrollUp {
 		transform : translateY(-100px);
 	}
+
 	&.scrollDown {
 		background : var(--smoky-black);
+
 		.menu--item {
 			padding-top : 20px;
 		}
 	}
+
 	.header-container {
 		@extend .container;
 	}
@@ -99,6 +103,7 @@ header {
 				background : var(--smoky-black);
 			}
 		}
+
 		&--item {
 			&__content {
 				// overflow : hidden !important;
@@ -115,12 +120,13 @@ header {
 				// height : 100vh;
 				padding-right : 0;
 				padding-left : 0;
-				padding-bottom : 0 ;
+				padding-bottom : 0;
 				transition : all 0.5s ease-in;
 				transform : translate(0, -100vw);
 				opacity : 0;
 				background : var(--smoky-black);
 				max-width : 1180px;
+
 				&:after {
 					content : "";
 					display : block;
@@ -132,6 +138,7 @@ header {
 					right : -9999em;
 					background : var(--smoky-black);
 				}
+
 				@media(min-width: $tablet) {
 					@include interpolate("padding-left", 768px, 30px, 900px, 120px, "ease-in");
 					padding-right : 20px;
@@ -185,6 +192,7 @@ header {
 							color : var(--white);
 						}
 					}
+
 					&:last-child {
 						a {
 							margin-bottom : 0;
@@ -212,10 +220,11 @@ header {
 							will-change : width, transition;
 							transform-origin : right;
 						}
+
 						&:hover {
 							&:after {
 								opacity : 1;
-								animation : 0.35s ease-out 0s scale-out forwards,0.35s ease-out 0.35s scale-in forwards;
+								animation : 0.35s ease-out 0s scale-out forwards, 0.35s ease-out 0.35s scale-in forwards;
 							}
 						}
 					}
@@ -282,6 +291,7 @@ header {
 
 							margin-bottom : 60px;
 						}
+
 						.menu--item__content-label {
 							font-size : 14px;
 							line-height : 21px;
@@ -297,16 +307,19 @@ header {
 					bottom : 0;
 					padding-left : 20px;
 					padding-right : 20px;
+
 					@media(min-width: $desktop) {
 						padding-left : 0;
 						padding-right : 0;
 					}
+
 					margin-bottom : 20px;
 					flex : 1 0 100%;
 					max-width : 100%;
 					max-width : 1180px;
 					margin-left : auto;
 					margin-right : auto;
+
 					.lead-me-out__link {
 						display : flex;
 
@@ -363,11 +376,12 @@ header {
 									will-change : width, transition;
 									transform-origin : right;
 								}
+
 								&:hover {
 									&:after {
 										opacity : 1;
 										// animation : 0.35s ease-out 0s scale-out forwards,0.35s ease-out 0.35s scale-in forwards;
-										animation : 0.35s ease-out 0s scale-out forwards,0.35s ease-out 0.35s scale-in forwards;
+										animation : 0.35s ease-out 0s scale-out forwards, 0.35s ease-out 0.35s scale-in forwards;
 									}
 								}
 							}
@@ -389,5 +403,31 @@ header {
 .menu--open {
 	.menu--icon {
 		height : 45px;
+	}
+}
+
+
+.page {
+	&__content {
+		&--header {
+			@include interpolate("margin-top", 576px, 148px, 992px, 164px, "ease-in");
+			@include interpolate("margin-bottom", 576px, 60px, 992px, 80px, "ease-in");
+
+			&_title {
+				font-family : var(--font-500);
+				letter-spacing : 3px;
+
+				@include interpolate("font-size", 576px, 48px, 992px, 200px, "ease-in");
+				@include interpolate("line-height", 576px, 58px, 992px, 243px, "ease-in");
+				color : var(--onyx);
+
+				@supports (-webkit-text-stroke: 2px var(--onyx)) {
+					-webkit-text-stroke : 2px var(--onyx);
+					color : transparent;
+					-webkit-text-stroke-width : 2px;
+					-webkit-text-stroke-color : var(--onyx);
+				}
+			}
+		}
 	}
 }

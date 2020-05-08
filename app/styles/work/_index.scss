@@ -5,16 +5,24 @@
 			display : flex;
 			align-items : flex-end;
 			overflow : visible;
+			flex-wrap : wrap;
 			.section-row {
 				&__text--heading {
 					p {
-						margin-right : 126px;
+						margin-bottom : 40px;
+						@media(min-width: $tablet) {
+							// margin-right : 126px;
+							margin-bottom : 0;
+							@include interpolate("margin-right", 600px, 36px, 900px, 126px, "ease-in");
+						}
 
 						strong {
 							display : block;
 							font-family : var(--font-500);
-							font-size : 80px;
-							line-height : 96px;
+							// font-size : 80px;
+							// line-height : 96px;
+							@include interpolate("font-size", 600px, 46px, 900px, 80px, "ease-in");
+							@include interpolate("line-height", 600px, 56px, 900px, 96px, "ease-in");
 							color : var(--white);
 							margin-bottom : 18px;
 
@@ -22,14 +30,18 @@
 								margin-bottom : 0;
 
 								&:before {
-									width : 90px;
 									height : 4px;
 									background : var(--white);
 									content : "";
 									display : inline-block;
-									margin-right : 30px;
 									position : relative;
 									top : -18px;
+									width : 40px;
+									margin-right : 20px;
+									@media(min-width: $tablet) {
+										width : 90px;
+										margin-right : 30px;
+									}
 								}
 							}
 						}
