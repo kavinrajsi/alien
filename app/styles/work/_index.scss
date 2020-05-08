@@ -3,17 +3,19 @@
 		&__data-title-area {
 			position : relative;
 			display : flex;
-			align-items : flex-end;
 			overflow : visible;
-			flex-wrap : wrap;
+			flex-direction : column;
+			@media(min-width: $ptablet) {
+				align-items : flex-end;
+				flex-direction : row;
+			}
 			.section-row {
 				&__text--heading {
 					p {
 						margin-bottom : 40px;
 						@media(min-width: $tablet) {
-							// margin-right : 126px;
 							margin-bottom : 0;
-							@include interpolate("margin-right", 600px, 36px, 900px, 126px, "ease-in");
+							@include interpolate("margin-right", 600px, 15px, 900px, 126px, "ease-in");
 						}
 
 						strong {

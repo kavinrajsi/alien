@@ -55,7 +55,10 @@ header {
 		// header menu icon
 		.menu--icon {
 			cursor : pointer;
-
+			height : 28px;
+			@media(min-width: $tablet) {
+				height : 34px;
+			}
 			span {
 				display : block;
 				width : 50px;
@@ -73,6 +76,24 @@ header {
 
 					@media(min-width: $tablet) {
 						margin-bottom : 22px;
+					}
+				}
+				top : 0;
+				.menu--open & {
+					transition : all 0.5s ease-in;
+					top : 11px;
+					&:first-child {
+						transform : rotate(30deg);
+						@media(min-width: $tablet) {
+							top : 14px;
+						}
+					}
+					&:last-child {
+						top : -7px;
+						transform : rotate(-30deg);
+						@media(min-width: $tablet) {
+							top : -12px;
+						}
 					}
 				}
 			}
@@ -193,11 +214,11 @@ header {
 						}
 					}
 
-					&:last-child {
-						a {
-							margin-bottom : 0;
-						}
-					}
+					// &:last-child {
+					// 	// a {
+					// 	// 	margin-bottom : 0;
+					// 	// }
+					// }
 
 					&.small {
 						display : inline-block;
@@ -397,15 +418,6 @@ header {
 		}
 	}
 }
-
-
-// menu open
-.menu--open {
-	.menu--icon {
-		height : 45px;
-	}
-}
-
 
 .page {
 	&__content {

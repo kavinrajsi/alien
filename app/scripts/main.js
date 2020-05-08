@@ -35,18 +35,6 @@ if ('loading' in HTMLImageElement.prototype) {
 const body = document.body,
   headerMenu = gsap.timeline({ paused: true }),
   headerMenu2 = gsap.timeline({ paused: true });
-headerMenu.to('.menu--icon span:first-child', 0.035, {
-  opacity: 1,
-  rotation: 30,
-  y: 24,
-  ease: Power4.easeOut,
-});
-
-headerMenu.to('.menu--icon span:last-child', 0.0354, {
-  opacity: 1,
-  rotation: -30,
-  ease: Power4.easeOut,
-});
 
 headerMenu.to('.menu--item__content', 0.3, {
   top: 0,
@@ -102,27 +90,6 @@ $(document).on('click', '.trigger-menu', function () {
   headerMenu.reversed(!headerMenu.reversed());
 });
 
-/* menu close */
-headerMenu2.to('.menu--item__content', 0.01, {
-  top: 0,
-  visibility: 'visible',
-  height: 'auto',
-  x: 0,
-  y: 0,
-  opacity: 1,
-  ease: Expo.Power3,
-});
-
-headerMenu2.reverse();
-$(document).on(
-  'click',
-  '.menu--open .trigger-menu, .menu--open .menu--scroller a',
-  function () {
-    // alert('1');
-    // body.classList.toggle('menu--open');
-    headerMenu2.reversed(!headerMenu2.reversed());
-  }
-);
 
 /* menu scroll up and down */
 var c,
