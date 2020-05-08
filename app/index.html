@@ -814,91 +814,84 @@
     <script>
       $(function () {
         var view = $(window).height();
-        $(".we-let-our-work")
-          // .height(view)
-          .scrollie({
-            // scrollOffset: -50,
-            scrollingInView: function (elem) {
-              var bgColor = elem.data("background");
-              $(".we-let-our-work ").css(
-                "background-color",
-                "var(--blue-green)"
-              );
-              $(".we-let-our-work .section-title span ").css(
-                "color",
-                "var(--smoky-black)"
-              );
-              $(".we-let-our-work .section-title span .indicator ").css(
-                "background-color",
-                "var(--smoky-black)"
-              );
-              console.log("scrollingInView");
-            },
-
-            scrolledOutOfView: function (elem) {
-              var bgColor = elem.data("background");
-              $(".we-let-our-work ").css(
-                "background-color",
-                "var(--smoky-black)"
-              );
-              $(".we-let-our-work .section-title span ").css(
-                "color",
-                "var(--blue-green)"
-              );
-              $(".we-let-our-work .section-title span .indicator ").css(
-                "background-color",
-                "var(--blue-green)"
-              );
-              console.log("scrolledOutOfView");
-            },
-          });
-      });
-
-      /* we let our work */
-      var controller = new ScrollMagic.Controller();
-
-      if ($(".we-let-our-work")) {
-        /* animation */
-        // loop
-        function loop(elements, callback) {
-          for (let i = 0; i < elements.length; i++) {
-            callback(elements[i]);
-          }
-        }
-
-        loop(
-          document.querySelectorAll(".project-list .project-wrapper"),
-          (elem) => {
-            const tl = new TimelineMax();
-
-            tl.fromTo(
-              elem,
-              0.6,
-              {
-                y: 30,
-                transformOrigin: "bottom",
-                ease: Back.easeOut,
-                autoAlpha: 0,
-              },
-              {
-                y: 0,
-                transformOrigin: "bottom",
-                ease: Back.easeOut,
-                autoAlpha: 1,
-              }
+        $(".we-let-our-work").scrollie({
+          scrollingInView: function (elem) {
+            var bgColor = elem.data("background");
+            $(".we-let-our-work ").css("background-color", "var(--blue-green)");
+            $(".we-let-our-work .section-title span ").css(
+              "color",
+              "var(--smoky-black)"
             );
+            $(".we-let-our-work .section-title span .indicator ").css(
+              "background-color",
+              "var(--smoky-black)"
+            );
+            console.log("scrollingInView");
+          },
 
-            new ScrollMagic.Scene({
-              triggerElement: elem,
-              triggerHook: 0.75,
-              reverse: false,
-            })
-              .setTween(tl)
-              // .addIndicators({ name: "Box Tween" })
-              .addTo(controller);
+          scrolledOutOfView: function (elem) {
+            var bgColor = elem.data("background");
+            $(".we-let-our-work ").css(
+              "background-color",
+              "var(--smoky-black)"
+            );
+            $(".we-let-our-work .section-title span ").css(
+              "color",
+              "var(--blue-green)"
+            );
+            $(".we-let-our-work .section-title span .indicator ").css(
+              "background-color",
+              "var(--blue-green)"
+            );
+            console.log("scrolledOutOfView");
+          },
+        });
+
+        /* we let our work */
+        var controller = new ScrollMagic.Controller();
+
+        if ($(".we-let-our-work")) {
+          /* animation */
+          // loop
+          function loop(elements, callback) {
+            for (let i = 0; i < elements.length; i++) {
+              callback(elements[i]);
+            }
           }
-        );
-      }
+
+          loop(
+            document.querySelectorAll(".project-list .project-wrapper"),
+            (elem) => {
+              const tl = new TimelineMax();
+
+              tl.fromTo(
+                elem,
+                0.6,
+                {
+                  y: 30,
+                  transformOrigin: "bottom",
+                  ease: Back.easeOut,
+                  autoAlpha: 0,
+                },
+                {
+                  y: 0,
+                  transformOrigin: "bottom",
+                  ease: Back.easeOut,
+                  autoAlpha: 1,
+                }
+              );
+
+              new ScrollMagic.Scene({
+                triggerElement: elem,
+                triggerHook: 0.75,
+                reverse: false,
+              })
+                .setTween(tl)
+                .addTo(controller);
+            }
+          );
+        }
+      });
     </script>
   </body>
 </html>
