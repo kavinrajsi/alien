@@ -426,3 +426,15 @@ main {
   overflow: hidden;
   position: relative;
 }
+.noscriptmsg,
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #fff;
+  padding: 0.2em 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}

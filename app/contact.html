@@ -2,7 +2,7 @@
 <html class="no-js" lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="description" content="" />
+    <meta name="description" content="we are Alien" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Contact | Alien</title>
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
@@ -49,10 +49,61 @@
       crossorigin
     />
     <!-- Place favicon.ico in the root directory -->
-    <!-- build:css styles/main.css -->
+    <link rel="manifest" href="./manifest.json" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Alien Design" />
+    <meta name="apple-mobile-web-app-title" content="Alien Design" />
+    <meta name="msapplication-starturl" content="/index.html" />
+    <meta name="theme-color" content="#0a0908">
+    <meta name="msapplication-navbutton-color" content="#0a0908">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#0a0908">
+
+    <!-- build:css styles/main.css as="style" media="all" -->
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="/node_modules/aos/dist/aos.css" />
     <!-- endbuild -->
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org/",
+        "@type": "Organization",
+        "url": "http://thealien.design/",
+        "name": "Alien Design",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "India",
+          "addressLocality": "Hyderabad",
+          "addressRegion": "Begumpet",
+          "postalCode": "500016",
+          "streetAddress": "212, 2nd floor, Lal Bungalow, Greenlands Hotel Road",
+          "email": "business@thealien.design",
+          "description": "we are Alien"
+        }
+      }
+    </script>
+    <noscript>
+      <div class="noscriptmsg">
+        For full functionality of this site it is necessary to enable
+        JavaScript. Here are the
+        <a href="https://www.enable-javascript.com/">
+          instructions how to enable JavaScript in your web browser</a
+        >.
+      </div>
+    </noscript>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "GA_MEASUREMENT_ID");
+    </script>
   </head>
   <body>
     <!--[if IE]>
@@ -227,7 +278,11 @@
           </svg>
         </div>
       </div>
-      <div data-aos="fade-up" data-aos-anchor-placement="center-bottom"  class="page__content--contact__content container">
+      <div
+        data-aos="fade-up"
+        data-aos-anchor-placement="center-bottom"
+        class="page__content--contact__content container"
+      >
         <div class="left section-row__text">
           <div class="section-row__card">
             <div class="section-row__card--title">PREFER MAIL?</div>
@@ -267,7 +322,11 @@
             </ul>
           </div>
         </div>
-        <div data-aos="fade-up" data-aos-anchor-placement="center-bottom"  class="right">
+        <div
+          data-aos="fade-up"
+          data-aos-anchor-placement="center-bottom"
+          class="right"
+        >
           <form
             id="form"
             class="form"
@@ -485,19 +544,14 @@
       type="text/javascript"
       src="/node_modules/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js"
     ></script>
-    <script
-      type="text/javascript"
-      src="/node_modules/aos/dist/aos.js"
-    ></script>
-    <!-- endbuild -->
-    <!-- build:js scripts/main.js -->
+    <script type="text/javascript" src="/node_modules/aos/dist/aos.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
-    <!-- build:js scripts/formValidation.js -->
+    <!-- build:js scripts/formValidation.js defer -->
     <script src="./scripts/jquery.validate.js"></script>
     <script src="./scripts/additional-methods.js"></script>
     <!-- endbuild -->
-    <script>
+    <script defer>
       $(".form").validate({
         errorPlacement: function (error, element) {
           if (element.attr("name") == "service[]") {
@@ -536,8 +590,7 @@
             data: $(form).serialize(),
             success: function (data) {
               $(form).append("<div id='message'></div>");
-              $("#message")
-                .html(data);
+              $("#message").html(data);
               $("#form")[0].reset();
             },
           });

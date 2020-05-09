@@ -11,17 +11,15 @@
 		display : block;
 		width : 100%;
 		height : 100%;
-		width : 1370px;
+		width : 1414px;
 		// height : 1370px;
 		position : absolute;
 		left : -460px;
-		top : 40px;
+		top : -20%;
 		background-repeat : no-repeat;
 		background-image : url("../images/header-image.svg");
 		background-color : transparent;
-		background-size : contain;
-		background-position : 0 0;
-		transform : rotate(26.94deg);
+		background-size : cover;
 		transform : rotate(6deg);
 	}
 
@@ -79,9 +77,11 @@
 	@include interpolate("margin-bottom", 576px, 90px, 992px, 206px, "ease-in");
 	.accordion {
 		&-menu {
+			position : relative;
 			cursor : pointer;
 			display : flex;
-			align-items : center;	.wedo {
+			align-items : center;
+			.wedo {
 				&-title {
 					transition : all 200ms ease;
 					color : var(--white);
@@ -91,28 +91,30 @@
 					@include interpolate("font-size", 576px, 36px, 992px, 100px, "ease-in");
 					@include interpolate("line-height", 576px, 54px, 992px, 120px, "ease-in");
 					color : var(--blue-violet);
-
-					@supports (-webkit-text-stroke: 2px var(--blue-violet)) {
-						-webkit-text-stroke : 2px var(--blue-violet);
+					transition : all 200ms ease;
+					@supports (-webkit-text-stroke: 1px var(--blue-violet)) {
+						-webkit-text-stroke : 1px var(--blue-violet);
 						color : transparent;
 						/* Will override color (regardless of order) */
-						-webkit-text-stroke-width : 2px;
+						-webkit-text-stroke-width : 1px;
 						-webkit-text-stroke-color : var(--blue-violet);
 					}
-
-					&:after {
-						position : absolute;
-						top : 0;
-						bottom : 0;
-						left : 0;
-						width : 0;
-						content : attr(data-text);
+					@media(min-width: $tablet) {
+						@supports (-webkit-text-stroke: 2px var(--blue-violet)) {
+							-webkit-text-stroke : 2px var(--blue-violet);
+							color : transparent;
+							/* Will override color (regardless of order) */
+							-webkit-text-stroke-width : 2px;
+							-webkit-text-stroke-color : var(--blue-violet);
+						}
+					}
+					&:hover {
+						transition : all 0.5s ease-out;
+						-webkit-text-stroke-color : transparent;
+						-webkit-text-stroke-width : 0;
+						-webkit-text-stroke : 0;
+						transition : all 200ms ease;
 						color : var(--blue-violet);
-						display : block;
-						overflow : hidden;
-						transition-property : width;
-						transition-duration : 1000ms;
-						white-space : nowrap;
 					}
 				}
 			}
@@ -133,14 +135,50 @@
 			margin-top : 20px;
 		}
 		&-group {
+			position : relative;
 			@include interpolate("margin-bottom", 576px, 10px, 992px, 40px, "ease-in");
-			.button {
-				display : none;
-				@media(min-width: $tablet) {
-					display : block;
+			&:last-child {
+				.accordion-menu {
+					max-width : 244px;
+					@media(min-width: 432px) {
+						max-width : initial;
+					}
 				}
-				margin-left : 30px;
+			}
+			.button {
+				// display : none;
+				width : 20px;
+				height : auto;
+				margin-left : 10px;
 				transition : all 0.26s ease-in-out;
+				@media(min-width: $tablet) {
+					// 	display : block;
+					width : 28px;
+					margin-left : 30px;
+				}
+				svg {
+					width : 100%;
+					height : 100%;
+				}
+			}
+			&:last-child {
+				@media(min-width: 400px) {
+					padding-right : 28px;
+				}
+				@media(min-width: 432px) {
+					padding-right : 0;
+				}
+				.button {
+					position : absolute;
+					// position : static;
+					bottom : 14px;
+					right : 26.5%;
+					right : 0;
+
+					@media(min-width: 432px) {
+						position : static;
+					}
+				}
 			}
 			&.active {
 				.wedo {

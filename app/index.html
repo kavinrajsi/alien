@@ -2,7 +2,7 @@
 <html class="no-js" lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="description" content="" />
+    <meta name="description" content="we are Alien" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Home | Alien</title>
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
@@ -49,9 +49,62 @@
       crossorigin
     />
     <!-- Place favicon.ico in the root directory -->
-    <!-- build:css styles/main.css -->
+    <link rel="manifest" href="./manifest.json" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Alien Design" />
+    <meta name="apple-mobile-web-app-title" content="Alien Design" />
+    <meta name="msapplication-starturl" content="/index.html" />
+    <meta name="theme-color" content="#0a0908">
+    <meta name="msapplication-navbutton-color" content="#0a0908">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#0a0908">
+
+    <!-- build:css styles/main.css as="style" media="all" -->
     <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="/node_modules/aos/dist/aos.css" />
     <!-- endbuild -->
+
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org/",
+        "@type": "Organization",
+        "url": "http://thealien.design/",
+        "name": "Alien Design",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "India",
+          "addressLocality": "Hyderabad",
+          "addressRegion": "Begumpet",
+          "postalCode": "500016",
+          "streetAddress": "212, 2nd floor, Lal Bungalow, Greenlands Hotel Road",
+          "email": "business@thealien.design",
+          "description": "we are Alien"
+        }
+      }
+    </script>
+    <noscript>
+      <div class="noscriptmsg">
+        For full functionality of this site it is necessary to enable
+        JavaScript. Here are the
+        <a href="https://www.enable-javascript.com/">
+          instructions how to enable JavaScript in your web browser</a
+        >.
+      </div>
+    </noscript>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "GA_MEASUREMENT_ID");
+    </script>
   </head>
 
   <body>
@@ -187,7 +240,7 @@
       </div>
     </header>
     <main>
-      <div class="container hero-unit">
+      <div data-color="#0a0908" class="container hero-unit">
         <div class="page-title">
           <span>We are Alien. </span>
           <span>A digital studio, creating </span>
@@ -198,7 +251,7 @@
           <span>out-of-this-world ideas in the digital space.</span>
         </div>
       </div>
-      <div class="container about-what-we-do">
+      <div data-color="#0a0908" class="container about-what-we-do">
         <div class="accordion">
           <div class="accordion-group">
             <div class="accordion-menu">
@@ -214,7 +267,7 @@
                   <path
                     d="M27.7188 10.1628L27.275 9.71903C26.9812 9.42528 26.5063 9.42528 26.2125 9.71903L14 21.9378L1.78125 9.71903C1.4875 9.42528 1.0125 9.42528 0.71875 9.71903L0.275 10.1628C-0.01875 10.4565 -0.01875 10.9315 0.275 11.2253L13.4625 24.419C13.7562 24.7128 14.2312 24.7128 14.525 24.419L27.7125 11.2253C28.0125 10.9315 28.0125 10.4565 27.7188 10.1628Z"
                     fill="#8816E1"
-                  /></svg></i>
+                  /></svg ></i>
             </div>
             <div class="accordion-content">
               <p>
@@ -239,7 +292,7 @@
                   <path
                     d="M27.7188 10.1628L27.275 9.71903C26.9812 9.42528 26.5063 9.42528 26.2125 9.71903L14 21.9378L1.78125 9.71903C1.4875 9.42528 1.0125 9.42528 0.71875 9.71903L0.275 10.1628C-0.01875 10.4565 -0.01875 10.9315 0.275 11.2253L13.4625 24.419C13.7562 24.7128 14.2312 24.7128 14.525 24.419L27.7125 11.2253C28.0125 10.9315 28.0125 10.4565 27.7188 10.1628Z"
                     fill="#8816E1"
-                  /></svg></i>
+                  /></svg ></i>
             </div>
             <div class="accordion-content">
               <p>
@@ -264,7 +317,7 @@
                   <path
                     d="M27.7188 10.1628L27.275 9.71903C26.9812 9.42528 26.5063 9.42528 26.2125 9.71903L14 21.9378L1.78125 9.71903C1.4875 9.42528 1.0125 9.42528 0.71875 9.71903L0.275 10.1628C-0.01875 10.4565 -0.01875 10.9315 0.275 11.2253L13.4625 24.419C13.7562 24.7128 14.2312 24.7128 14.525 24.419L27.7125 11.2253C28.0125 10.9315 28.0125 10.4565 27.7188 10.1628Z"
                     fill="#8816E1"
-                  /></svg></i>
+                  /></svg ></i>
             </div>
             <div class="accordion-content">
               <p>
@@ -291,7 +344,7 @@
                   <path
                     d="M27.7188 10.1628L27.275 9.71903C26.9812 9.42528 26.5063 9.42528 26.2125 9.71903L14 21.9378L1.78125 9.71903C1.4875 9.42528 1.0125 9.42528 0.71875 9.71903L0.275 10.1628C-0.01875 10.4565 -0.01875 10.9315 0.275 11.2253L13.4625 24.419C13.7562 24.7128 14.2312 24.7128 14.525 24.419L27.7125 11.2253C28.0125 10.9315 28.0125 10.4565 27.7188 10.1628Z"
                     fill="#8816E1"
-                  /></svg></i>
+                  /></svg ></i>
             </div>
             <div class="accordion-content">
               <p>
@@ -304,7 +357,7 @@
         </div>
         <a href="/service.html" class="link--text">Know more about services</a>
       </div>
-      <div class="container-fluid we-let-our-work" data-background="#7DE2D1">
+      <div data-color="#7DE2D1" class="container-fluid we-let-our-work" >
         <div class="container no-padding section-title">
           <span>
             We let our
@@ -412,11 +465,14 @@
             </div>
           </div>
           <div class="project-list-readmore">
-            <a class="link" href="/work.html"> see more work </a>
+            <span></span>
+            <span class="">
+              <a class="link" href="/work.html"> See more work </a>
+            </span>
           </div>
         </div>
       </div>
-      <div class="container hear-them">
+      <div data-color="#0a0908" class="container hear-them">
         <div class="hear-them-say-it view-mobile">
           <div class="testimonial-action">
             <span>
@@ -753,7 +809,7 @@
           </div>
         </div>
       </div>
-      <div class="container requestacces">
+      <div data-color="#0a0908" class="container requestacces">
         <p>
           <span>Ready for an encounter? </span> <span>Send us a signal.</span>
         </p>
@@ -775,7 +831,7 @@
         <li><a href="https://www.linkedin.com/">Linkedin</a></li>
       </ul>
     </footer>
-    <!-- build:js scripts/vendor.js  -->
+    <!-- build:js scripts/vendor.js -->
     <script
       type="text/javascript"
       src="/node_modules/jquery/dist/jquery.min.js"
@@ -796,94 +852,115 @@
       type="text/javascript"
       src="/node_modules/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js"
     ></script>
-    <!-- endbuild -->
-    <!-- build:js scripts/main.js  -->
+    <script type="text/javascript" src="/node_modules/aos/dist/aos.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
-    <!-- build:js scripts/scroll.js  -->
-    <script src="scripts/jquery.scrollie.min.js"></script>
-    <!-- endbuild -->
     <script>
-      $(function () {
-        var view = $(window).height();
-        $(".we-let-our-work").scrollie({
-          scrollingInView: function (elem) {
-            var bgColor = elem.data("background");
-            $(".we-let-our-work ").css("background-color", "var(--blue-green)");
-            $(".we-let-our-work .section-title span, .project-list-readmore .link ").css(
-              "color",
-              "var(--smoky-black)"
-            );
-            $(".we-let-our-work .section-title span .indicator ").css(
-              "background-color",
-              "var(--smoky-black)"
-            );
-            console.log("scrollingInView");
-          },
+      // const view = $(window).height();
+      // $(".we-let-our-work").scrollie({
+      //   scrollingInView: function (elem) {
+      //     var bgColor = elem.data("background");
+      //     $("body").css("background-color", "var(--white)");
+      //     $(
+      //       ".we-let-our-work .section-title span, .project-list-readmore .link "
+      //     ).css("color", "var(--smoky-black)");
+      //     $(".we-let-our-work .section-title span .indicator ").css(
+      //       "background-color",
+      //       "var(--smoky-black)"
+      //     );
+      //     console.log("scrollingInView");
+      //   },
 
-          scrolledOutOfView: function (elem) {
-            var bgColor = elem.data("background");
-            $(".we-let-our-work ").css(
-              "background-color",
-              "var(--smoky-black)"
-            );
-            $(".we-let-our-work .section-title span , .project-list-readmore .link ").css(
-              "color",
-              "var(--blue-green)"
-            );
-            $(".we-let-our-work .section-title span .indicator ").css(
-              "background-color",
-              "var(--blue-green)"
-            );
-            console.log("scrolledOutOfView");
-          },
-        });
+      //   scrolledOutOfView: function (elem) {
+      //     var bgColor = elem.data("background");
+      //     $("body").css("background-color", "var(--smoky-black)");
+      //     $(
+      //       ".we-let-our-work .section-title span , .project-list-readmore .link "
+      //     ).css("color", "var(--blue-green)");
+      //     $(".we-let-our-work .section-title span .indicator ").css(
+      //       "background-color",
+      //       "var(--blue-green)"
+      //     );
+      //     console.log("scrolledOutOfView");
+      //   },
+      // });
 
-        /* we let our work */
-        var controller = new ScrollMagic.Controller();
+      $(window).scroll(function() {
 
-        if ($(".we-let-our-work")) {
-          /* animation */
-          // loop
-          function loop(elements, callback) {
-            for (let i = 0; i < elements.length; i++) {
-              callback(elements[i]);
-            }
+  // selectors
+  var $window = $(window),
+      $body = $('body'),
+      $panel = $('.container, .container-fluid');
+
+  // Change 33% earlier than scroll position so colour is there when you arrive.
+  var scroll = $window.scrollTop() + ($window.height() / 4);
+
+  $panel.each(function () {
+    var $this = $(this);
+
+    // if position is within range of this panel.
+    // So position of (position of top of div <= scroll position) && (position of bottom of div > scroll position).
+    // Remember we set the scroll to 33% earlier in scroll var.
+    if ($this.position().top <= scroll && $this.position().top + $this.height() > scroll) {
+const color = $(this).data('color');
+console.log($(this).data('color'));
+      // Remove all classes on body with color-
+      // $body.removeClass(function (index, css) {
+      //   return (css.match (/(^|\s)color-\S+/g) || []).join(' ');
+      // });
+      // Add class of currently active div
+      $body.css("background-color", color);
+      // $body.css("background", "$(this).data('color')");
+    }
+  });
+
+}).scroll();
+
+
+      /* we let our work */
+      const controller = new ScrollMagic.Controller();
+
+      if ($(".we-let-our-work")) {
+        /* animation */
+        // loop
+        function loop(elements, callback) {
+          for (let i = 0; i < elements.length; i++) {
+            callback(elements[i]);
           }
-
-          loop(
-            document.querySelectorAll(".project-list .project-wrapper"),
-            (elem) => {
-              const tl = new TimelineMax();
-
-              tl.fromTo(
-                elem,
-                0.6,
-                {
-                  y: 30,
-                  transformOrigin: "bottom",
-                  ease: Back.easeOut,
-                  autoAlpha: 0,
-                },
-                {
-                  y: 0,
-                  transformOrigin: "bottom",
-                  ease: Back.easeOut,
-                  autoAlpha: 1,
-                }
-              );
-
-              new ScrollMagic.Scene({
-                triggerElement: elem,
-                triggerHook: 0.75,
-                reverse: false,
-              })
-                .setTween(tl)
-                .addTo(controller);
-            }
-          );
         }
-      });
+
+        loop(
+          document.querySelectorAll(".project-list .project-wrapper"),
+          (elem) => {
+            const tl = new TimelineMax();
+
+            tl.fromTo(
+              elem,
+              0.6,
+              {
+                y: 30,
+                transformOrigin: "bottom",
+                ease: Back.easeOut,
+                autoAlpha: 0,
+              },
+              {
+                y: 0,
+                transformOrigin: "bottom",
+                ease: Back.easeOut,
+                autoAlpha: 1,
+              }
+            );
+
+            new ScrollMagic.Scene({
+              triggerElement: elem,
+              triggerHook: 0.75,
+              reverse: false,
+            })
+              .setTween(tl)
+              .addTo(controller);
+          }
+        );
+      }
     </script>
   </body>
 </html>

@@ -6,7 +6,7 @@
 	@include interpolate("padding-bottom", 576px, 86px, 992px, 120px, "ease-in");
 	position : relative;
 	z-index : 1;
-	background : var(--smoky-black);
+	// background : var(--smoky-black);
 
 	.section-title {
 		margin-bottom : 80px;
@@ -14,9 +14,10 @@
 		span {
 			display : block;
 			font-family : var(--font-500);
-			color : var(--wework-color);
+			// color : var(--wework-color);
+			color : var(--smoky-black);
 			// color : inherit;
-			background : transparent !important;
+			// background : transparent !important;
 
 			@include interpolate("margin-bottom", 576px, 5px, 992px, 18px, "ease-in");
 			@include interpolate("font-size", 576px, 46px, 992px, 80px, "ease-in");
@@ -25,6 +26,7 @@
 			&:last-child {
 				margin-bottom : 0;
 				.indicator {
+					background : var(--smoky-black);
 					display : inline-block;
 					height : 4px;
 					@include interpolate("width", 576px, 40px, 992px, 90px, "ease-in");
@@ -61,12 +63,14 @@
 			&-wrapper {
 				// opacity : 0;
 				@include interpolate("margin-bottom", 375px, 60px, 992px, 100px, "ease-in");
-
+				width : 100%;
 				a {
+					width : 100%;
 					display : inline-block;
 				}
 
 				@media(min-width: $mobile) {
+					width : auto;
 					flex-grow : 1;
 					flex-shrink : 0;
 					flex-basis : 50%;
@@ -103,10 +107,6 @@
 					&:nth-child(2) {
 						flex-basis : 460px;
 					}
-
-					// &:nth-child(3) {
-					// 	flex-basis : 942px;
-					// }
 				}
 
 				&:nth-child(1) {
@@ -182,22 +182,39 @@
 			}
 
 			&-list-readmore {
+				display : flex;
+				@media(min-width: $mobile) {
+					span {
+						flex : 1 0 50%;
+						&:nth-child(1) {
+							padding-right : 15px;
+						}
+						&:nth-child(2) {
+							flex-basis : 460px;
+							padding-left : 15px;
+
+							@media(min-width: 1060px) {
+								margin-left : -30px;
+								padding-left : 0;
+							}
+						}
+					}
+				}
 				.link {
 					display : inline-block;
 					position : relative;
 					font-family : var(--font-500);
 					font-size : 20px;
 					line-height : 30px;
+					color : var(--wework-color);
+					padding-bottom : 5px;
 
 					@media(min-width: $tablet) {
 						font-size : 24px;
 						line-height : 36px;
 					}
 
-					color : var(--wework-color);
-					padding-bottom : 5px;
-
-					&:before {
+					&:after {
 						content : "";
 						display : block;
 						width : 100%;
@@ -206,6 +223,12 @@
 						position : absolute;
 						left : 0;
 						bottom : 0;
+					}
+					&:hover {
+						&:after {
+							opacity : 1;
+							animation : 0.35s ease-out 0s scale-out forwards, 0.35s ease-out 0.35s scale-in forwards;
+						}
 					}
 				}
 			}
