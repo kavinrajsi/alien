@@ -433,4 +433,6 @@ if ($('.hear-them-say-it')) {
 }
 
 // all page animation
-AOS.init();
+AOS.init({
+  once: false
+});
