@@ -45,6 +45,7 @@
 
 
 		@include interpolate("margin-top", 375px, 90px, 992px, 200px, "ease-in");
+		@include interpolate("margin-top", 375px, 90px, 992px, 600px, "ease-in");
 	}
 
 	.testimonial {

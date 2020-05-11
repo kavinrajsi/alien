@@ -334,9 +334,7 @@
             </div>
             <div class="accordion-content">
               <p>
-                We enjoy flipping complex matters of the world into simple
-                solutions and experiences through the forces of Research,
-                Strategy & Design.
+                We help launch products & websites across various platforms with the power of technology
               </p>
             </div>
           </div>
@@ -711,7 +709,7 @@
             </div>
           </div>
         </div>
-        <div  data-aos="fade-up"  class="hear-them-say-it view-desktop">
+        <div class="hear-them-say-it view-desktop">
           <div class="testimonial-one">
             <div class="slide slider1 active testimonial-content">
               <div class="testimonial-wrapper">
@@ -925,7 +923,7 @@
           $panel.each(function () {
             const $this = $(this),
               color = $(this).data("color");
-            text = $(this).data("text");
+              text = $(this).data("text");
 
             if (
               $this.position().top <= scroll &&
@@ -933,7 +931,7 @@
             ) {
               // the element is visible, do something
               // console.clear();
-              $(".container-fluid").css("background", color);
+              $("body").css("background", color);
               $(".container-fluid .section-title span").css("color", "#7de2d1");
               $(".container-fluid .section-title span .indicator").css(
                 "background",
@@ -950,7 +948,7 @@
           });
         })
         .scroll();
-      // $(".container-fluid").css("outline", '1px solid yellow');
+      $(".container-fluid").css("outline", '5px solid red');
     </script>
   </body>
 </html>

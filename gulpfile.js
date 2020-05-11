@@ -127,7 +127,7 @@ function html() {
 function imagesWebp() {
   return src('app/images/**/*', { since: lastRun(images) })
     .pipe($.webp())
-  .pipe(dest("dist/images"));
+  .pipe(dest("app/images"));
 }
 
 function images() {
@@ -189,6 +189,7 @@ function startAppServer() {
     server.reload
   );
 
+  watch("app/images/**/*", imagesWebp);
   watch("app/styles/**/*.scss", styles);
   watch("app/scripts/**/*.js", scripts);
   watch("modernizr.json", modernizr);
@@ -278,7 +279,7 @@ let serve;
 if (isDev) {
   serve = series(
     clean,
-    parallel(styles, scripts, modernizr, fonts),
+    parallel(styles, scripts, modernizr, fonts, imagesWebp),
     startAppServer
   );
 } else if (isTest) {
