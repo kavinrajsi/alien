@@ -8,13 +8,15 @@
     "gsap": "^3.2.6",
     "gulp-webp": "^4.0.1",
     "gulp-zip": "^5.0.1",
+    "gutil": "^1.6.4",
     "imagemin-pngquant": "^8.0.0",
     "imagemin-webp": "^5.1.0",
     "jquery": "^3.4.1",
     "jquery-validation": "^1.19.1",
     "mixitup": "^3.3.1",
     "modernizr": "^3.7.1",
-    "scrollmagic": "^2.0.7"
+    "scrollmagic": "^2.0.7",
+    "vinyl-ftp": "^0.6.1"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",

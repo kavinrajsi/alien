@@ -189,7 +189,7 @@ function startAppServer() {
     server.reload
   );
 
-  watch("app/images/**/*", imagesWebp);
+
   watch("app/styles/**/*.scss", styles);
   watch("app/scripts/**/*.js", scripts);
   watch("modernizr.json", modernizr);

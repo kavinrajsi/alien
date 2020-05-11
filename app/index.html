@@ -246,7 +246,7 @@
         </nav>
       </div>
     </header>
-    <main class="smooth-scroll-wrapper">
+    <main class="home-page smooth-scroll-wrapper">
       <div data-color="#0a0908" class="dataStyle container hero-unit">
         <div class="page-title">
           <span>We are Alien. </span>
@@ -918,7 +918,7 @@
           const $window = $(window),
             $body = $("body"),
             $panel = $(".dataStyle"),
-            scroll = $window.scrollTop() + $window.height() / 3 - 200;
+            scroll = $window.scrollTop() + $window.height() / 3 + 150;
 
           $panel.each(function () {
             const $this = $(this),
@@ -932,23 +932,23 @@
               // the element is visible, do something
               // console.clear();
               $("body").css("background", color);
-              $(".container-fluid .section-title span").css("color", "#7de2d1");
-              $(".container-fluid .section-title span .indicator").css(
-                "background",
-                "#7de2d1"
-              );
-              if (color == "#ffffff") {
-                $(".container-fluid .section-title span").css("color", text);
-                $(".container-fluid .section-title span .indicator").css(
-                  "background",
-                  text
-                );
-              }
+              // $(".container-fluid .section-title span").css("color", "#7de2d1");
+              // $(".container-fluid .section-title span .indicator").css(
+                // "background",
+                // "#7de2d1"
+              // );
+              // if (color == "#ffffff") {
+                // $(".container-fluid .section-title span").css("color", text);
+                // $(".container-fluid .section-title span .indicator").css(
+                  // "background",
+                  // text
+                // );
+              // }
             }
           });
         })
         .scroll();
-      $(".container-fluid").css("outline", '5px solid red');
+      // $(".container-fluid").css("outline", '5px solid red');
     </script>
   </body>
 </html>
