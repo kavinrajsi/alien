@@ -1,24 +1,4 @@
-// const body = document.body,
-// scrollWrap = document.getElementsByClassName('smooth-scroll-wrapper')[0],
-// height = scrollWrap.getBoundingClientRect().height - 1,
-// speed = 0.04;
-
-// var offset = 0;
-
-// body.style.height = Math.floor(height) + 'px';
-
-// function smoothScroll() {
-// offset += (window.pageYOffset - offset) * speed;
-
-// var scroll = 'translateY(-' + offset + 'px) translateZ(0)';
-// scrollWrap.style.transform = scroll;
-
-// callScroll = requestAnimationFrame(smoothScroll);
-// }
-
-// smoothScroll();
-
-// // service worker
+ // service worker
 // if ('serviceWorker' in navigator) {
 //   navigator.serviceWorker
 //     .register('./sw.js')
@@ -45,7 +25,8 @@ if ('loading' in HTMLImageElement.prototype) {
 }
 
 // menu transition and action on click
-const body = document.body,
+const
+  body = document.body,
   headerMenu = gsap.timeline({ paused: true }),
   headerMenu2 = gsap.timeline({ paused: true });
 
@@ -136,6 +117,11 @@ function playAnimation(event) {
   group.toggleClass('active').siblings().removeClass('active');
 }
 
+/* link has no value */
+if ($('a.project-link')) {
+  $('a.project-link .image').append('<span class="project-coming-soon">Coming Soon!</span>');
+}
+
 /* Slider */
 if ($('.hear-them-say-it')) {
   const slider_one = $('.view-mobile .testimonial-one .slide'),
@@ -159,7 +145,7 @@ if ($('.hear-them-say-it')) {
   init();
 
   if ($(window).width() < 992) {
-    console.log('mobile');
+    // console.log('mobile');
 
     const slider_one = $('.view-mobile .testimonial-one .slide'),
       actionLeft = $('.view-mobile .testimonial-action .action-left'),
@@ -167,14 +153,14 @@ if ($('.hear-them-say-it')) {
       active = $('.view-mobile .testimonial-one .active');
 
     function gotoPrevSlider(slideOut, slideIn) {
-      console.log('left');
+      // console.log('left');
       const leftCard = gsap.timeline(),
         content = slideIn.find('blockquote'),
         author = slideIn.find('footer'),
         index = slideIn.index(),
         size = $('.view-mobile .testimonial-one .slide').length;
 
-      console.log('leftCard: ' + index + ',' + size);
+      // console.log('leftCard: ' + index + ',' + size);
 
       if (slideIn !== 0) {
         // go to prev slider
@@ -224,14 +210,14 @@ if ($('.hear-them-say-it')) {
     }
 
     function gotoNextSlider(slideOut, slideIn) {
-      console.log('right');
+      // console.log('right');
       const rightCard = gsap.timeline(),
         content = slideIn.find('blockquote'),
         author = slideIn.find('footer'),
         index = slideIn.index(),
         size = $('.view-mobile .testimonial-one .slide').length;
 
-      console.log('rightCard: ' + index + ',' + size);
+      // console.log('rightCard: ' + index + ',' + size);
 
       if (slideIn !== 0) {
         rightCard
@@ -279,14 +265,14 @@ if ($('.hear-them-say-it')) {
     });
 
     actionRight.click(function (e) {
-      console.log('right click');
+      // console.log('right click');
       e.preventDefault();
       const slideOut = $('.view-mobile .testimonial-one .slide'),
         slideIn = $('.view-mobile .testimonial-one .slide.active').next();
       gotoNextSlider(slideOut, slideIn);
     });
   } else {
-    console.log('desktop');
+    // console.log('desktop');
     const slider_one = $('.view-desktop .testimonial-one .slide'),
       actionLeft = $('.view-desktop .testimonial-action .action-left'),
       actionRight = $('.view-desktop .testimonial-action .action-right'),
@@ -358,7 +344,7 @@ if ($('.hear-them-say-it')) {
         css: { color: '#fff', opacity: 1.0, 'pointer-events': 'initial' },
       });
 
-      console.log(index);
+      // console.log(index);
 
       if (index == 1) {
         TweenLite.to(actionRight, 0.3, {
@@ -368,7 +354,7 @@ if ($('.hear-them-say-it')) {
     }
 
     actionRight.click(function (e) {
-      console.log('right');
+      // console.log('right');
       e.preventDefault();
       const slideOut = $('.view-desktop .testimonial-one .slide'),
         slideIn = $('.view-desktop .testimonial-one .slide.active').next();
@@ -376,7 +362,7 @@ if ($('.hear-them-say-it')) {
     });
 
     function gotoPrevSlider(slideOut, slideIn) {
-      console.log('left');
+      // console.log('left');
 
       const tl = gsap.timeline(),
         content = slideIn.find('blockquote'),
@@ -384,7 +370,7 @@ if ($('.hear-them-say-it')) {
         index = slideIn.index(),
         size = $('.view-desktop .testimonial-one .slide').length;
 
-      console.log(index + ',' + size);
+      // console.log(index + ',' + size);
 
       if (slideIn !== 0) {
         // go to prev slider

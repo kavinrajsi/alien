@@ -48,6 +48,13 @@
       type="font/woff2"
       crossorigin
     />
+    <link rel="preload" href="images/arise_thumbnail.webp" as="image" />
+    <link
+      rel="preload"
+      href="images/google-digital-billboards.webp"
+      as="image"
+    />
+    <link rel="preload" href="scripts/vendor.js" as="script" />
     <!-- Place favicon.ico in the root directory -->
     <link rel="manifest" href="manifest.json" />
     <meta name="mobile-web-app-capable" content="yes" />
@@ -239,7 +246,7 @@
         </nav>
       </div>
     </header>
-    <main>
+    <main class="smooth-scroll-wrapper">
       <div data-color="#0a0908" class="dataStyle container hero-unit">
         <div class="page-title">
           <span>We are Alien. </span>
@@ -273,9 +280,9 @@
             </div>
             <div class="accordion-content">
               <p>
-                We help you embrace the endless possibilities of digital
-                channels in forging connections that last and stories that
-                resonate with the crowd.
+                We enjoy flipping complex matters of the world into simple
+                solutions and experiences through the forces of Research,
+                Strategy & Design.
               </p>
             </div>
           </div>
@@ -300,9 +307,9 @@
             </div>
             <div class="accordion-content">
               <p>
-                We help you embrace the endless possibilities of digital
-                channels in forging connections that last and stories that
-                resonate with the crowd.
+                We help build the right brand & identity for you in people’s
+                minds through strong first impressions, vivid storytelling &
+                memorable messaging.
               </p>
             </div>
           </div>
@@ -327,9 +334,9 @@
             </div>
             <div class="accordion-content">
               <p>
-                We help you embrace the endless possibilities of digital
-                channels in forging connections that last and stories that
-                resonate with the crowd.
+                We enjoy flipping complex matters of the world into simple
+                solutions and experiences through the forces of Research,
+                Strategy & Design.
               </p>
             </div>
           </div>
@@ -369,6 +376,7 @@
       </div>
       <div
         data-color="#ffffff"
+        data-text="#0a0908"
         class="dataStyle container-fluid we-let-our-work"
       >
         <div data-color="#ffffff" class="container no-padding section-title">
@@ -388,22 +396,32 @@
                 <div class="image">
                   <picture>
                     <source
-                      srcset="./images/labeldata.webp"
+                      srcset="
+                        ./images/arise_thumbnail.webp    1x,
+                        ./images/arise_thumbnail@2x.webp 2x,
+                        ./images/arise_thumbnail@3x.webp 3x
+                      "
                       type="image/webp"
                     />
-                    <source srcset="./images/labeldata.jpg 1x" />
+                    <source
+                      srcset="
+                        ./images/arise_thumbnail.jpg    1x,
+                        ./images/arise_thumbnail@2x.jpg 2x,
+                        ./images/arise_thumbnail@3x.jpg 3x
+                      "
+                    />
                     <img
-                      data-src="./images/labeldata.jpg"
-                      src="./images/labeldata.jpg"
+                      data-src="./images/arise_thumbnail.jpg"
+                      src="./images/arise_thumbnail.jpg"
                       loading="lazy"
                       class="lazyload"
-                      alt="labeldata"
+                      alt="Arise Academy"
                     />
                   </picture>
                 </div>
                 <div class="title">
-                  Fresh new look for data consulting
-                  <span>labeldata</span>
+                  Reinventing traditional education for new age startup
+                  <span>Arise Academy</span>
                 </div>
               </a>
             </div>
@@ -416,13 +434,23 @@
                 <div class="image">
                   <picture>
                     <source
-                      srcset="./images/coinspinner.webp"
+                      srcset="
+                        ./images/google-digital-billboards.webp    1x,
+                        ./images/google-digital-billboards@2x.webp 2x,
+                        ./images/google-digital-billboards@3x.webp 3x
+                      "
                       type="image/webp"
                     />
-                    <source srcset="./images/coinspinner.jpg 1x" />
+                    <source
+                      srcset="
+                        ./images/google-digital-billboards.jpg    1x,
+                        ./images/google-digital-billboards@2x.jpg 2x,
+                        ./images/google-digital-billboards@3x.jpg 3x
+                      "
+                    />
                     <img
-                      data-src="./images/labeldata.jpg"
-                      src="./images/coinspinner.jpg"
+                      data-src="./images/google-digital-billboards.jpg"
+                      src="./images/google-digital-billboards.jpg"
                       loading="lazy"
                       class="lazyload"
                       alt="coinspinner"
@@ -430,8 +458,8 @@
                   </picture>
                 </div>
                 <div class="title">
-                  Visual brand alignment for fintech
-                  <span>coinspinner</span>
+                  Imagining billboards as a part of Google Ads
+                  <span>Concept</span>
                 </div>
               </a>
             </div>
@@ -445,7 +473,11 @@
                 <div class="image">
                   <picture>
                     <source
-                      srcset="./images/labeldata.webp"
+                      srcset="
+                        ./images/labeldata.webp    1x,
+                        ./images/labeldata@2x.webp 2x,
+                        ./images/labeldata@3x.webp 3x
+                      "
                       type="image/webp"
                     />
                     <source srcset="./images/labeldata.jpg 1x" />
@@ -473,16 +505,26 @@
                 <div class="image">
                   <picture>
                     <source
-                      srcset="./images/coinspinner.webp"
+                      srcset="
+                        ./images/pathways_homepage_thumbnail.webp    1x,
+                        ./images/pathways_homepage_thumbnail@2x.webp 2x,
+                        ./images/pathways_homepage_thumbnail@3x.webp 3x
+                      "
                       type="image/webp"
                     />
-                    <source srcset="./images/coinspinner.jpg 1x" />
+                    <source
+                      srcset="
+                        ./images/pathways_homepage_thumbnail.jpg    1x,
+                        ./images/pathways_homepage_thumbnail@2x.jpg 2x,
+                        ./images/pathways_homepage_thumbnail@3x.jpg 3x
+                      "
+                    />
                     <img
-                      data-src="./images/coinspinner.jpg"
-                      src="./images/coinspinner.jpg"
+                      data-src="./images/pathways_homepage_thumbnail.jpg"
+                      src="./images/pathways_homepage_thumbnail.jpg"
                       loading="lazy"
                       class="lazyload"
-                      alt="coinspinner"
+                      alt="Arise Academy"
                     />
                   </picture>
                 </div>
@@ -869,59 +911,46 @@
       type="text/javascript"
       src="/node_modules/gsap/dist/gsap.js"
     ></script>
-    <script
-      type="text/javascript"
-      src="/node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="/node_modules/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js"
-    ></script>
     <script type="text/javascript" src="/node_modules/aos/dist/aos.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
     <script>
       $(window)
         .scroll(function () {
-          var $window = $(window);
-          var $body = $("body");
-          var $panel = $(".dataStyle");
-          var top_of_element = $(".dataStyle").offset().top;
-          var bottom_of_element =
-            $(".dataStyle").offset().top + $(".dataStyle").outerHeight();
-          var bottom_of_screen =
-            $(window).scrollTop() + $(window).innerHeight();
-          var top_of_screen = $(window).scrollTop();
-          var scroll = $window.scrollTop() + $window.height() / 3 + 150;
-
-          // $(".we-let-our-work").css("background", 'var(--smoky-black)');
-          // $(".we-let-our-work .section-title span, .we-let-our-work .project-link .title, .we-let-our-work .project-list-readmore .link").css("color", 'var(--egg-blue)');
+          const $window = $(window),
+            $body = $("body"),
+            $panel = $(".dataStyle"),
+            scroll = $window.scrollTop() + $window.height() / 3 - 200;
 
           $panel.each(function () {
-            var $this = $(this);
-
-            const color = $(this).data("color");
-            // console.log(color);
+            const $this = $(this),
+              color = $(this).data("color");
+            text = $(this).data("text");
 
             if (
               $this.position().top <= scroll &&
               $this.position().top + $this.height() > scroll
             ) {
               // the element is visible, do something
-              console.clear();
-              $("body").css("background", color);
-              // $(".we-let-our-work").css("background", 'transparent');
-              // $(".we-let-our-work .section-title span, .we-let-our-work .project-link .title, .we-let-our-work .project-list-readmore .link").css("color", 'var(--smoky-black)');
-              console.log("visible : " + color);
+              // console.clear();
+              $(".container-fluid").css("background", color);
+              $(".container-fluid .section-title span").css("color", "#7de2d1");
+              $(".container-fluid .section-title span .indicator").css(
+                "background",
+                "#7de2d1"
+              );
+              if (color == "#ffffff") {
+                $(".container-fluid .section-title span").css("color", text);
+                $(".container-fluid .section-title span .indicator").css(
+                  "background",
+                  text
+                );
+              }
             }
-            // else {
-            //   // the element is not visible, do something else
-            //   $("body").css("background", color);
-            //   console.log("not visible : " + color);
-            // }
           });
         })
         .scroll();
+      // $(".container-fluid").css("outline", '1px solid yellow');
     </script>
   </body>
 </html>

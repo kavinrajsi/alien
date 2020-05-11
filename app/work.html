@@ -48,6 +48,8 @@
       type="font/woff2"
       crossorigin
     />
+    <link rel="preload" href="scripts/vendor.js" as="script">
+    <link rel="preload" href="scripts/filter.js" as="script">
     <!-- Place favicon.ico in the root directory -->
     <link rel="manifest" href="manifest.json" />
     <meta name="mobile-web-app-capable" content="yes" />
@@ -237,7 +239,7 @@
         </nav>
       </div>
     </header>
-    <main>
+    <main class="smooth-scroll-wrapper">
       <!-- reuse -->
       <div class="page__content--contact page__content--header container">
         <h2 class="page__content--header_title">
@@ -375,7 +377,7 @@
           </div>
           <div
             data-aos="fade-up"
-            data-aos-delay="100"
+            data-aos-delay="000"
             class="project-wrapper mix digital"
           >
             <a href="javascript:void(0);" class="project-link">
@@ -426,7 +428,7 @@
           </div>
           <div
             data-aos="fade-up"
-            data-aos-delay="100"
+            data-aos-delay="000"
             class="project-wrapper mix uiux"
           >
             <a href="javascript:void(0);" class="project-link">
@@ -477,7 +479,7 @@
           </div>
           <div
             data-aos="fade-up"
-            data-aos-delay="100"
+            data-aos-delay="000"
             class="project-wrapper mix uiux"
           >
             <a href="javascript:void(0);" class="project-link">
@@ -559,25 +561,13 @@
       type="text/javascript"
       src="/node_modules/gsap/dist/gsap.js"
     ></script>
-    <script
-      type="text/javascript"
-      src="/node_modules/gsap/dist/CSSRulePlugin.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="/node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="/node_modules/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js"
-    ></script>
     <script type="text/javascript" src="/node_modules/aos/dist/aos.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
-    <!-- build:js scripts/filter.js defer -->
+    <!-- build:js scripts/filter.js -->
     <script type="text/javascript" src="scripts/filter.min.js"></script>
     <!-- endbuild -->
-    <script defer>
+    <script>
       /* work page filter */
       var containerEl = document.querySelector(".project-list");
       var mixer = mixitup(containerEl);

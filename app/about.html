@@ -47,6 +47,7 @@
       type="font/woff2"
       crossorigin
     />
+    <link rel="preload" href="scripts/vendor.js" as="script">
     <!-- Place favicon.ico in the root directory -->
     <link rel="manifest" href="manifest.json" />
     <meta name="mobile-web-app-capable" content="yes" />
@@ -237,7 +238,7 @@
         </nav>
       </div>
     </header>
-    <main>
+    <main class="smooth-scroll-wrapper">
       <div class="page__content--header container">
         <h2 class="page__content--header_title">
           ABOUT
@@ -979,18 +980,6 @@
     <script
       type="text/javascript"
       src="/node_modules/gsap/dist/gsap.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="/node_modules/gsap/dist/CSSRulePlugin.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="/node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="/node_modules/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js"
     ></script>
     <script type="text/javascript" src="/node_modules/aos/dist/aos.js"></script>
     <script src="scripts/main.js"></script>

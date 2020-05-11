@@ -48,6 +48,9 @@
       type="font/woff2"
       crossorigin
     />
+    <link rel="preload" href="images/checkmark.svg" as="image">
+    <link rel="preload" href="scripts/vendor.js" as="script">
+    <link rel="preload" href="scripts/formValidation.js" as="script">
     <!-- Place favicon.ico in the root directory -->
     <link rel="manifest" href="manifest.json" />
     <meta name="mobile-web-app-capable" content="yes" />
@@ -58,7 +61,6 @@
     <meta name="theme-color" content="#0a0908">
     <meta name="msapplication-navbutton-color" content="#0a0908">
     <meta name="apple-mobile-web-app-status-bar-style" content="#0a0908">
-
     <!-- build:css styles/main.css as="style" media="all" -->
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="/node_modules/aos/dist/aos.css" />
@@ -238,7 +240,7 @@
         </nav>
       </div>
     </header>
-    <main>
+    <main class="smooth-scroll-wrapper">
       <!-- reuse -->
       <div class="page__content--contact page__content--header container">
         <h2 class="page__content--header_title">
@@ -528,26 +530,14 @@
       type="text/javascript"
       src="/node_modules/gsap/dist/gsap.js"
     ></script>
-    <script
-      type="text/javascript"
-      src="/node_modules/gsap/dist/CSSRulePlugin.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="/node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="/node_modules/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js"
-    ></script>
     <script type="text/javascript" src="/node_modules/aos/dist/aos.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
-    <!-- build:js scripts/formValidation.js defer -->
+    <!-- build:js scripts/formValidation.js-->
     <script src="./scripts/jquery.validate.js"></script>
     <script src="./scripts/additional-methods.js"></script>
     <!-- endbuild -->
-    <script defer>
+    <script>
       $(".form").validate({
         errorPlacement: function (error, element) {
           if (element.attr("name") == "service[]") {

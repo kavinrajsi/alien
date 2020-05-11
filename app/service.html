@@ -48,6 +48,7 @@
       type="font/woff2"
       crossorigin
     />
+    <link rel="preload" href="scripts/vendor.js" as="script">
     <!-- Place favicon.ico in the root directory -->
     <link rel="manifest" href="manifest.json" />
     <meta name="mobile-web-app-capable" content="yes" />
@@ -238,7 +239,7 @@
         </nav>
       </div>
     </header>
-    <main>
+    <main class="smooth-scroll-wrapper">
       <!-- reuse -->
       <div class="page__content--service page__content--header container">
         <h2 class="page__content--header_title">
@@ -262,7 +263,6 @@
       >
         <div
           data-aos="fade-up"
-
           data-aos-delay="0"
           class="section-row__image-wrapper"
         >
@@ -270,7 +270,6 @@
         </div>
         <div
           data-aos="fade-up"
-
           data-aos-delay="100"
           class="section-row__text"
         >
@@ -291,7 +290,6 @@
       <div class="page__content--service__brand--lost service--brand container">
         <div
           data-aos="fade-up"
-
           data-aos-delay="0"
           class="section-row__image-wrapper"
         >
@@ -300,7 +298,6 @@
 
         <div
           data-aos="fade-up"
-
           data-aos-delay="100"
           class="section-row__text"
         >
@@ -322,7 +319,6 @@
       >
         <div
           data-aos="fade-up"
-
           data-aos-delay="0"
           class="section-row__image-wrapper"
         >
@@ -331,7 +327,6 @@
 
         <div
           data-aos="fade-up"
-
           data-aos-delay="100"
           class="section-row__text"
         >
@@ -354,7 +349,6 @@
       >
         <div
           data-aos="fade-up"
-
           data-aos-delay="0"
           class="section-row__image-wrapper"
         >
@@ -363,7 +357,6 @@
 
         <div
           data-aos="fade-up"
-
           data-aos-delay="100"
           class="section-row__text"
         >
@@ -387,7 +380,6 @@
         <div class="section-row__card">
           <div
             data-aos="fade-up"
-
             data-aos-delay="0"
             class="card"
           >
@@ -478,7 +470,6 @@
           </div>
           <div
             data-aos="fade-up"
-
             data-aos-delay="100"
             class="card"
           >
@@ -552,7 +543,6 @@
           </div>
           <div
             data-aos="fade-up"
-
             data-aos-delay="200"
             class="card"
           >
@@ -624,7 +614,6 @@
           </div>
           <div
             data-aos="fade-up"
-
             data-aos-delay="300"
             class="card"
           >
@@ -758,18 +747,6 @@
     <script
       type="text/javascript"
       src="/node_modules/gsap/dist/gsap.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="/node_modules/gsap/dist/CSSRulePlugin.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="/node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="/node_modules/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js"
     ></script>
     <script type="text/javascript" src="/node_modules/aos/dist/aos.js"></script>
     <script src="scripts/main.js"></script>

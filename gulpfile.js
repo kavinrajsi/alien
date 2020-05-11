@@ -90,9 +90,11 @@ const lintBase = (files) => {
     .pipe($.eslint.format())
     .pipe($.if(!server.active, $.eslint.failAfterError()));
 };
+
 function lint() {
   return lintBase("app/scripts/**/*.js").pipe(dest("app/scripts"));
 }
+
 function lintTest() {
   return lintBase("test/spec/**/*.js").pipe(dest("test/spec"));
 }
@@ -122,10 +124,16 @@ function html() {
     .pipe(dest("dist"));
 }
 
+function imagesWebp() {
+  return src('app/images/**/*', { since: lastRun(images) })
+    .pipe($.webp())
+  .pipe(dest("dist/images"));
+}
+
 function images() {
-  return src("app/images/**/*", { since: lastRun(images) })
+  return src('app/images/**/*', { since: lastRun(images) })
     .pipe($.imagemin())
-    .pipe(dest("dist/images"));
+  .pipe(dest("dist/images"));
 }
 
 function fonts() {
@@ -141,7 +149,7 @@ function extras() {
 }
 
 function clean() {
-  return del([".tmp", "dist"]);
+  return del([".tmp", "dist", "dist.zip"]);
 }
 
 function measureSize() {
@@ -154,12 +162,14 @@ const build = series(
     lint,
     series(parallel(styles, scripts, modernizr), html),
     images,
+    imagesWebp,
     fonts,
     extras
   ),
-  measureSize,
   criticalCss,
-  serviceWorker
+  serviceWorker,
+  measureSize,
+  compressZip
 );
 
 function startAppServer() {
@@ -258,6 +268,11 @@ function serviceWorker() {
   });
 }
 
+function compressZip() {
+  return src('dist/**/*')
+    .pipe($.zip('dist.zip'))
+    .pipe(dest('./'));
+}
 
 let serve;
 if (isDev) {

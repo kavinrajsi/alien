@@ -1,205 +1,207 @@
 .hear-them {
+	&.container {
+		@media (min-width: 1199px) {
+			padding-left : 20px;
+			padding-right : 20px;
+		}
+	}
 
-  &.container{
-    @media (min-width: 1199px){
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-  }
+	// viewport display
+	&-say-it {
+		&.view-mobile {
+			display : block;
+		}
 
-  // viewport display
-  &-say-it {
-    &.view-mobile {
-      display: block;
-    }
+		&.view-desktop {
+			display : none;
+		}
 
-    &.view-desktop {
-      display: none;
-    }
+		@media(min-width: $ptablet) {
+			&.view-mobile {
+				display : none;
+			}
 
-    @media(min-width: $ptablet) {
-      &.view-mobile {
-        display: none;
-      }
+			&.view-desktop {
+				display : grid;
+				gap : 30px;
+				grid-template-columns : repeat(2, 1fr);
+				grid-template-areas : "one action"". two";
 
-      &.view-desktop {
-        display: grid;
-        gap: 30px;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas: "one action"". two";
+				div {
+					&:nth-child(1n) {
+						grid-area : one;
+					}
 
-        div {
-          &:nth-child(1n) {
-            grid-area: one;
-          }
+					&:nth-child(2n) {
+						grid-area : action;
+					}
 
-          &:nth-child(2n) {
-            grid-area: action;
-          }
-
-          &:nth-child(3n) {
-            grid-area: two;
-          }
-        }
-      }
-    }
-
-
-    @include interpolate('margin-top', 375px, 90px, 992px, 200px, 'ease-in');
-  }
-
-  .testimonial {
-
-    // testimonial actions
-    &-action {
-      strong {
-        display: inline-block;
-        font-family: var(--font-500);
-        color: var(--white);
-        @include interpolate('font-size', 375px, 46px, 992px, 80px, 'ease-in');
-        @include interpolate('line-height', 375px, 56px, 992px, 97px, 'ease-in');
-
-        &:first-child {
-          margin-bottom: 5px;
-          display: block;
-
-          @media(min-width: $ptablet) {
-            margin-bottom: 9px;
-          }
-        }
-
-        &:last-child {
-          margin-bottom: 50px;
-
-          @media(min-width: $ptablet) {
-            margin-bottom: 0;
-          }
-        }
-
-      }
-
-      .action {
-
-        &-left,
-        &-right {
-          display: inline-block;
-          margin-right: 10px;
-          width: 41px;
-          height: 20px;
-          cursor: pointer;
-        }
-
-        &-right {
-          margin-left: 10px;
-          margin-right: 28px;
-        }
-      }
-    }
-
-    // one
-    &-one {
-      position: relative;
-      @include interpolate('min-height', 320px, 492px, 992px, 510px, 'ease-in');
-      @include interpolate('min-height', 320px, 492px, 992px, 417px, 'ease-in');
-
-      .testimonial-content {
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        max-width: 525px;
-        @media(min-width: $ptablet){
-          max-width: initial;
-      }
-        .testimonial-wrapper {
-          position: relative;
-          background: var(--smoky-black);
-          border: 1px solid var(--onyx);
-
-          padding-top: 40px;
-          padding-bottom: 50px;
-          padding-left: 20px;
-          padding-right: 20px;
-
-          @media(min-width: $ptablet) {
-            padding-top: 50px;
-            padding-bottom: 50px;
-            padding-left: 80px;
-            padding-right: 80px;
-          }
+					&:nth-child(3n) {
+						grid-area : two;
+					}
+				}
+			}
+		}
 
 
-          &:after {
-            z-index: -1;
-            position: absolute;
-            top: 0;
-            left: 0;
-            display: block;
-            width: 100%;
-            height: 100%;
-            content: "";
-            transition: transform 0.3s;
-            transform: translate(-10px, 20px);
-            border: 1px solid var(--blue-violet);
-            background: var(--smoky-black);
-          }
+		@include interpolate("margin-top", 375px, 90px, 992px, 200px, "ease-in");
+	}
 
-        }
+	.testimonial {
+		// testimonial actions
+		&-action {
+			strong {
+				display : inline-block;
+				font-family : var(--font-500);
+				color : var(--white);
+				@include interpolate("font-size", 375px, 46px, 992px, 80px, "ease-in");
+				@include interpolate("line-height", 375px, 56px, 992px, 97px, "ease-in");
 
-        blockquote {
-          font-family: var(--font-400);
-          font-size: 18px;
-          line-height: 30px;
-          color: var(--white);
-          margin-bottom: 30px;
+				&:first-child {
+					margin-bottom : 5px;
+					display : block;
 
-          @media(min-width: $ptablet) {
-            margin-bottom: 40px;
-          }
-        }
+					@media(min-width: $ptablet) {
+						margin-bottom : 9px;
+					}
+				}
 
-        .author {
-          &__image-wrapper {
-            display: inline-block;
-            border-radius: 50%;
-            border: 1px solid var(--smoky-black);
+				&:last-child {
+					margin-bottom : 50px;
 
-            .avatar {
-              border: 1px solid var(--smoky-black);
-              border-radius: 50%;
-              width: 40px;
-              height: 40px;
-            }
-          }
+					@media(min-width: $ptablet) {
+						margin-bottom : 0;
+					}
+				}
+			}
 
-          &__meta {
-            margin-left: 12px;
-            display: inline-block;
-            vertical-align: bottom;
+			.action {
+				&-left ,
+				&-right {
+					display : inline-block;
+					margin-right : 10px;
+					width : 41px;
+					height : 20px;
+					cursor : pointer;
+				}
 
-            &-name {
-              display: block;
-              margin-bottom: 5px;
-              font-family: var(--font-500);
-              font-size: 14px;
-              line-height: 17px;
-              letter-spacing: 1px;
-              text-transform: uppercase;
-              color: var(--white);
-            }
+				&-right {
+					margin-left : 10px;
+					margin-right : 28px;
+				}
+			}
+		}
 
-            span {
-              font-family: var(--font-400);
-              display: block;
-              font-size: 14px;
-              line-height: 17px;
-              letter-spacing: 1px;
-              text-transform: uppercase;
-              color: #c4c4c4;
-            }
-          }
-        }
-      }
-    }
-  }
+		// one
+		&-one {
+			position : relative;
+			@include interpolate("min-height", 320px, 492px, 992px, 510px, "ease-in");
+			@include interpolate("min-height", 320px, 492px, 992px, 417px, "ease-in");
+
+			.testimonial-content {
+				position : absolute;
+				left : 0;
+				right : 0;
+				top : 0;
+				max-width : 525px;
+				@media(min-width: $ptablet) {
+					max-width : initial;
+				}
+				.testimonial-wrapper {
+					position : relative;
+					background : var(--smoky-black);
+					border : 1px solid var(--onyx);
+					padding-top : 40px;
+					padding-bottom : 50px;
+					padding-left : 20px;
+					padding-right : 20px;
+
+					@media(min-width: $ptablet) {
+						padding-top : 50px;
+						padding-bottom : 50px;
+						padding-left : 80px;
+						padding-right : 80px;
+					}
+
+
+					&:after {
+						z-index : -1;
+						position : absolute;
+						top : 0;
+						left : 0;
+						display : block;
+						width : 100%;
+						height : 100%;
+						content : "";
+						transition : transform 0.3s;
+						transform : translate(-10px, 20px);
+						border : 1px solid var(--blue-violet);
+						background : var(--smoky-black);
+					}
+				}
+
+				blockquote {
+					font-family : var(--font-400);
+					font-size : 18px;
+					line-height : 30px;
+					color : var(--white);
+					margin-bottom : 30px;
+
+					@media(min-width: $ptablet) {
+						margin-bottom : 40px;
+					}
+				}
+
+				.author {
+					&__image-wrapper {
+						display : inline-block;
+						border-radius : 50%;
+						border : 1px solid var(--smoky-black);
+
+						.avatar {
+							border : 1px solid var(--smoky-black);
+							border-radius : 50%;
+							width : 40px;
+							height : 40px;
+						}
+					}
+
+					&__meta {
+						margin-left : 12px;
+						display : inline-block;
+						vertical-align : bottom;
+
+						&-name {
+							display : block;
+							margin-bottom : 5px;
+							font-family : var(--font-500);
+							font-size : 14px;
+							line-height : 17px;
+							letter-spacing : 1px;
+							text-transform : uppercase;
+							color : var(--white);
+						}
+
+						span {
+							font-family : var(--font-400);
+							display : block;
+							font-size : 14px;
+							line-height : 17px;
+							letter-spacing : 1px;
+							text-transform : uppercase;
+							color : #c4c4c4;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.view-desktop {
+	.testimonial-action {
+		display : flex;
+		justify-content : flex-end;
+	}
 }

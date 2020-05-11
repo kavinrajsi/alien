@@ -10,6 +10,8 @@ html {
 	transition : background-color 0.65s var(--ease-in-out-soft),
 	color 0.65s var(--ease-in-out-soft),
 	border 0.65s var(--ease-in-out-soft);
+	font-variant-ligatures : normal;
+	-webkit-font-smoothing : antialiased;
 }
 
 body {
@@ -62,4 +64,20 @@ body {
 
 .no-padding {
 	padding : 0;
+}
+
+.project-coming-soon {
+	position : absolute;
+	top : 15px;
+	right : 0;
+	padding : 10px 15px 10px 22px;
+	border-radius : 88px 0 0 88px;
+	background : var(--white);
+	font-family : var(--font-600);
+	font-style : normal;
+	font-weight : normal;
+	font-size : 14px;
+	line-height : 21px;
+	letter-spacing : 0.5px;
+	color : var(--smoky-black);
 }
