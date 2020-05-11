@@ -8,6 +8,8 @@
 
 	// viewport display
 	&-say-it {
+    opacity : 1;
+    transition : all 1.2s ease;
 		&.view-mobile {
 			display : block;
 		}
@@ -44,8 +46,7 @@
 		}
 
 
-		// @include interpolate("margin-top", 375px, 90px, 992px, 200px, "ease-in");
-		@include interpolate("margin-top", 375px, 90px, 992px, 330px, "ease-in");
+		@include interpolate("margin-top", 375px, 90px, 992px, 200px, "ease-in");
 	}
 
 	.testimonial {
@@ -202,7 +203,6 @@
 
 .view-desktop {
 	.testimonial-action {
-		// margin-top : -356px;
 		display : flex;
 		justify-content : flex-end;
 	}

@@ -339,7 +339,7 @@
             </div>
           </div>
 
-          <div data-aos="fade-up" class="accordion-group">
+          <div data-aos="fade-up" data-aos-delay="100" class="accordion-group">
             <div class="accordion-menu">
               <h2 class="wedo-title" data-text="Digital Marketing">
                 Digital Marketing
@@ -368,7 +368,7 @@
             </div>
           </div>
         </div>
-        <a data-aos="fade-up" href="/service.html" class="link--text"
+        <a  href="/service.html" class="link--text"
           >Know more about services</a
         >
       </div>
@@ -377,11 +377,11 @@
         data-text="#0a0908"
         class="dataStyle container-fluid we-let-our-work"
       >
-        <div data-color="#ffffff" class="container no-padding section-title">
-          <span data-aos="fade-up" >
+        <div data-aos="fade-up" data-color="#ffffff" class="container no-padding section-title">
+          <span  >
             We let our
           </span>
-          <span data-aos="fade-up" > <strong class="indicator"></strong>work speak </span>
+          <span > <strong class="indicator"></strong>work speak </span>
         </div>
         <div data-color="#ffffff" class="container no-padding section-content">
           <div class="project-list">
@@ -533,7 +533,7 @@
               </a>
             </div>
           </div>
-          <div data-aos="fade-up" class="project-list-readmore">
+          <div class="project-list-readmore">
             <span></span>
             <span class="">
               <a class="link" href="/work.html"> See more work </a>
@@ -541,7 +541,7 @@
           </div>
         </div>
       </div>
-      <div data-color="#0a0908" class="dataStyle container hear-them">
+      <div data-color="#0a0908" data-text="#000" class="dataStyle container hear-them">
         <div class="hear-them-say-it view-mobile">
           <div class="testimonial-action">
             <span>
@@ -932,23 +932,27 @@
               // the element is visible, do something
               // console.clear();
               $("body").css("background", color);
-              // $(".container-fluid .section-title span").css("color", "#7de2d1");
-              // $(".container-fluid .section-title span .indicator").css(
-                // "background",
-                // "#7de2d1"
-              // );
-              // if (color == "#ffffff") {
-                // $(".container-fluid .section-title span").css("color", text);
-                // $(".container-fluid .section-title span .indicator").css(
-                  // "background",
-                  // text
-                // );
-              // }
+              if (color == "#ffffff") {
+                $('.about-what-we-do').css({'opacity': '0', 'transform': 'translateY(-100px)'});
+                console.log('0');
+              }else{
+                console.log('1');
+                $('.about-what-we-do').css({'opacity': '1', 'transform': 'translateY(0px)'});
+              }
+
+              if(color == '#000'){
+                console.log('hear 0');
+                $('.we-let-our-work').css({'opacity': '0', 'transform': 'translateY(-100px)'});
+              }else{
+                console.log('hear 1');
+                $('.we-let-our-work').css({'opacity': '1', 'transform': 'translateY(0px)'});
+              }
+
+
             }
           });
         })
         .scroll();
-      // $(".container-fluid").css("outline", '5px solid red');
     </script>
   </body>
 </html>

@@ -75,6 +75,8 @@
 
 // home page about
 .about-what-we-do {
+	opacity : 1;
+	transition : all 1.2s ease;
 	@include interpolate("margin-bottom", 576px, 90px, 992px, 206px, "ease-in");
 	.accordion {
 		&-menu {

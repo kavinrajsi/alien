@@ -434,5 +434,6 @@ if ($('.hear-them-say-it')) {
 
 // all page animation
 AOS.init({
-  once: false
+  once: true,
+  mirror: false
 });
