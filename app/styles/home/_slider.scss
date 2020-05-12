@@ -1,4 +1,7 @@
 .hear-them {
+	transition : background-color 0.65s var(--ease-in-out-soft),
+	color 0.65s var(--ease-in-out-soft),
+	border 0.65s var(--ease-in-out-soft);
 	&.container {
 		@media (min-width: 1199px) {
 			padding-left : 20px;
@@ -8,8 +11,8 @@
 
 	// viewport display
 	&-say-it {
-    opacity : 1;
-    transition : all 1.2s ease;
+		opacity : 1;
+		transition : all 1.2s ease;
 		&.view-mobile {
 			display : block;
 		}
