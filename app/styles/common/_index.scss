@@ -6,12 +6,14 @@
 
 html {
 	backface-visibility : hidden;
-	will-change : background-color,color;
-	transition : background-color 0.65s var(--ease-in-out-soft),
-	color 0.65s var(--ease-in-out-soft),
-	border 0.65s var(--ease-in-out-soft);
 	font-variant-ligatures : normal;
 	-webkit-font-smoothing : antialiased;
+	* {
+		will-change : background-color,color;
+		transition : background-color 0.65s var(--ease-in-out-soft),
+		color 0.65s var(--ease-in-out-soft),
+		border 0.65s var(--ease-in-out-soft);
+	}
 }
 
 body {
