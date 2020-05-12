@@ -1,7 +1,7 @@
 // header hero
 .hero-unit {
 	position : relative;
-	@include interpolate("padding-top", 576px, 206px, 992px, 194px, "ease-in");
+	@include interpolate("padding-top", 576px, 196px, 992px, 194px, "ease-in");
 	@include interpolate("padding-bottom", 576px, 100px, 992px, 200px, "ease-in");
 	overflow : visible;
 	&:before {
@@ -9,19 +9,24 @@
 		/* TODO : Need to change the width and height, then convert into WEBGL interaction effect */
 		z-index : -1;
 		display : block;
-		width : 100%;
-		height : 100%;
-		width : 1414px;
-		// height : 1370px;
 		position : absolute;
-		left : -460px;
-		left : -126px;
-		top : -8%;
 		background-repeat : no-repeat;
-		background-image : url("../images/header-image.svg");
 		background-color : transparent;
 		background-size : cover;
-		transform : rotate(0deg);
+		background-image : url("../images/header-image-mobile.svg");
+		width : 100%;
+		height : 100%;
+		@include interpolate("top", 576px, -100px, 992px, -78px, "ease-in");
+		left : 0;
+		@media(min-width: $mobile) {
+			width : 1414px;
+			// height : 1370px;
+			left : -460px;
+			left : -126px;
+			// top : -8%;
+			background-image : url("../images/header-image.svg");
+			transform : rotate(0deg);
+		}
 	}
 
 	.page-title {
