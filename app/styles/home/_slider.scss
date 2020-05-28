@@ -9,6 +9,16 @@
 		}
 	}
 
+	// client logo
+	.client-logo-list {
+		display : grid;
+		gap : 30px;
+		grid-template-columns : repeat(auto-fill, minmax(220px, 1fr));
+		.item {
+			text-align : center;
+			margin-top : 1px;
+		}
+	}
 	// viewport display
 	&-say-it {
 		opacity : 1;
