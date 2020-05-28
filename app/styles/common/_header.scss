@@ -13,7 +13,21 @@ header {
 
 	&.scrollDown {
 		background : var(--smoky-black);
-
+		svg path {
+			fill : var(--white);
+		}
+		.menu--item .menu--icon span {
+			background-color : var(--white);
+		}
+		.header-not-light & {
+			background : var(--white);
+			.menu--item .menu--icon span {
+				background-color : var(--smoky-black);
+			}
+			svg path {
+				fill : var(--smoky-black);
+			}
+		}
 		.menu--item {
 			padding-top : 20px;
 		}

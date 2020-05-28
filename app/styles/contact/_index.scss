@@ -36,7 +36,10 @@
 				&__text--heading {
 					p {
 						span {
-							display : block;
+							display : inline;
+							@media(min-width:400px) {
+								display : block;
+							}
 						}
 
 						color : var(--white);

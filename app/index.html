@@ -953,7 +953,7 @@
       const tween = TweenMax.to("body", 0.15, { backgroundColor: "#ffffff" }),
        tween2 = TweenMax.to("body", 0.15, { backgroundColor: "#0a0908" }),
        controller = new ScrollMagic.Controller();
-
+      //  $('body').addClass('header-not-light');
       // build scenes
       const scene = new ScrollMagic.Scene({
         triggerElement: ".we-let-our-work",
@@ -962,12 +962,14 @@
       })
         .setTween(tween)
         .on("enter", function () {
+          $('body').toggleClass('header-not-light');
           $(".about-what-we-do").css({
             opacity: "0",
             transform: "translateY(-100px)",
           });
         })
         .on("leave", function () {
+          $('body').toggleClass('header-not-light');
           $(".about-what-we-do").css({
             opacity: "1",
             transform: "translateY(0px)",
@@ -983,12 +985,14 @@
       })
         .setTween(tween2)
         .on("enter", function () {
+          $('body').toggleClass('header-not-light');
           $(".we-let-our-work").css({
             opacity: "0",
             transform: "translateY(-100px)",
           });
         })
         .on("leave", function () {
+          $('body').toggleClass('header-not-light');
           $(".we-let-our-work").css({
             opacity: "1",
             transform: "translateY(0px)",
