@@ -118,8 +118,8 @@ function playAnimation(event) {
 }
 
 /* link has no value */
-if ($('a.project-link')) {
-  $('a.project-link .image').append('<span class="project-coming-soon">Coming Soon!</span>');
+if ($('a[href^="javascript:void(0)"].project-link')) {
+  $('a[href^="javascript:void(0)"].project-link .image').append('<span class="project-coming-soon">Coming Soon!</span>');
 }
 
 /* Slider */
