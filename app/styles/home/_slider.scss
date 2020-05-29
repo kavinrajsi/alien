@@ -123,8 +123,8 @@
 		// one
 		&-one {
 			position : relative;
-			@include interpolate("min-height", 320px, 492px, 992px, 510px, "ease-in");
-			@include interpolate("min-height", 320px, 492px, 992px, 417px, "ease-in");
+			@include interpolate("min-height", 320px, 784px, 992px, 540px, "ease-in");
+			// @include interpolate("min-height", 320px, 492px, 992px, 417px, "ease-in");
 
 			.testimonial-content {
 				position : absolute;
