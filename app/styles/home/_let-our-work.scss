@@ -68,11 +68,13 @@
 					flex-shrink : 0;
 					flex-basis : 50%;
 
-					&:nth-child(odd) {
+					&:nth-child(4) ,
+					&:nth-child(1) {
 						@include interpolate("width", 375px, 335px, 992px, 540px, "ease-in");
 					}
 
-					&:nth-child(even) {
+					&:nth-child(3) ,
+					&:nth-child(2) {
 						@include interpolate("width", 375px, 335px, 992px, 460px, "ease-in");
 					}
 				}
@@ -81,11 +83,13 @@
 					flex-grow : 0;
 					flex-shrink : 0;
 
-					&:nth-child(odd) {
+					&:nth-child(4) ,
+					&:nth-child(1) {
 						flex-basis : 540px;
 					}
 
-					&:nth-child(even) {
+					&:nth-child(3) ,
+					&:nth-child(2) {
 						flex-basis : 460px;
 					}
 				}
