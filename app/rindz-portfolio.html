@@ -120,7 +120,7 @@
         your experience.
       </p>
     <![endif]-->
-    <header class="header-new sky-blue">
+    <header class="header-new">
       <div class="header-container">
         <nav class="menu--item">
           <div class="logo">
@@ -516,20 +516,68 @@
           <h2>Explore more</h2>
           <div class="inner-explore-col">
             <div class="left">
-              <div class="explore-img" data-aos="fade-up">
-                <img src="images/rindz_thumbnail@2x.png" alt="" />
-              </div>
-              <h6>Fresh new look for data consulting</h6>
-              <span
-                >UX/UI Design, Branding, Development, Digital Marketing</span
-              >
+              <a href="javascript:void(0)">
+                <div class="explore-img" data-aos="fade-up">
+                  <picture>
+                    <source
+                      srcset="
+                      ./images/mykloudz_thumbnail.webp    1x,
+                      ./images/mykloudz_thumbnail@2x.webp 2x,
+                      ./images/mykloudz_thumbnail@3x.webp 3x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/mykloudz_thumbnail.png    1x,
+                        ./images/mykloudz_thumbnail@2x.png 2x,
+                        ./images/mykloudz_thumbnail@3x.png 3x
+                      "
+                    />
+                    <img
+                      data-src="./images/mykloudz_thumbnail.png"
+                      src="./images/mykloudz_thumbnail.png"
+                      loading="lazy"
+                      class="lazyload"
+                      alt="Rindz"
+                    />
+                  </picture>
+                </div>
+                <h6>Mykloudz</h6>
+                <span>Mykloudz</span>
+              </a>
             </div>
             <div class="right">
-              <div class="explore-img" data-aos="fade-up">
-                <img src="images/Google digital billboards@2x.jpg" alt="" />
-              </div>
-              <h6>Visual brand alignment for fintech</h6>
-              <span>Development</span>
+              <a href="javascript:void(0)">
+                <div class="explore-img" data-aos="fade-up">
+                  <picture>
+                    <source
+                      srcset="
+                      ./images/graphy_thumbnail.webp    1x,
+                      ./images/graphy_thumbnail@2x.webp 2x,
+                      ./images/graphy_thumbnail@3x.webp 3x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/graphy_thumbnail.jpg    1x,
+                        ./images/graphy_thumbnail@2x.jpg 2x,
+                        ./images/graphy_thumbnail@3x.jpg 3x
+                      "
+                    />
+                    <img
+                      data-src="./images/graphy_thumbnail.jpg"
+                      src="./images/graphy_thumbnail.jpg"
+                      loading="lazy"
+                      class="lazyload"
+                      alt="Pathways"
+                    />
+                  </picture>
+                </div>
+                <h6>Graphy</h6>
+                <span>Graphy</span>
+              </a>
             </div>
           </div>
         </div>
@@ -565,7 +613,6 @@
       </ul>
     </footer>
 
-
     <!-- build:js scripts/vendor.js -->
     <script
       type="text/javascript"
@@ -588,7 +635,6 @@
       const tween = TweenMax.to("body", 0.15, { backgroundColor: "#ffffff" }),
         tween2 = TweenMax.to("body", 0.15, { backgroundColor: "#0a0908" }),
         controller = new ScrollMagic.Controller();
-
       // build scenes
       const scene = new ScrollMagic.Scene({
         triggerElement: ".we-let-our-work",
@@ -597,12 +643,14 @@
       })
         .setTween(tween)
         .on("enter", function () {
+          $("body").toggleClass("header-not-light");
           $(".about-what-we-do").css({
             opacity: "0",
             transform: "translateY(-100px)",
           });
         })
         .on("leave", function () {
+          $("body").toggleClass("header-not-light");
           $(".about-what-we-do").css({
             opacity: "1",
             transform: "translateY(0px)",
@@ -618,12 +666,14 @@
       })
         .setTween(tween2)
         .on("enter", function () {
+          $("body").toggleClass("header-not-light");
           $(".we-let-our-work").css({
             opacity: "0",
             transform: "translateY(-100px)",
           });
         })
         .on("leave", function () {
+          $("body").toggleClass("header-not-light");
           $(".we-let-our-work").css({
             opacity: "1",
             transform: "translateY(0px)",

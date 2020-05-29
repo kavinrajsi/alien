@@ -121,6 +121,10 @@ function playAnimation(event) {
 if ($('a[href^="javascript:void(0)"].project-link')) {
   $('a[href^="javascript:void(0)"].project-link .image').append('<span class="project-coming-soon">Coming Soon!</span>');
 }
+/* link has no value */
+if ($('.inner-explore-col a[href^="javascript:void(0)"]')) {
+  $('.inner-explore-col a[href^="javascript:void(0)"] .explore-img').append('<span class="project-coming-soon">Coming Soon!</span>');
+}
 
 /* Slider */
 if ($('.hear-them-say-it')) {
