@@ -38,7 +38,10 @@
 		@include interpolate("margin-bottom", 576px, 40px, 992px, 168px, "ease-in");
 
 		span {
-			display : block;
+			display : inline;
+			@media(min-width: 500px) {
+				display : block;
+			}
 		}
 
 		&-secondary {
