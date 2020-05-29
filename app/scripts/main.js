@@ -254,7 +254,7 @@ if ($('.hear-them-say-it')) {
         css: { color: '#fff', opacity: 1.0, 'pointer-events': 'initial' },
       });
 
-      if (index == 3) {
+      if (index == 1) {
         gsap.to(actionRight, 0.3, {
           css: { 'pointer-events': 'none', color: '#fff', opacity: 0.4 },
         });
