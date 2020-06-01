@@ -97,22 +97,32 @@
         >.
       </div>
     </noscript>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
-    ></script>
+    <!-- Google Tag Manager -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "GA_MEASUREMENT_ID");
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-58B8BWN");
     </script>
+    <!-- End Google Tag Manager -->
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-58B8BWN"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden;"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <!--[if IE]>
       <p class="browserupgrade">
         You are using an <strong>outdated</strong> browser. Please
@@ -498,11 +508,7 @@
           <div class="intro-content middle" data-aos="fade-up">
             <h2>Website</h2>
             <p>
-              We built the website to provide crisp, clear and concise
-              information to the visitors. All the website pages were sturctured
-              for easy consumption of information across the site. We laid out
-              the information so that potential users can precisely understand
-              information and show their interest.
+              We built the website with clear & concise information for the visitors. All the web pages of the site were designed in a visually alluring manner so that the users can understand the structure easily and show their enthusiasm in learning from the academy.
             </p>
           </div>
         </div>
@@ -557,7 +563,8 @@
             </div>
             <div class="right" data-aos="fade-up">
               <h6>
-                We made custom icons to match the course modules offered by the academy*
+                We made custom icons to match the course modules offered by the
+                academy
               </h6>
             </div>
           </div>
@@ -610,8 +617,8 @@
               During a short span, we have designed brand identity, brand assets
               and a remarkable website that users can easily use and consume
               information. During the whole engagement, we were able to
-              understand so much about the fierce education industry and the way it
-              is evolving.
+              understand so much about the fierce education industry and the way
+              it is evolving.
             </p>
           </div>
         </div>
@@ -629,7 +636,9 @@
             <div class="left" data-aos="fade-up">
               <h2>Scope of Work</h2>
               <div class="link-col">
-                <a href="http://arise.academy/" target="_blank"><span>Visit Arise academy</span></a>
+                <a href="http://arise.academy/" target="_blank"
+                  ><span>Visit Arise academy</span></a
+                >
               </div>
             </div>
             <div class="right" data-aos="fade-up">
@@ -681,9 +690,9 @@
                   <picture>
                     <source
                       srcset="
-                      ./images/rindz_thumbnail.webp    1x,
-                      ./images/rindz_thumbnail@2x.webp 2x,
-                      ./images/rindz_thumbnail@3x.webp 3x
+                        ./images/rindz_thumbnail.webp    1x,
+                        ./images/rindz_thumbnail@2x.webp 2x,
+                        ./images/rindz_thumbnail@3x.webp 3x
                       "
                       type="image/webp"
                     />
@@ -705,7 +714,7 @@
                 </div>
                 <h6>Pharma brand redesigned for new direction</h6>
                 <span>Rindz</span>
-                </a>
+              </a>
             </div>
             <div class="right">
               <a href="./digital-portfolio.html">
@@ -793,8 +802,8 @@
 
     <script>
       const tween = TweenMax.to("body", 0.15, { backgroundColor: "#ffffff" }),
-       tween2 = TweenMax.to("body", 0.15, { backgroundColor: "#0a0908" }),
-       controller = new ScrollMagic.Controller();
+        tween2 = TweenMax.to("body", 0.15, { backgroundColor: "#0a0908" }),
+        controller = new ScrollMagic.Controller();
       // build scenes
       const scene = new ScrollMagic.Scene({
         triggerElement: ".we-let-our-work",
@@ -803,14 +812,14 @@
       })
         .setTween(tween)
         .on("enter", function () {
-          $('body').toggleClass('header-not-light');
+          $("body").toggleClass("header-not-light");
           $(".about-what-we-do").css({
             opacity: "0",
             transform: "translateY(-100px)",
           });
         })
         .on("leave", function () {
-          $('body').toggleClass('header-not-light');
+          $("body").toggleClass("header-not-light");
           $(".about-what-we-do").css({
             opacity: "1",
             transform: "translateY(0px)",
@@ -826,14 +835,14 @@
       })
         .setTween(tween2)
         .on("enter", function () {
-          $('body').toggleClass('header-not-light');
+          $("body").toggleClass("header-not-light");
           $(".we-let-our-work").css({
             opacity: "0",
             transform: "translateY(-100px)",
           });
         })
         .on("leave", function () {
-          $('body').toggleClass('header-not-light');
+          $("body").toggleClass("header-not-light");
           $(".we-let-our-work").css({
             opacity: "1",
             transform: "translateY(0px)",

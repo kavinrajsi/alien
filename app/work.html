@@ -48,8 +48,8 @@
       type="font/woff2"
       crossorigin
     />
-    <link rel="preload" href="scripts/vendor.js" as="script">
-    <link rel="preload" href="scripts/filter.js" as="script">
+    <link rel="preload" href="scripts/vendor.js" as="script" />
+    <link rel="preload" href="scripts/filter.js" as="script" />
     <!-- Place favicon.ico in the root directory -->
     <link rel="manifest" href="manifest.json" />
     <meta name="mobile-web-app-capable" content="yes" />
@@ -57,9 +57,9 @@
     <meta name="application-name" content="Alien Design" />
     <meta name="apple-mobile-web-app-title" content="Alien Design" />
     <meta name="msapplication-starturl" content="/index.html" />
-    <meta name="theme-color" content="#0a0908">
-    <meta name="msapplication-navbutton-color" content="#0a0908">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#0a0908">
+    <meta name="theme-color" content="#0a0908" />
+    <meta name="msapplication-navbutton-color" content="#0a0908" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#0a0908" />
 
     <!-- build:css styles/main.css as="style" media="all" -->
     <link rel="stylesheet" href="styles/main.css" />
@@ -92,22 +92,32 @@
         >.
       </div>
     </noscript>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
-    ></script>
+    <!-- Google Tag Manager -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "GA_MEASUREMENT_ID");
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-58B8BWN");
     </script>
+    <!-- End Google Tag Manager -->
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-58B8BWN"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden;"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <!--[if IE]>
       <p class="browserupgrade">
         You are using an <strong>outdated</strong> browser. Please
@@ -231,9 +241,17 @@
               <li><a href="https://dribbble.com/thealiendot">Dribbble</a></li>
               <li><a href="https://www.behance.net/thealiendot">Behance</a></li>
               <li><a href="https://medium.com/@iamthealiendot">Medium</a></li>
-              <li><a href="https://www.instagram.com/thealien.design/">Instagram</a></li>
+              <li>
+                <a href="https://www.instagram.com/thealien.design/"
+                  >Instagram</a
+                >
+              </li>
               <li><a href="https://twitter.com/">Twitter</a></li>
-              <li><a href="https://www.linkedin.com/company/the-alien-dot">Linkedin</a></li>
+              <li>
+                <a href="https://www.linkedin.com/company/the-alien-dot"
+                  >Linkedin</a
+                >
+              </li>
             </ul>
           </div>
         </nav>
@@ -367,114 +385,114 @@
             data-aos-delay="100"
             class="project-wrapper mix uiux"
           >
-          <a href="./digital-portfolio.html" class="project-link">
-            <div class="image">
-              <picture>
-                <source
-                  srcset="
-                    ./images/google-digital-billboards.webp    1x,
-                    ./images/google-digital-billboards@2x.webp 2x,
-                    ./images/google-digital-billboards@3x.webp 3x
-                  "
-                  type="image/webp"
-                />
-                <source
-                  srcset="
-                    ./images/google-digital-billboards.jpg    1x,
-                    ./images/google-digital-billboards@2x.jpg 2x,
-                    ./images/google-digital-billboards@3x.jpg 3x
-                  "
-                />
-                <img
-                  data-src="./images/google-digital-billboards.jpg"
-                  src="./images/google-digital-billboards.jpg"
-                  loading="lazy"
-                  class="lazyload"
-                  alt="coinspinner"
-                />
-              </picture>
-            </div>
-            <div class="title">
-              Imagining billboards as a part of Google Ads
-              <span>Concept</span>
-            </div>
-          </a>
+            <a href="./digital-portfolio.html" class="project-link">
+              <div class="image">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/google-digital-billboards.webp    1x,
+                      ./images/google-digital-billboards@2x.webp 2x,
+                      ./images/google-digital-billboards@3x.webp 3x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/google-digital-billboards.jpg    1x,
+                      ./images/google-digital-billboards@2x.jpg 2x,
+                      ./images/google-digital-billboards@3x.jpg 3x
+                    "
+                  />
+                  <img
+                    data-src="./images/google-digital-billboards.jpg"
+                    src="./images/google-digital-billboards.jpg"
+                    loading="lazy"
+                    class="lazyload"
+                    alt="coinspinner"
+                  />
+                </picture>
+              </div>
+              <div class="title">
+                Imagining billboards as a part of Google Ads
+                <span>Concept</span>
+              </div>
+            </a>
           </div>
           <div
             data-aos="fade-up"
             data-aos-delay="000"
             class="project-wrapper mix uiux"
           >
-          <a href="./pathways-portfolio.html" class="project-link">
-            <div class="image">
-              <picture>
-                <source
-                  srcset="
-                    ./images/pathways_thumbnail_v2.webp    1x,
-                    ./images/pathways_thumbnail_v2@2x.webp 2x,
-                    ./images/pathways_thumbnail_v2@3x.webp 3x
-                  "
-                  type="image/webp"
-                />
-                <source
-                  srcset="
-                    ./images/pathways_thumbnail_v2.jpg    1x,
-                    ./images/pathways_thumbnail_v2@2x.jpg 2x,
-                    ./images/pathways_thumbnail_v2@3x.jpg 3x
-                  "
-                />
-                <img
-                  data-src="./images/pathways_thumbnail_v2.jpg"
-                  src="./images/pathways_thumbnail_v2.jpg"
-                  loading="lazy"
-                  class="lazyload"
-                  alt="Pathways"
-                />
-              </picture>
-            </div>
-            <div class="title">
-              Making learning Interactive for kids
-              <span>Pathways</span>
-            </div>
-          </a>
+            <a href="./pathways-portfolio.html" class="project-link">
+              <div class="image">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/pathways_thumbnail_v2.webp    1x,
+                      ./images/pathways_thumbnail_v2@2x.webp 2x,
+                      ./images/pathways_thumbnail_v2@3x.webp 3x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/pathways_thumbnail_v2.jpg    1x,
+                      ./images/pathways_thumbnail_v2@2x.jpg 2x,
+                      ./images/pathways_thumbnail_v2@3x.jpg 3x
+                    "
+                  />
+                  <img
+                    data-src="./images/pathways_thumbnail_v2.jpg"
+                    src="./images/pathways_thumbnail_v2.jpg"
+                    loading="lazy"
+                    class="lazyload"
+                    alt="Pathways"
+                  />
+                </picture>
+              </div>
+              <div class="title">
+                Making learning Interactive for kids
+                <span>Pathways</span>
+              </div>
+            </a>
           </div>
           <div
             data-aos="fade-up"
             data-aos-delay="000"
             class="project-wrapper mix branding"
           >
-          <a href="./rindz-portfolio.html" class="project-link">
-            <div class="image">
-              <picture>
-                <source
-                  srcset="
-                    ./images/rindz_thumbnail.webp    1x,
-                    ./images/rindz_thumbnail@2x.webp 2x,
-                    ./images/rindz_thumbnail@3x.webp 3x
-                  "
-                  type="image/webp"
-                />
-                <source
-                  srcset="
-                    ./images/rindz_thumbnail.jpg    1x,
-                    ./images/rindz_thumbnail@2x.jpg 2x,
-                    ./images/rindz_thumbnail@3x.jpg 3x
-                  "
-                />
-                <img
-                  data-src="./images/rindz_thumbnail.jpg"
-                  src="./images/rindz_thumbnail.jpg"
-                  loading="lazy"
-                  class="lazyload"
-                  alt="Rindz"
-                />
-              </picture>
-            </div>
-            <div class="title">
-              Pharma brand redesigned for new direction
-              <span>Rindz</span>
-            </div>
-          </a>
+            <a href="./rindz-portfolio.html" class="project-link">
+              <div class="image">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/rindz_thumbnail.webp    1x,
+                      ./images/rindz_thumbnail@2x.webp 2x,
+                      ./images/rindz_thumbnail@3x.webp 3x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/rindz_thumbnail.jpg    1x,
+                      ./images/rindz_thumbnail@2x.jpg 2x,
+                      ./images/rindz_thumbnail@3x.jpg 3x
+                    "
+                  />
+                  <img
+                    data-src="./images/rindz_thumbnail.jpg"
+                    src="./images/rindz_thumbnail.jpg"
+                    loading="lazy"
+                    class="lazyload"
+                    alt="Rindz"
+                  />
+                </picture>
+              </div>
+              <div class="title">
+                Pharma brand redesigned for new direction
+                <span>Rindz</span>
+              </div>
+            </a>
           </div>
 
           <div
@@ -482,78 +500,77 @@
             data-aos-delay="000"
             class="project-wrapper mix branding"
           >
-          <a href="javascript:void(0)" class="project-link">
-            <div class="image">
-              <picture>
-                <source
-                  srcset="
-                    ./images/mykloudz_thumbnail.webp    1x,
-                    ./images/mykloudz_thumbnail@2x.webp 2x,
-                    ./images/mykloudz_thumbnail@3x.webp 3x
-                  "
-                  type="image/webp"
-                />
-                <source
-                  srcset="
-                    ./images/mykloudz_thumbnail.png    1x,
-                    ./images/mykloudz_thumbnail@2x.png 2x,
-                    ./images/mykloudz_thumbnail@3x.png 3x
-                  "
-                />
-                <img
-                  data-src="./images/mykloudz_thumbnail.png"
-                  src="./images/mykloudz_thumbnail.png"
-                  loading="lazy"
-                  class="lazyload"
-                  alt="mykloudz"
-                />
-              </picture>
-            </div>
-            <div class="title">
-              Brand identity for an ERP system
-              <span>Mykloudz</span>
-            </div>
-          </a>
+            <a href="javascript:void(0)" class="project-link">
+              <div class="image">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/mykloudz_thumbnail.webp    1x,
+                      ./images/mykloudz_thumbnail@2x.webp 2x,
+                      ./images/mykloudz_thumbnail@3x.webp 3x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/mykloudz_thumbnail.png    1x,
+                      ./images/mykloudz_thumbnail@2x.png 2x,
+                      ./images/mykloudz_thumbnail@3x.png 3x
+                    "
+                  />
+                  <img
+                    data-src="./images/mykloudz_thumbnail.png"
+                    src="./images/mykloudz_thumbnail.png"
+                    loading="lazy"
+                    class="lazyload"
+                    alt="mykloudz"
+                  />
+                </picture>
+              </div>
+              <div class="title">
+                Brand identity for an ERP system
+                <span>Mykloudz</span>
+              </div>
+            </a>
           </div>
           <div
             data-aos="fade-up"
             data-aos-delay="000"
             class="project-wrapper mix uiux"
           >
-          <a href="javascript:void(0)" class="project-link">
-            <div class="image">
-              <picture>
-                <source
-                  srcset="
-                    ./images/graphy_thumbnail.webp    1x,
-                    ./images/graphy_thumbnail@2x.webp 2x,
-                    ./images/graphy_thumbnail@3x.webp 3x
-                  "
-                  type="image/webp"
-                />
-                <source
-                  srcset="
-                    ./images/graphy_thumbnail.png    1x,
-                    ./images/graphy_thumbnail@2x.jpg 2x,
-                    ./images/graphy_thumbnail@3x.jpg 3x
-                  "
-                />
-                <img
-                  data-src="./images/graphy_thumbnail.jpg"
-                  src="./images/graphy_thumbnail.jpg"
-                  loading="lazy"
-                  class="lazyload"
-                  alt="graphy"
-                />
-              </picture>
-            </div>
-            <div class="title">
-              Building a community for Visual storytellers
-              <span>Graphy</span>
-            </div>
-          </a>
+            <a href="javascript:void(0)" class="project-link">
+              <div class="image">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/graphy_thumbnail.webp    1x,
+                      ./images/graphy_thumbnail@2x.webp 2x,
+                      ./images/graphy_thumbnail@3x.webp 3x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/graphy_thumbnail.png    1x,
+                      ./images/graphy_thumbnail@2x.jpg 2x,
+                      ./images/graphy_thumbnail@3x.jpg 3x
+                    "
+                  />
+                  <img
+                    data-src="./images/graphy_thumbnail.jpg"
+                    src="./images/graphy_thumbnail.jpg"
+                    loading="lazy"
+                    class="lazyload"
+                    alt="graphy"
+                  />
+                </picture>
+              </div>
+              <div class="title">
+                Building a community for Visual storytellers
+                <span>Graphy</span>
+              </div>
+            </a>
           </div>
-
         </div>
       </div>
       <div class="container requestacces">
@@ -573,9 +590,13 @@
         <li><a href="https://dribbble.com/thealiendot">Dribbble</a></li>
         <li><a href="https://www.behance.net/thealiendot">Behance</a></li>
         <li><a href="https://medium.com/@iamthealiendot">Medium</a></li>
-        <li><a href="https://www.instagram.com/thealien.design/">Instagram</a></li>
+        <li>
+          <a href="https://www.instagram.com/thealien.design/">Instagram</a>
+        </li>
         <li><a href="https://twitter.com/">Twitter</a></li>
-        <li><a href="https://www.linkedin.com/company/the-alien-dot">Linkedin</a></li>
+        <li>
+          <a href="https://www.linkedin.com/company/the-alien-dot">Linkedin</a>
+        </li>
       </ul>
     </footer>
     <!-- build:js scripts/vendor.js  -->

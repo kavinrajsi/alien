@@ -97,22 +97,32 @@
         >.
       </div>
     </noscript>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
-    ></script>
+    <!-- Google Tag Manager -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "GA_MEASUREMENT_ID");
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-58B8BWN");
     </script>
+    <!-- End Google Tag Manager -->
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-58B8BWN"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden;"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <!--[if IE]>
       <p class="browserupgrade">
         You are using an <strong>outdated</strong> browser. Please
@@ -440,10 +450,14 @@
               <div class="intro-content" data-aos="fade-up">
                 <h2>Designing for Smartboards</h2>
                 <p>
-                  The next biggest challenge was to work Smartboards with very low contrast ratio, lower color reproduction, lower color gamut and very low resolution relative digital displays.
+                  The next biggest challenge was to work Smartboards with very
+                  low contrast ratio, lower color reproduction, lower color
+                  gamut and very low resolution relative digital displays.
                 </p>
                 <p>
-                  Initially, We made a lot of iteration with color palettes to find out the optimal colours that work for all kinds of displays without loosing on contrast.
+                  Initially, We made a lot of iteration with color palettes to
+                  find out the optimal colours that work for all kinds of
+                  displays without loosing on contrast.
                 </p>
               </div>
             </div>
@@ -470,10 +484,18 @@
               <div class="intro-content" data-aos="fade-up">
                 <h2>Storytelling requires cross fucntional creative teams</h2>
                 <p>
-                  As per project demands, we worked with multiple departments as in concept ideation, Illustrators, Animators, UX/UI designers, Development and sound departments. We required different contents from the different team on time to move the project flawlessly.
+                  As per project demands, we worked with multiple departments as
+                  in concept ideation, Illustrators, Animators, UX/UI designers,
+                  Development and sound departments. We required different
+                  contents from the different team on time to move the project
+                  flawlessly.
                 </p>
                 <p>
-                  To solve it, we came up with a solution of creating a Content Map. Content mapping is the project management framework that we created to collaboratively manage all teams at a single place to gather and monitor the required things without any friction.
+                  To solve it, we came up with a solution of creating a Content
+                  Map. Content mapping is the project management framework that
+                  we created to collaboratively manage all teams at a single
+                  place to gather and monitor the required things without any
+                  friction.
                 </p>
               </div>
             </div>
@@ -492,7 +514,11 @@
           <div class="intro-content" data-aos="fade-up">
             <h2>The Result</h2>
             <p>
-              Our entire team was happy to see all the hard work paid off with kids having fun while learning and during this journey we were able to understand many insights about the evolution of schools teaching methods and changes in kids mental models with various activities.
+              Our entire team was happy to see all the hard work paid off with
+              kids having fun while learning and during this journey we were
+              able to understand many insights about the evolution of schools
+              teaching methods and changes in kids mental models with various
+              activities.
             </p>
           </div>
         </div>
@@ -556,34 +582,34 @@
           <div class="inner-explore-col">
             <div class="left">
               <a href="./rindz-portfolio.html">
-              <div class="explore-img" data-aos="fade-up">
-                <picture>
-                  <source
-                    srcset="
-                    ./images/rindz_thumbnail.webp    1x,
-                    ./images/rindz_thumbnail@2x.webp 2x,
-                    ./images/rindz_thumbnail@3x.webp 3x
-                    "
-                    type="image/webp"
-                  />
-                  <source
-                    srcset="
-                      ./images/rindz_thumbnail.png    1x,
-                      ./images/rindz_thumbnail@2x.png 2x,
-                      ./images/rindz_thumbnail@3x.png 3x
-                    "
-                  />
-                  <img
-                    data-src="./images/rindz_thumbnail.png"
-                    src="./images/rindz_thumbnail.png"
-                    loading="lazy"
-                    class="lazyload"
-                    alt="Rindz"
-                  />
-                </picture>
-              </div>
-              <h6>Pharma brand redesigned for new direction</h6>
-              <span>Rindz</span>
+                <div class="explore-img" data-aos="fade-up">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/rindz_thumbnail.webp    1x,
+                        ./images/rindz_thumbnail@2x.webp 2x,
+                        ./images/rindz_thumbnail@3x.webp 3x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/rindz_thumbnail.png    1x,
+                        ./images/rindz_thumbnail@2x.png 2x,
+                        ./images/rindz_thumbnail@3x.png 3x
+                      "
+                    />
+                    <img
+                      data-src="./images/rindz_thumbnail.png"
+                      src="./images/rindz_thumbnail.png"
+                      loading="lazy"
+                      class="lazyload"
+                      alt="Rindz"
+                    />
+                  </picture>
+                </div>
+                <h6>Pharma brand redesigned for new direction</h6>
+                <span>Rindz</span>
               </a>
             </div>
             <div class="right">
@@ -652,7 +678,6 @@
       </ul>
     </footer>
 
-
     <!-- build:js scripts/vendor.js -->
     <script
       type="text/javascript"
@@ -673,8 +698,8 @@
 
     <script>
       const tween = TweenMax.to("body", 0.15, { backgroundColor: "#ffffff" }),
-       tween2 = TweenMax.to("body", 0.15, { backgroundColor: "#0a0908" }),
-       controller = new ScrollMagic.Controller();
+        tween2 = TweenMax.to("body", 0.15, { backgroundColor: "#0a0908" }),
+        controller = new ScrollMagic.Controller();
       // build scenes
       const scene = new ScrollMagic.Scene({
         triggerElement: ".we-let-our-work",
@@ -683,14 +708,14 @@
       })
         .setTween(tween)
         .on("enter", function () {
-          $('body').toggleClass('header-not-light');
+          $("body").toggleClass("header-not-light");
           $(".about-what-we-do").css({
             opacity: "0",
             transform: "translateY(-100px)",
           });
         })
         .on("leave", function () {
-          $('body').toggleClass('header-not-light');
+          $("body").toggleClass("header-not-light");
           $(".about-what-we-do").css({
             opacity: "1",
             transform: "translateY(0px)",
@@ -706,14 +731,14 @@
       })
         .setTween(tween2)
         .on("enter", function () {
-          $('body').toggleClass('header-not-light');
+          $("body").toggleClass("header-not-light");
           $(".we-let-our-work").css({
             opacity: "0",
             transform: "translateY(-100px)",
           });
         })
         .on("leave", function () {
-          $('body').toggleClass('header-not-light');
+          $("body").toggleClass("header-not-light");
           $(".we-let-our-work").css({
             opacity: "1",
             transform: "translateY(0px)",

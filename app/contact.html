@@ -48,9 +48,9 @@
       type="font/woff2"
       crossorigin
     />
-    <link rel="preload" href="images/checkmark.svg" as="image">
-    <link rel="preload" href="scripts/vendor.js" as="script">
-    <link rel="preload" href="scripts/formValidation.js" as="script">
+    <link rel="preload" href="images/checkmark.svg" as="image" />
+    <link rel="preload" href="scripts/vendor.js" as="script" />
+    <link rel="preload" href="scripts/formValidation.js" as="script" />
     <!-- Place favicon.ico in the root directory -->
     <link rel="manifest" href="manifest.json" />
     <meta name="mobile-web-app-capable" content="yes" />
@@ -58,9 +58,9 @@
     <meta name="application-name" content="Alien Design" />
     <meta name="apple-mobile-web-app-title" content="Alien Design" />
     <meta name="msapplication-starturl" content="/index.html" />
-    <meta name="theme-color" content="#0a0908">
-    <meta name="msapplication-navbutton-color" content="#0a0908">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#0a0908">
+    <meta name="theme-color" content="#0a0908" />
+    <meta name="msapplication-navbutton-color" content="#0a0908" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#0a0908" />
     <!-- build:css styles/main.css as="style" media="all" -->
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="/node_modules/aos/dist/aos.css" />
@@ -92,22 +92,32 @@
         >.
       </div>
     </noscript>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
-    ></script>
+    <!-- Google Tag Manager -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "GA_MEASUREMENT_ID");
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-58B8BWN");
     </script>
+    <!-- End Google Tag Manager -->
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-58B8BWN"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden;"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <!--[if IE]>
       <p class="browserupgrade">
         You are using an <strong>outdated</strong> browser. Please
@@ -232,9 +242,17 @@
               <li><a href="https://dribbble.com/thealiendot">Dribbble</a></li>
               <li><a href="https://www.behance.net/thealiendot">Behance</a></li>
               <li><a href="https://medium.com/@iamthealiendot">Medium</a></li>
-              <li><a href="https://www.instagram.com/thealien.design/">Instagram</a></li>
+              <li>
+                <a href="https://www.instagram.com/thealien.design/"
+                  >Instagram</a
+                >
+              </li>
               <li><a href="https://twitter.com/">Twitter</a></li>
-              <li><a href="https://www.linkedin.com/company/the-alien-dot">Linkedin</a></li>
+              <li>
+                <a href="https://www.linkedin.com/company/the-alien-dot"
+                  >Linkedin</a
+                >
+              </li>
             </ul>
           </div>
         </nav>
@@ -280,11 +298,13 @@
           </svg>
         </div>
       </div>
-      <div
-        class="page__content--contact__content container"
-      >
+      <div class="page__content--contact__content container">
         <div class="left section-row__text">
-          <div data-aos="fade-up" data-aos-delay="000" class="section-row__card">
+          <div
+            data-aos="fade-up"
+            data-aos-delay="000"
+            class="section-row__card"
+          >
             <div class="section-row__card--title">PREFER MAIL?</div>
             <div class="section-row__card--content">
               You can always reach out to our team at
@@ -293,7 +313,11 @@
               >
             </div>
           </div>
-          <div data-aos="fade-up" data-aos-delay="100" class="section-row__card">
+          <div
+            data-aos="fade-up"
+            data-aos-delay="100"
+            class="section-row__card"
+          >
             <div class="section-row__card--title">HYDERABAD (Production)</div>
             <div class="section-row__card--content">
               <address>
@@ -303,18 +327,26 @@
               </address>
             </div>
           </div>
-          <div data-aos="fade-up" data-aos-delay="100" class="section-row__card">
+          <div
+            data-aos="fade-up"
+            data-aos-delay="100"
+            class="section-row__card"
+          >
             <div class="section-row__card--title">CHENNAI (Business)</div>
             <div class="section-row__card--content">
               <address>
-                Plot No : 3, Door No : 19 /8 Murali<br>
-                Krishna Nagar, Alwartirunagar,<br>
-                Valasaravakkam,<br>
+                Plot No : 3, Door No : 19 /8 Murali<br />
+                Krishna Nagar, Alwartirunagar,<br />
+                Valasaravakkam,<br />
                 Chennai - 600087
               </address>
             </div>
           </div>
-          <div data-aos="fade-up" data-aos-delay="200" class="section-row__card">
+          <div
+            data-aos="fade-up"
+            data-aos-delay="200"
+            class="section-row__card"
+          >
             <div class="section-row__card--title">BECOME PART OF ALIEN?</div>
             <div class="section-row__card--content">
               <a href="mailto:joinforce@thealien.design"
@@ -322,20 +354,30 @@
               >
             </div>
           </div>
-          <div data-aos="fade-up" data-aos-delay="300" class="section-row__card">
+          <div
+            data-aos="fade-up"
+            data-aos-delay="300"
+            class="section-row__card"
+          >
             <ul>
               <li><a href="https://dribbble.com/thealiendot">Dribbble</a></li>
               <li><a href="https://www.behance.net/thealiendot">Behance</a></li>
               <li><a href="https://medium.com/@iamthealiendot">Medium</a></li>
-              <li><a href="https://www.instagram.com/thealien.design/">Instagram</a></li>
+              <li>
+                <a href="https://www.instagram.com/thealien.design/"
+                  >Instagram</a
+                >
+              </li>
               <li><a href="https://twitter.com/">Twitter</a></li>
-              <li><a href="https://www.linkedin.com/company/the-alien-dot">Linkedin</a></li>
+              <li>
+                <a href="https://www.linkedin.com/company/the-alien-dot"
+                  >Linkedin</a
+                >
+              </li>
             </ul>
           </div>
         </div>
-        <div
-          class="right"
-        >
+        <div class="right">
           <form
             id="form"
             class="form"
@@ -448,7 +490,9 @@
                 rows="10"
                 required
               ></textarea>
-              <label class="form-group-label" for="projectDetails">Project Details</label>
+              <label class="form-group-label" for="projectDetails"
+                >Project Details</label
+              >
             </div>
 
             <div class="form-group">
@@ -463,7 +507,9 @@
                     value="Referral"
                     required
                   />
-                  <label class="form-check-label" for="referral">Referral</label>
+                  <label class="form-check-label" for="referral"
+                    >Referral</label
+                  >
                 </div>
                 <div class="form-check form-radio-inline">
                   <input
@@ -474,7 +520,9 @@
                     value="Instagram/Linkedin"
                     required
                   />
-                  <label class="form-check-label" for="instalinked">Instagram/Linkedin</label>
+                  <label class="form-check-label" for="instalinked"
+                    >Instagram/Linkedin</label
+                  >
                 </div>
                 <div class="form-check form-radio-inline">
                   <input

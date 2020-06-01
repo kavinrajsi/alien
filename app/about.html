@@ -47,7 +47,7 @@
       type="font/woff2"
       crossorigin
     />
-    <link rel="preload" href="scripts/vendor.js" as="script">
+    <link rel="preload" href="scripts/vendor.js" as="script" />
     <!-- Place favicon.ico in the root directory -->
     <link rel="manifest" href="manifest.json" />
     <meta name="mobile-web-app-capable" content="yes" />
@@ -55,9 +55,9 @@
     <meta name="application-name" content="Alien Design" />
     <meta name="apple-mobile-web-app-title" content="Alien Design" />
     <meta name="msapplication-starturl" content="/index.html" />
-    <meta name="theme-color" content="#0a0908">
-    <meta name="msapplication-navbutton-color" content="#0a0908">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#0a0908">
+    <meta name="theme-color" content="#0a0908" />
+    <meta name="msapplication-navbutton-color" content="#0a0908" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#0a0908" />
 
     <!-- build:css styles/main.css as="style" media="all" -->
     <link rel="stylesheet" href="styles/main.css" />
@@ -90,22 +90,32 @@
         >.
       </div>
     </noscript>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
-    ></script>
+    <!-- Google Tag Manager -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "GA_MEASUREMENT_ID");
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-58B8BWN");
     </script>
+    <!-- End Google Tag Manager -->
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-58B8BWN"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden;"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <!--[if IE]>
       <p class="browserupgrade">
         You are using an <strong>outdated</strong> browser. Please
@@ -230,9 +240,17 @@
               <li><a href="https://dribbble.com/thealiendot">Dribbble</a></li>
               <li><a href="https://www.behance.net/thealiendot">Behance</a></li>
               <li><a href="https://medium.com/@iamthealiendot">Medium</a></li>
-              <li><a href="https://www.instagram.com/thealien.design/">Instagram</a></li>
+              <li>
+                <a href="https://www.instagram.com/thealien.design/"
+                  >Instagram</a
+                >
+              </li>
               <li><a href="https://twitter.com/">Twitter</a></li>
-              <li><a href="https://www.linkedin.com/company/the-alien-dot">Linkedin</a></li>
+              <li>
+                <a href="https://www.linkedin.com/company/the-alien-dot"
+                  >Linkedin</a
+                >
+              </li>
             </ul>
           </div>
         </nav>
@@ -249,13 +267,20 @@
           <div class="text-content">
             <p>
               <strong> Meet a new </strong>
-              <strong> kind of creators  </strong>
+              <strong> kind of creators </strong>
             </p>
             <p>
-              Alien is an independent full service creative agency working with a lethal blend of Business Strategy, Creative Design & Innovative Technology to fashion extraordinary things for extraordinary brands & businesses.
+              Alien is an independent full service creative agency working with
+              a lethal blend of Business Strategy, Creative Design & Innovative
+              Technology to fashion extraordinary things for extraordinary
+              brands & businesses.
             </p>
             <p>
-              One eve, when we three friends were discussing about happenings across design, technology and products and there were was a question “Why is the process same when the business goals are different?” So, we came up with an idea to create tailored frameworks to match the scale of business.
+              One eve, when we three friends were discussing about happenings
+              across design, technology and products and there were was a
+              question “Why is the process same when the business goals are
+              different?” So, we came up with an idea to create tailored
+              frameworks to match the scale of business.
             </p>
           </div>
         </div>
@@ -269,82 +294,64 @@
       </div>
 
       <div class="page__content--about__sourcing-power container">
-        <div
-          data-aos="fade-up"
-          class="section-row__text-special"
-        >
+        <div data-aos="fade-up" class="section-row__text-special">
           Sourcing power from far & wide.
         </div>
-        <div
-          data-aos="fade-up"
-          class="section-row__text"
-        >
-        We harness the potential of resources across the globe for diversified expertise through remote work collaborating with our passionate in-house team. The organization structure help us to give you delightful experiences and frictionless services.
+        <div data-aos="fade-up" class="section-row__text">
+          We harness the potential of resources across the globe for diversified
+          expertise through remote work collaborating with our passionate
+          in-house team. The organization structure help us to give you
+          delightful experiences and frictionless services.
         </div>
       </div>
 
       <section class="page__content--about__we-ideas">
         <div class="section-row__text section-row">
           <p>
-            <strong data-aos="fade-up"
-              >We’re all about</strong
-            >
-            <strong data-aos="fade-up"
-              >the ideas.</strong
-            >
+            <strong data-aos="fade-up">We’re all about</strong>
+            <strong data-aos="fade-up">the ideas.</strong>
           </p>
         </div>
         <div class="section-row__card section-row">
           <div class="drag-container">
             <div class="scroller-content">
               <div class="card-sections">
-                <div
-                  data-aos="fade-up"
-                  data-aos-delay="0"
-                  class="card"
-                >
+                <div data-aos="fade-up" data-aos-delay="0" class="card">
                   <div class="card--content">
                     <p>
                       <span>Half-part work,</span> <span>Half-part play.</span>
                     </p>
                     <p>
-                      Craving that balance across work, life & beyond, we make things that are not only serious but fun too.
+                      Craving that balance across work, life & beyond, we make
+                      things that are not only serious but fun too.
                     </p>
                   </div>
                 </div>
-                <div
-                  data-aos="fade-up"
-                  data-aos-delay="100"
-                  class="card"
-                >
+                <div data-aos="fade-up" data-aos-delay="100" class="card">
                   <div class="card--content">
                     <p><span>Learning through</span> <span>change.</span></p>
                     <p>
-                      We live to be challenged by the new, proven wrong by the unknown and ultimately evolve. Be it with people or technology.
+                      We live to be challenged by the new, proven wrong by the
+                      unknown and ultimately evolve. Be it with people or
+                      technology.
                     </p>
                   </div>
                 </div>
-                <div
-                  data-aos="fade-up"
-                  data-aos-delay="200"
-                  class="card"
-                >
+                <div data-aos="fade-up" data-aos-delay="200" class="card">
                   <div class="card--content">
                     <p><span>Creating for</span> <span>growth.</span></p>
                     <p>
-                      We are strong growth activists who use Design to make things that push purpose and value for your business.
+                      We are strong growth activists who use Design to make
+                      things that push purpose and value for your business.
                     </p>
                   </div>
                 </div>
-                <div
-                  data-aos="fade-up"
-                  data-aos-delay="300"
-                  class="card"
-                >
+                <div data-aos="fade-up" data-aos-delay="300" class="card">
                   <div class="card--content">
                     <p><span>Powered by</span> <span>relationships.</span></p>
                     <p>
-                      We choose to build relationships rather than an empty clientele; Shared knowledge than individual expertise.
+                      We choose to build relationships rather than an empty
+                      clientele; Shared knowledge than individual expertise.
                     </p>
                   </div>
                 </div>
@@ -357,26 +364,21 @@
       <div class="page__content--about__doing-rigidity container">
         <div class="section-row__text">
           <p>
-            <strong data-aos="fade-up"
-              >Doing away</strong
-            >
-            <strong data-aos="fade-up"
-              >with rigidity.</strong
-            >
+            <strong data-aos="fade-up">Doing away</strong>
+            <strong data-aos="fade-up">with rigidity.</strong>
           </p>
-          <p data-aos="fade-up" >
-            Our process is not set in stone. Every project deserves its own course of action, ideated on by all teams, that helps the teamwork towards a common goal.
+          <p data-aos="fade-up">
+            Our process is not set in stone. Every project deserves its own
+            course of action, ideated on by all teams, that helps the teamwork
+            towards a common goal.
           </p>
         </div>
-        <div
-          data-aos="fade-up"
-          class="section-row__image-wrapper"
-        >
+        <div data-aos="fade-up" class="section-row__image-wrapper">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650.65 654.82">
             <defs>
               <style>
                 .cls-1 {
-                	fill : #881fdf;
+                  fill: #881fdf;
                 }
               </style>
             </defs>
@@ -567,18 +569,14 @@
 
       <div class="page__content--about__vision-process container">
         <div class="section-row__text event-what-we">
-          <span data-aos="fade-up" >Eye on</span>
-          <span data-aos="fade-up" >the vision,</span>
-          <span data-aos="fade-up" >Mind on</span>
-          <span data-aos="fade-up" >the process.</span>
+          <span data-aos="fade-up">Eye on</span>
+          <span data-aos="fade-up">the vision,</span>
+          <span data-aos="fade-up">Mind on</span>
+          <span data-aos="fade-up">the process.</span>
         </div>
 
         <div class="section-row__card">
-          <div
-            data-aos="fade-up"
-            data-aos-delay="0"
-            class="card"
-          >
+          <div data-aos="fade-up" data-aos-delay="0" class="card">
             <div class="card-header">
               <div class="icon">
                 <svg
@@ -656,15 +654,13 @@
             <div class="card-content">
               <div class="text">Discover</div>
               <p>
-                A good start is one where all players are of one mind. We collaborate with your entire team to uncover your ideas & goals for your brand/product.
+                A good start is one where all players are of one mind. We
+                collaborate with your entire team to uncover your ideas & goals
+                for your brand/product.
               </p>
             </div>
           </div>
-          <div
-            data-aos="fade-up"
-            data-aos-delay="100"
-            class="card"
-          >
+          <div data-aos="fade-up" data-aos-delay="100" class="card">
             <div class="card-header">
               <div class="icon">
                 <svg
@@ -777,15 +773,13 @@
             <div class="card-content">
               <div class="text">Strategy</div>
               <p>
-                It's all about planning. We combine your expertise with that of our strategists to frame a plan of action that will define and guide your brand/product’s path for now and for later.
+                It's all about planning. We combine your expertise with that of
+                our strategists to frame a plan of action that will define and
+                guide your brand/product’s path for now and for later.
               </p>
             </div>
           </div>
-          <div
-            data-aos="fade-up"
-            data-aos-delay="200"
-            class="card"
-          >
+          <div data-aos="fade-up" data-aos-delay="200" class="card">
             <div class="card-header">
               <div class="icon">
                 <svg
@@ -828,15 +822,14 @@
             <div class="card-content">
               <div class="text">Design</div>
               <p>
-                At this stage of creation, we dive deep into understanding user behavior, goals, and journeys to come up with designs that positively impact not only people’s lives but your business’ too.
+                At this stage of creation, we dive deep into understanding user
+                behavior, goals, and journeys to come up with designs that
+                positively impact not only people’s lives but your business’
+                too.
               </p>
             </div>
           </div>
-          <div
-            data-aos="fade-up"
-            data-aos-delay="300"
-            class="card"
-          >
+          <div data-aos="fade-up" data-aos-delay="300" class="card">
             <div class="card-header">
               <div class="icon">
                 <svg
@@ -907,7 +900,9 @@
             <div class="card-content">
               <div class="text">Deliver</div>
               <p>
-                Our developers are all about agile. They get down to work to move our ideas and designs into the real world while aiming for perfection and reliability.
+                Our developers are all about agile. They get down to work to
+                move our ideas and designs into the real world while aiming for
+                perfection and reliability.
               </p>
             </div>
           </div>
@@ -931,9 +926,13 @@
         <li><a href="https://dribbble.com/thealiendot">Dribbble</a></li>
         <li><a href="https://www.behance.net/thealiendot">Behance</a></li>
         <li><a href="https://medium.com/@iamthealiendot">Medium</a></li>
-        <li><a href="https://www.instagram.com/thealien.design/">Instagram</a></li>
+        <li>
+          <a href="https://www.instagram.com/thealien.design/">Instagram</a>
+        </li>
         <li><a href="https://twitter.com/">Twitter</a></li>
-        <li><a href="https://www.linkedin.com/company/the-alien-dot">Linkedin</a></li>
+        <li>
+          <a href="https://www.linkedin.com/company/the-alien-dot">Linkedin</a>
+        </li>
       </ul>
     </footer>
     <!-- build:js scripts/vendor.js -->
