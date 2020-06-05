@@ -256,6 +256,8 @@
     </header>
     <main class="home-page smooth-scroll-wrapper">
       <div data-color="#0a0908" class="dataStyle container hero-unit">
+        <div id="bm"></div>
+
         <div class="page-title">
           <span>We are Alien. </span>
           <span>A digital studio, creating </span>
@@ -505,7 +507,6 @@
                 </div>
               </a>
             </div>
-
           </div>
           <div class="project-list-readmore">
             <span></span>
@@ -900,10 +901,20 @@
     <script src="/node_modules/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
     <!-- endbuild -->
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.6.10/lottie.min.js"></script>
+    <script>
+      var animation = bodymovin.loadAnimation({
+        container: document.getElementById("bm"),
+        renderer: "svg",
+        loop: true,
+        autoplay: true,
+        path: "data.json",
+      });
+    </script>
     <script>
       const tween = TweenMax.to("body", 0.15, { backgroundColor: "#ffffff" }),
-       tween2 = TweenMax.to("body", 0.15, { backgroundColor: "#0a0908" }),
-       controller = new ScrollMagic.Controller();
+        tween2 = TweenMax.to("body", 0.15, { backgroundColor: "#0a0908" }),
+        controller = new ScrollMagic.Controller();
 
       // build scenes
       const scene = new ScrollMagic.Scene({
