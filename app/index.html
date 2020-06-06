@@ -245,19 +245,15 @@
           <div class="menu--item__content-footer">
             <ul class="lead-me-out__link">
               <li><a href="/index.html">ALIEN &copy; 2020</a></li>
-              <li><a href="https://dribbble.com/thealiendot">Dribbble</a></li>
-              <li><a href="https://www.behance.net/thealiendot">Behance</a></li>
-              <li><a href="https://medium.com/@iamthealiendot">Medium</a></li>
+              <li><a href="https://dribbble.com/thealien_design">Dribbble</a></li>
+              <li><a href="https://www.behance.net/the_alien">Behance</a></li>
+              <li><a href="https://medium.com/@thealiendesign">Medium</a></li>
               <li>
-                <a href="https://www.instagram.com/thealien.design/"
-                  >Instagram</a
-                >
+                <a href="https://www.instagram.com/thealien.design/">Instagram</a>
               </li>
               <li><a href="https://twitter.com/">Twitter</a></li>
               <li>
-                <a href="https://www.linkedin.com/company/the-alien-dot"
-                  >Linkedin</a
-                >
+                <a href="https://www.linkedin.com/company/the-alien/">Linkedin</a>
               </li>
             </ul>
           </div>
@@ -266,6 +262,8 @@
     </header>
     <main class="home-page smooth-scroll-wrapper">
       <div data-color="#0a0908" class="dataStyle container hero-unit">
+        <div id="bm"></div>
+
         <div class="page-title">
           <span>We are a full service </span>
           <span>creative agency doing</span>
@@ -1282,15 +1280,15 @@
     <footer data-color="#0a0908" class="dataStyle container lead-me-out">
       <ul>
         <li><a href="/index.html">ALIEN</a>&copy; 2020</li>
-        <li><a href="https://dribbble.com/thealiendot">Dribbble</a></li>
-        <li><a href="https://www.behance.net/thealiendot">Behance</a></li>
-        <li><a href="https://medium.com/@iamthealiendot">Medium</a></li>
+        <li><a href="https://dribbble.com/thealien_design">Dribbble</a></li>
+        <li><a href="https://www.behance.net/the_alien">Behance</a></li>
+        <li><a href="https://medium.com/@thealiendesign">Medium</a></li>
         <li>
           <a href="https://www.instagram.com/thealien.design/">Instagram</a>
         </li>
-        <li><a href="https://twitter.com/">Twitter</a></li>
+        <li><a href="javadcript:void(0)">Twitter</a></li>
         <li>
-          <a href="https://www.linkedin.com/company/the-alien-dot">Linkedin</a>
+          <a href="https://www.linkedin.com/company/the-alien/">Linkedin</a>
         </li>
       </ul>
     </footer>
@@ -1312,11 +1310,22 @@
     <script src="/node_modules/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
     <!-- endbuild -->
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.6.10/lottie.min.js"></script>
+    <script>
+      var animation = bodymovin.loadAnimation({
+        container: document.getElementById("bm"),
+        renderer: "svg",
+        loop: true,
+        autoplay: true,
+        path: "data.json",
+      });
+    </script>
     <script>
       const tween = TweenMax.to("body", 0.15, { backgroundColor: "#ffffff" }),
         tween2 = TweenMax.to("body", 0.15, { backgroundColor: "#0a0908" }),
         controller = new ScrollMagic.Controller();
       //  $('body').addClass('header-not-light');
+
       // build scenes
       const scene = new ScrollMagic.Scene({
         triggerElement: ".we-let-our-work",
